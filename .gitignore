@@ -1,0 +1,14 @@
+.local/
+dist/
+**/.gradle/
+**/build/
+**/local.properties
+**/.idea/
+*.keystore
+*.jks
+.env*
+*.mp4
+*.apk
+*.aar
+*.log
+__pycache__/
