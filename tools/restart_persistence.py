@@ -4,12 +4,17 @@ No uninstall, pm clear, run-as, preference injection, or vendor modification.
 Run after release_smoke.py, with hold_console.py still running.
 """
 import argparse, json, os, pathlib, subprocess, time
-os.environ['PLEOS_TRIAL']='restart-persistence'
+p=argparse.ArgumentParser()
+p.add_argument('--use-running',action='store_true',help='Use an externally cold-booted AVD; retain its startup evidence separately')
+p.add_argument('--trial',default='restart-persistence',help='New evidence directory name')
+p.add_argument('--baseline',default='release-smoke-verified',help='Prior successful release UI trial directory name')
+args=p.parse_args()
+os.environ['PLEOS_TRIAL']=args.trial
 import release_smoke as ui
 from wait_vehicle_ready import wait_ready
 
 LAB=pathlib.Path(os.environ['LOCALAPPDATA'])/'PleosSyncLab'
-saved=next(e for e in json.loads((ui.ROOT/'evidence/release-smoke-verified/run.json').read_text(encoding='utf8')) if e['kind']=='PERSISTENT_UI_BEFORE')
+saved=next(e for e in json.loads((ui.ROOT/'evidence'/args.baseline/'run.json').read_text(encoding='utf8')) if e['kind']=='PERSISTENT_UI_BEFORE')
 expected={k:saved[k] for k in ('history','settings')}
 
 def check_restart(label):
@@ -25,7 +30,6 @@ def check_restart(label):
     ui.screenshot(label+'-history')
 
 ui.event('PROVENANCE',input='Automated UI; exact displayed history and all five preferences compared',apkUnchanged=True,dataCleared=False)
-p=argparse.ArgumentParser();p.add_argument('--use-running',action='store_true',help='Use an externally cold-booted AVD; retain its startup evidence separately');args=p.parse_args()
 proc=None;stdout=None;stderr=None
 if not args.use_running:
     ui.adb('emu','kill')

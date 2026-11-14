@@ -23,7 +23,9 @@ adb -s emulator-5572 forward tcp:18088 tcp:8088
 python tools/hold_console.py
 # 별도 터미널
 python tools/wait_vehicle_ready.py --out evidence/my-dds-check
+$env:PLEOS_TRIAL = 'my-release-check'
 python tools/release_smoke.py
+python tools/restart_persistence.py --trial my-restart-check --baseline my-release-check
 ```
 
 기존 결과를 덮어쓰지 않으려면 실행 전에 `PLEOS_TRIAL`을 새 폴더 이름으로 지정합니다. 도구는 기존 run.json의 묵시적 덮어쓰기를 거부합니다. 이 도구들의 ADB serial·SDK 위치는 이번 전용 Windows 실험 환경 기준입니다.
