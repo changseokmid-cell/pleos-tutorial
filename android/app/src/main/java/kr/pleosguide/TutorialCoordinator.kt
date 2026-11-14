@@ -30,7 +30,9 @@ class TutorialCoordinator(private val context: Context, private val scope: Corou
         wasParked = snapshot.parked; lastSampleAt=now
         val signature = snapshot.samples.mapValues { it.value.value }.toString()
         if (signature != previousSignature) { record("SNAPSHOT", SourceType.LIVE_SDK, snapshot.samples.toString()); previousSignature = signature }
-        context.state().edit().putString("context", "${if (snapshot.parked == true) "P · 정차" else if (snapshot.parked == false) "주행 상태" else "기어 확인 중"}   ·   SYNC ${snapshot.value<Boolean>("sync") ?: "—"}   ·   동승석 ${snapshot.value<Boolean>("passengerOccupied") ?: "미확인"}")
+        val syncLabel=when(snapshot.value<Boolean>("sync")){ true->"켜짐"; false->"꺼짐"; null->"미확인" }
+        val seatLabel=when(snapshot.value<Boolean>("passengerOccupied")){ true->"착좌"; false->"비어 있음"; null->"미확인" }
+        context.state().edit().putString("context", "${if (snapshot.parked == true) "P · 정차" else if (snapshot.parked == false) "주행 상태" else "기어 확인 중"}   ·   SYNC $syncLabel   ·   동승석 $seatLabel")
             .putString("driverTemp", snapshot.value<Float>("driverTemp")?.toString() ?: "—")
             .putString("passengerTemp", snapshot.value<Float>("passengerTemp")?.toString() ?: "—")
             .putBoolean("safeDetails", snapshot.safeDetails).apply()
@@ -74,8 +76,8 @@ class TutorialCoordinator(private val context: Context, private val scope: Corou
                 "동승석 온도를 따로 조절할 수 있어요. 운전석 ${s.baselineDriver}도는 유지하고, 동승석을 ${s.target}도로 바꿔 볼까요? 원하는 온도를 말하거나 수락해 주세요."
             }
             Feature.ERGO -> "정차하셨네요. 에르고 모션 시트가 장착되어 있다면 피로 완화 스트레칭을 체험할 수 있어요. 시트 옆 버튼 사용법을 안내할까요?"
-            Feature.SOUND -> "뒤쪽 음악이 크다는 요청에는 전체 음량 대신 소리의 중심을 앞으로 옮기는 방법이 있어요. 사운드 위치 설정을 안내할까요?"
-            Feature.SPREAD -> "얼굴에 직접 닿는 바람이 불편하군요. 전동 에어벤트가 있다면 온도 대신 바람을 분산하는 SPREAD를 선택할 수 있어요. 안내할까요?"
+            Feature.SOUND -> "뒤쪽 음악이 크게 들릴 때는 전체 음량 대신 소리의 중심을 앞으로 옮기는 방법이 있어요. 사운드 위치 설정을 안내할까요?"
+            Feature.SPREAD -> "얼굴에 직접 닿는 바람이 불편할 때, 전동 에어벤트가 있다면 온도 대신 바람을 분산하는 SPREAD를 선택할 수 있어요. 안내할까요?"
             Feature.GLEO -> "에어컨과 라디오를 따로 조작하려면, Gleo에 한 문장으로 부탁하는 방법을 익혀 보세요. 사용법을 안내할까요?"
         }
         show(text,listenAfter=true); return true

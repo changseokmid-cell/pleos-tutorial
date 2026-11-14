@@ -2,6 +2,8 @@ plugins {
     id("com.android.application") version "8.7.3"
     id("org.jetbrains.kotlin.android") version "1.9.25"
 }
+// Optional ASCII build path for Windows JDK/Gradle test classpath encoding issues.
+providers.gradleProperty("pleosBuildDir").orNull?.let { layout.buildDirectory.set(file(it)) }
 android {
     namespace = "kr.pleosguide"
     compileSdk = 35
@@ -10,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "kr.pleosguide"
         minSdk = 28
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0.0"
     }

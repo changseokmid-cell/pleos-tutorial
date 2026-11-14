@@ -9,6 +9,7 @@ OUT=ROOT/'evidence'/'debug-trial'; OUT.mkdir(parents=True,exist_ok=True)
 ADB=pathlib.Path(os.environ['LOCALAPPDATA'])/'PleosSyncLab/sdk/platform-tools/adb.exe'
 A=[str(ADB),'-s','emulator-5572']
 events=[]
+user_id=None
 def adb(*args):
     return subprocess.check_output(A+list(args),timeout=60).decode('utf8','replace').strip()
 def shell(*args): return adb('shell',' '.join(shlex.quote(str(a)) for a in args))
@@ -20,7 +21,9 @@ def console(path,**params):
     response=requests.put('http://127.0.0.1:18088/vehicle/'+path,params=params,timeout=20)
     response.raise_for_status(); record('MANUAL_CONSOLE_SEED',path=path,params=params)
 def logs():
-    raw=shell('run-as','kr.pleosguide','cat','files/evidence.jsonl')
+    global user_id
+    if user_id is None: user_id=shell('am','get-current-user')
+    raw=shell('run-as','kr.pleosguide','--user',user_id,'cat','files/evidence.jsonl')
     return [json.loads(line) for line in raw.splitlines() if line.startswith('{')]
 def wait(kind, contains='', start=0, timeout=50):
     end=time.monotonic()+timeout

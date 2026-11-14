@@ -35,7 +35,7 @@ class MainActivity:Activity(),SharedPreferences.OnSharedPreferenceChangeListener
         mode=button("튜토리얼 켜기") {
             if(TutorialService.current!=null) stopService(Intent(this,TutorialService::class.java))
             else if(checkSelfPermission(Manifest.permission.RECORD_AUDIO)!=PackageManager.PERMISSION_GRANTED)
-                requestPermissions(arrayOf(Manifest.permission.RECORD_AUDIO),70)
+                requestPermissions(if(android.os.Build.VERSION.SDK_INT>=33) arrayOf(Manifest.permission.RECORD_AUDIO,Manifest.permission.POST_NOTIFICATIONS) else arrayOf(Manifest.permission.RECORD_AUDIO),70)
             else startForegroundService(Intent(this,TutorialService::class.java))
         }
         actions.addView(mode)
@@ -64,7 +64,7 @@ class MainActivity:Activity(),SharedPreferences.OnSharedPreferenceChangeListener
             setOnCheckedChangeListener { _, checked -> settings().edit().putBoolean("enabled.${f.name}",checked).apply() }
         }) }
         details.addView(settingsRow)
-        voice=label(14f); details.addView(voice)
+        voice=label(14f); if(BuildConfig.DEBUG) details.addView(voice)
         history=label(16f); details.addView(history)
         if(BuildConfig.DEBUG) details.addView(button("공식 한국어 음성 확인") { command("SPEAK_TEST") })
         setContentView(ScrollView(this).apply { isFillViewport=true; addView(root) })

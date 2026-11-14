@@ -10,7 +10,7 @@ try {
         if (-not $env:PLEOS_KEYSTORE -or -not $env:PLEOS_STORE_PASSWORD -or -not $env:PLEOS_KEY_PASSWORD) {
             throw 'Set PLEOS_KEYSTORE, PLEOS_STORE_PASSWORD and PLEOS_KEY_PASSWORD to your private signing key. Alias: submission.'
         }
-        & .\gradlew.bat :app:testDebugUnitTest :app:assembleRelease --console=plain --max-workers=2
-    } else { & .\gradlew.bat :app:assembleDebug :app:testDebugUnitTest --console=plain --max-workers=2 }
+        & .\gradlew.bat :app:testDebugUnitTest :app:assembleRelease "-PpleosBuildDir=$lab/tutorial-build" --console=plain --max-workers=2
+    } else { & .\gradlew.bat :app:assembleDebug :app:testDebugUnitTest "-PpleosBuildDir=$lab/tutorial-build" --console=plain --max-workers=2 }
     if ($LASTEXITCODE -ne 0) { throw "Gradle failed: $LASTEXITCODE" }
 } finally { Pop-Location }

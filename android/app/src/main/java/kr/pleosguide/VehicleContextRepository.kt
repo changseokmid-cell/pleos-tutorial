@@ -33,7 +33,9 @@ class VehicleContextRepository(private val context: Context, private val evidenc
     private var tempRange: ClosedFloatingPointRange<Float>? = null
     private var increment: Float? = null
     private val seatMapped = Build.FINGERPRINT == "Pleos/crp_avd/crp_avd_x86_64:14/RELEASE.release_connect_v2.1.0/release_connect_v2.1.0:user/test-keys"
-    init { sdk.initialize(); evidence.event("VEHICLE_INIT", SourceType.LIVE_SDK, "${Build.FINGERPRINT};seatMapping=$seatMapped") }
+    suspend fun initialize() = withContext(Dispatchers.IO) {
+        sdk.initialize(); evidence.event("VEHICLE_INIT", SourceType.LIVE_SDK, "${Build.FINGERPRINT};seatMapping=$seatMapped")
+    }
     private fun note(key: String, message: String) {
         if (reported.put(key, message) != message) evidence.event("CAPABILITY_OR_ERROR", SourceType.LIVE_SDK, "$key=$message")
     }
@@ -146,8 +148,10 @@ class VehicleContextRepository(private val context: Context, private val evidenc
         val before = snapshot()
         if (!before.syncReady || abs((before.value<Float>("driverTemp") ?: -100f) - baseline) > .1f)
             return ActionResult(ActionStatus.FAILED, "조건 또는 운전석 설정이 변경되었습니다.", before)
+        if (access["temperature"] == "READ_WRITE" && !canSetTemperature(target))
+            return ActionResult(ActionStatus.FAILED, "차량의 지원 온도 범위나 간격에 맞지 않습니다. 값을 확인한 뒤 새로 요청해 주세요.", before)
         if (access["sync"] != "READ_WRITE" || !canSetTemperature(target))
-            return ActionResult(ActionStatus.UNKNOWN, "쓰기 권한이나 지원 온도를 확인하지 못했습니다. 공조 화면에서 SYNC를 끄고 동승석을 ${target}도로 설정해 주세요.", before)
+            return ActionResult(ActionStatus.UNKNOWN, "쓰기 권한이나 지원 온도를 확인하지 못했습니다. 공조 화면에서 SYNC를 끄고 지원되는 동승석 온도를 직접 선택해 주세요.", before)
         if (before.value<Boolean>("sync") == true) {
             evidence.event("COMMAND_REQUESTED", SourceType.LIVE_SDK, "setHvacDual(false)", session)
             val ack = await<Boolean>("setDual") { ok, fail -> sdk.getHVAC().setHvacDual(areas.getValue("sync"), false, { _, _ -> ok(true) }, fail) }

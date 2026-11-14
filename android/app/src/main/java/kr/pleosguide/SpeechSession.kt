@@ -10,11 +10,13 @@ import android.os.Looper
 import ai.pleos.playground.stt.SpeechToText
 import ai.pleos.playground.tts.TextToSpeech
 import java.util.Locale
+import kotlinx.coroutines.*
 
 /** One official ON_DEVICE speech owner. No ambient listening or external STT. */
 class SpeechSession(private val context: Context, private val evidence: EvidenceRecorder,
     private val onText: (String, SourceType) -> Unit) {
     private val main = Handler(Looper.getMainLooper())
+    private val initScope = CoroutineScope(SupervisorJob()+Dispatchers.IO)
     private val stt = SpeechToText(context, ai.pleos.playground.stt.constant.Mode.ON_DEVICE)
     private val tts = TextToSpeech(context, ai.pleos.playground.tts.constant.Mode.ON_DEVICE)
     private val audio = context.getSystemService(AudioManager::class.java)
@@ -24,6 +26,7 @@ class SpeechSession(private val context: Context, private val evidence: Evidence
     private var sttReady = false
     private var ttsReady = false
     private var listening = false
+    private var recognitionSource = SourceType.LIVE_STT
     private var speaking = false
     private var closed = false
     private var done: (() -> Unit)? = null
@@ -37,8 +40,9 @@ class SpeechSession(private val context: Context, private val evidence: Evidence
         override fun onStartedRecognition() { main.post { if (listening) event("STT_STARTED", "vehicle microphone") } }
         override fun onUpdated(stt: String, completed: Boolean) { main.post {
             if (!listening || closed) return@post
-            event(if (completed) "STT_FINAL" else "STT_PARTIAL", stt, SourceType.LIVE_STT)
-            if (completed) { stop(); if (stt.isNotBlank()) onText(stt, SourceType.LIVE_STT) }
+            val origin=recognitionSource
+            event(if (completed) "STT_FINAL" else "STT_PARTIAL", stt, origin)
+            if (completed) { stop(); if (stt.isNotBlank() && origin!=SourceType.TEST_PCM) onText(stt, origin) }
         } }
         override fun onUpdatedEpdData(on: Long, off: Long) = Unit
         override fun onUpdatedRms(rms: Double) = Unit
@@ -55,20 +59,18 @@ class SpeechSession(private val context: Context, private val evidence: Evidence
         override fun onUpdatedRms(rms: Double) = Unit
         override fun onError(errorType: ai.pleos.playground.tts.constant.ErrorType) { main.post { event("TTS_ERROR", errorType.toString()); if (speaking) stop() } }
     }
-    init {
+    init { initScope.launch {
         try {
-            stt.addListener(recognition)
-            tts.addEventListener(synthesis)
             stt.initialize(object : ai.pleos.playground.stt.listener.OnInitializeListener {
-                override fun onSuccess() { main.post { if (!closed) { sttReady=true; stt.setLocale(Locale.KOREAN); event("STT_INIT_OK", "ON_DEVICE ko-KR") } } }
+                override fun onSuccess() { main.post { if (!closed) { stt.addListener(recognition); sttReady=true; stt.setLocale(Locale.KOREA); event("STT_INIT_OK", "ON_DEVICE ${Locale.KOREA.toLanguageTag()}") } } }
                 override fun onFailure(errorType: ai.pleos.playground.stt.constant.ErrorType) { event("STT_INIT_FAILED", errorType.toString()) }
             })
             tts.initialize(object : ai.pleos.playground.tts.listener.OnInitializeListener {
-                override fun onSuccess() { main.post { if (!closed) { ttsReady=true; tts.setLocale(Locale.KOREAN); tts.setAudioAttributes(attributes); event("TTS_INIT_OK", "ON_DEVICE ko-KR") } } }
+                override fun onSuccess() { main.post { if (!closed) { tts.addEventListener(synthesis); ttsReady=true; tts.setLocale(Locale.KOREA); tts.setAudioAttributes(attributes); event("TTS_INIT_OK", "ON_DEVICE ${Locale.KOREA.toLanguageTag()}") } } }
                 override fun onFailure(errorType: ai.pleos.playground.tts.constant.ErrorType) { event("TTS_INIT_FAILED", errorType.toString()) }
             })
         } catch (e: Exception) { event("SPEECH_INIT_EXCEPTION", e.toString()) }
-    }
+    } }
     private fun acquire(): Boolean {
         val request = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT)
             .setAudioAttributes(attributes).setOnAudioFocusChangeListener { if (it < 0) { event("FOCUS_LOST", it.toString()); stop() } }.build()
@@ -91,8 +93,19 @@ class SpeechSession(private val context: Context, private val evidence: Evidence
             event("STT_UNAVAILABLE", "initialization or microphone permission missing"); return false
         }
         if (!acquire()) return false
-        return try { listening=true; event("STT_REQUESTED", "vehicle microphone; 12 seconds; ON_DEVICE ko-KR"); timeout(12000,"STT_TIMEOUT"); stt.request(); true }
+        return try { recognitionSource=SourceType.LIVE_STT; listening=true; event("STT_REQUESTED", "vehicle microphone; 12 seconds; ON_DEVICE ko-KR"); timeout(12000,"STT_TIMEOUT"); stt.request(); true }
         catch (e: Exception) { event("STT_EXCEPTION", e.toString()); stop(); false }
+    }
+    fun testPcm(bytes: ByteArray) {
+        if(!BuildConfig.DEBUG || !sttReady || bytes.size !in 1..2_000_000) return
+        stop(); if(!acquire()) return
+        recognitionSource=SourceType.TEST_PCM; listening=true
+        event("STT_PCM_REQUESTED","${bytes.size} bytes; synthetic fixture; no microphone; no vehicle action dispatch",SourceType.TEST_PCM)
+        timeout(40000,"STT_PCM_TIMEOUT")
+        initScope.launch {
+            try { stt.sendAudio(bytes); stt.completeAudioSend() }
+            catch(e:Exception) { main.post { event("STT_PCM_ERROR",e.toString(),SourceType.TEST_PCM); stop() } }
+        }
     }
     fun stop() {
         timeout?.let(main::removeCallbacks); timeout=null; done=null
@@ -102,5 +115,5 @@ class SpeechSession(private val context: Context, private val evidence: Evidence
         focus?.let { audio.abandonAudioFocusRequest(it) }; focus=null
     }
     fun yieldToGleo() { stop(); event("AUDIO_YIELDED", "microphone and focus released for native Gleo") }
-    fun close() { closed=true; stop(); runCatching { stt.removeListener(recognition); stt.release() }; runCatching { tts.removeEventListener(synthesis); tts.release() } }
+    fun close() { closed=true; initScope.cancel(); stop(); runCatching { stt.removeListener(recognition); stt.release() }; runCatching { tts.removeEventListener(synthesis); tts.release() } }
 }

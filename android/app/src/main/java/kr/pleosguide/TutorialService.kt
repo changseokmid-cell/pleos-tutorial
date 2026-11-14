@@ -29,8 +29,16 @@ class TutorialService : Service() {
         current=this; state().edit().putBoolean("active",true).apply()
         evidence.event("MODE_ON",SourceType.USER_REPORT,"user-started foreground service")
         scope.launch {
-            repository.probe()
-            while(isActive) { try { coordinator.sample(repository.snapshot()) } catch(e:CancellationException) { throw e } catch(e:Exception) { evidence.event("POLL_ERROR",SourceType.LIVE_SDK,e.toString()) }; delay(1000) }
+            repository.initialize()
+            withContext(Dispatchers.IO) { repository.probe() }
+            var nextProbe=System.currentTimeMillis()+30000
+            while(isActive) {
+                try {
+                    if(System.currentTimeMillis()>=nextProbe) { withContext(Dispatchers.IO) { repository.probe() }; nextProbe=System.currentTimeMillis()+30000 }
+                    coordinator.sample(withContext(Dispatchers.IO) { repository.snapshot() })
+                } catch(e:CancellationException) { throw e } catch(e:Exception) { evidence.event("POLL_ERROR",SourceType.LIVE_SDK,e.toString()) }
+                delay(1000)
+            }
         }
     }
     override fun onStartCommand(intent: Intent?, flags:Int, startId:Int):Int {
@@ -45,6 +53,7 @@ class TutorialService : Service() {
     fun input(text:String,source:SourceType=SourceType.USER_REPORT) { speech.stop(); coordinator.input(text,source) }
     fun startFeature(feature:Feature,source:SourceType=SourceType.USER_REPORT) = coordinator.start(feature,"explicit request",source)
     fun cancel() = coordinator.finish("안내를 취소했습니다.")
+    fun testPcm(bytes:ByteArray) { if(BuildConfig.DEBUG) speech.testPcm(bytes) }
     override fun onDestroy() {
         current=null; coordinator.close(); scope.cancel(); speech.close(); repository.close()
         state().edit().putBoolean("active",false).putBoolean("safeDetails",false).apply()
