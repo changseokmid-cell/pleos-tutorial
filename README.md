@@ -31,7 +31,7 @@ $env:ANDROID_HOME = 'C:/path/to/android-sdk'
 ./tools/build.ps1
 ```
 
-기본 출력은 `%LOCALAPPDATA%/PleosSyncLab/tutorial-build/outputs/apk/debug/app-debug.apk`입니다. 한글 Windows 경로에서 JUnit 클래스 로딩 실패가 발생해 빌드 출력만 ASCII 경로로 분리했습니다. 일반 환경은 `android/`에서 `./gradlew :app:assembleDebug :app:testDebugUnitTest`로 빌드할 수 있습니다.
+기본 출력은 `%LOCALAPPDATA%/PleosSyncLab/tutorial-build/outputs/apk/debug/app-debug.apk`입니다. 한글 Windows 경로에서 JUnit 클래스 로딩 실패가 발생해 빌드 출력만 ASCII 경로로 분리했습니다. Linux/macOS 환경은 `android/`에서 `bash ./gradlew :app:assembleDebug :app:testDebugUnitTest`로 빌드할 수 있습니다. Windows만 실제 빌드 검증했습니다.
 
 릴리스는 외부 개인 keystore의 alias `submission`과 환경 변수 `PLEOS_KEYSTORE`, `PLEOS_STORE_PASSWORD`, `PLEOS_KEY_PASSWORD`를 지정한 뒤 `./tools/build.ps1 -Release`로 만듭니다. 암호나 키를 커밋하지 마세요. 재빌드 APK는 서명과 ZIP 생성 시각에 따라 제출 APK와 바이트 해시가 달라질 수 있습니다.
 
