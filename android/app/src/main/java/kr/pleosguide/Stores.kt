@@ -34,7 +34,14 @@ class LearningStore(context: Context) {
     }
     fun summary() = Feature.values().joinToString("\n") { f ->
         "${f.title} · " + listOf("accepted", "action", "experience", "reuse").mapNotNull { key ->
-            prefs.getString("${f.name}.$key", null)?.let { "$key: $it" }
+            prefs.getString("${f.name}.$key", null)?.let {
+                when(key) {
+                    "accepted" -> "체험 수락"
+                    "action" -> if(it=="CONFIRMED") "차량 상태 확인" else "실행 상태 미확인"
+                    "experience" -> "체감 응답 기록"
+                    else -> "다음 사용에 대한 응답 기록"
+                }
+            }
         }.joinToString(" / ").ifEmpty { "체험 기록 없음" }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "packageName": "kr.pleosguide",
+  "appDescription": "A vehicle feature learning assistant that guides parked drivers through supported settings and records their reported experience.",
+  "invokeWord": "내 차 사용 안내",
+  "version": "1.0.0",
+  "actionCalls": [
+    {"type":"function","function":{"name":"SET_TUTORIAL_MODE","description":"Enable or disable contextual vehicle feature tutorials.","component":"service","parameters":{"type":"object","properties":{"enabled":{"type":"boolean","description":"Whether the tutorial mode should be enabled."}},"required":["enabled"]}}},
+    {"type":"function","function":{"name":"START_FEATURE_GUIDE","description":"Start a parked feature learning session and request user consent before any supported vehicle operation.","component":"service","parameters":{"type":"object","properties":{"feature":{"type":"string","enum":["SYNC","ERGO","SOUND","SPREAD","GLEO"],"description":"The vehicle feature to learn."}},"required":["feature"]}}},
+    {"type":"function","function":{"name":"RESPOND_TO_GUIDE","description":"Deliver a user response to the active learning session without assuming vehicle execution succeeded.","component":"service","parameters":{"type":"object","properties":{"sessionId":{"type":"string","description":"The identifier returned by the active guide session."},"response":{"type":"string","description":"The user response, consent, desired temperature or experience report."}},"required":["sessionId","response"]}}}
+  ]
+}
