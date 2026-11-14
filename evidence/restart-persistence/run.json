@@ -1,0 +1,163 @@
+[
+  {
+    "time": 1794650350.652495,
+    "kind": "PROVENANCE",
+    "input": "Automated UI; exact displayed history and all five preferences compared",
+    "apkUnchanged": true,
+    "dataCleared": false
+  },
+  {
+    "time": 1794650350.6561882,
+    "kind": "EXTERNAL_COLD_BOOT",
+    "note": "See dds-recovery.md and emulator startup evidence"
+  },
+  {
+    "time": 1794650351.00401,
+    "kind": "ANDROID_BOOT_COMPLETED",
+    "elapsedSeconds": 0.3
+  },
+  {
+    "time": 1794650357.1865973,
+    "kind": "VEHICLE_READY",
+    "elapsedSeconds": 6.5
+  },
+  {
+    "time": 1794650357.237712,
+    "kind": "CONSOLE_SEED",
+    "path": "gear",
+    "values": {
+      "gear": "Park"
+    }
+  },
+  {
+    "time": 1794650370.4644234,
+    "kind": "DEFAULT_OFF",
+    "cycle": "01-cold-boot"
+  },
+  {
+    "time": 1794650377.1795878,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 켜기"
+  },
+  {
+    "time": 1794650385.6013324,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794650382532,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794650382528, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794650382343, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794650381491, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794650381280, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=22.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794650382437, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794650382488, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794650382266, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794650382446, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794650382446, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794650382488, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794650382512, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=22.0, unit=C, area=[ROW_1_LEFT], observedAt=1794650382400, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=true, unit=, area=[ROW_1_LEFT], observedAt=1794650382511, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794650382529, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794650382279, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794650381492, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794650390.304269,
+    "kind": "PERSISTENCE_MATCH",
+    "cycle": "01-cold-boot",
+    "history": "체험 이력\n좌석별 독립 온도 · 체험 수락 / 차량 상태 확인 / 체감 응답 기록\n시트 스트레칭 · 체험 기록 없음\n사운드 위치·음장 · 체험 기록 없음\n직풍 피하기 · 체험 기록 없음\n한 문장으로 두 가지 요청 · 체험 기록 없음",
+    "settings": {
+      "SYNC 안내": "true",
+      "ERGO 안내": "true",
+      "SOUND 안내": "false",
+      "SPREAD 안내": "true",
+      "GLEO 안내": "true"
+    }
+  },
+  {
+    "time": 1794650401.5541124,
+    "kind": "DEFAULT_OFF",
+    "cycle": "02-killed-while-on"
+  },
+  {
+    "time": 1794650405.7801082,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 켜기"
+  },
+  {
+    "time": 1794650761.560007,
+    "kind": "RETRY_AFTER_LAUNCHER_RECOVERY",
+    "reason": "Prior component-only start left an empty task surface; On tap did not start service; Home plus MAIN/LAUNCHER restored it"
+  },
+  {
+    "time": 1794650775.8565555,
+    "kind": "DEFAULT_OFF",
+    "cycle": "03-killed-while-on-launcher"
+  },
+  {
+    "time": 1794651097.9432251,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 켜기"
+  },
+  {
+    "time": 1794651107.3242671,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794651102546,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794651102466, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794651101387, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794651102327, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794651101430, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794651102281, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=22.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794651102489, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794651102391, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794651102541, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794651102541, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794651102281, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794651102422, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=22.0, unit=C, area=[ROW_1_LEFT], observedAt=1794651102358, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=true, unit=, area=[ROW_1_LEFT], observedAt=1794651102421, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794651102467, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794651102251, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794651101395, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794651111.7439275,
+    "kind": "RETRY_AFTER_LAUNCHER_RECOVERY",
+    "reason": "Home overlay/focus interrupted On tap; select app dock icon and focus the right pane before UI queries"
+  },
+  {
+    "time": 1794651128.8585756,
+    "kind": "DEFAULT_OFF",
+    "cycle": "04-killed-while-on-dock"
+  },
+  {
+    "time": 1794651134.91681,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 켜기"
+  },
+  {
+    "time": 1794651139.5427248,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794651138483,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794651138393, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794651138091, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794651137160, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794651137152, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=22.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794651138261, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794651138353, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794651138168, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794651138341, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794651138341, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794651138353, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794651138481, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=22.0, unit=C, area=[ROW_1_LEFT], observedAt=1794651138158, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=true, unit=, area=[ROW_1_LEFT], observedAt=1794651138481, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794651138393, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794651138227, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794651137161, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794651143.1391501,
+    "kind": "PERSISTENCE_MATCH",
+    "cycle": "04-killed-while-on-dock",
+    "history": "체험 이력\n좌석별 독립 온도 · 체험 수락 / 차량 상태 확인 / 체감 응답 기록\n시트 스트레칭 · 체험 기록 없음\n사운드 위치·음장 · 체험 기록 없음\n직풍 피하기 · 체험 기록 없음\n한 문장으로 두 가지 요청 · 체험 기록 없음",
+    "settings": {
+      "SYNC 안내": "true",
+      "ERGO 안내": "true",
+      "SOUND 안내": "false",
+      "SPREAD 안내": "true",
+      "GLEO 안내": "true"
+    }
+  },
+  {
+    "time": 1794651148.6908088,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 끄기"
+  },
+  {
+    "time": 1794651148.6926315,
+    "kind": "PASS",
+    "checks": [
+      "cold boot DDS ready",
+      "cold boot default Off",
+      "cold boot history and five preferences equal",
+      "force-stop while On defaults Off",
+      "force-stop while On preserves history and preferences"
+    ],
+    "launcher": "Home then MAIN/LAUNCHER and app dock selection; right-pane focus"
+  },
+  {
+    "time": 1794651220.250151,
+    "kind": "HARNESS_METADATA_CORRECTION",
+    "detail": "The final successful retry used MAIN/LAUNCHER, a 5-second task transition wait, and right-pane focus before each UI query. Home and dock taps had been removed from ensure_app before this successful run. The retry reason/cycle label/PASS launcher string retained earlier wording; observed UI and SDK comparisons are unchanged."
+  }
+]

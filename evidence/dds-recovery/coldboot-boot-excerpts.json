@@ -1,0 +1,21 @@
+{
+  "failure": [
+    "11-14 01:59:05.776   217   245 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet",
+    "11-14 01:59:05.871 11334 11334 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error",
+    "11-14 01:59:05.978   217   245 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet",
+    "11-14 01:59:06.054 11350 11350 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error",
+    "11-14 01:59:06.172 11362 11362 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error",
+    "11-14 01:59:06.185   217   245 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet",
+    "11-14 01:59:06.192 11360 11360 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error",
+    "11-14 01:59:06.390   217   245 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet"
+  ],
+  "address": [
+    "11-14 01:59:06.414   702   702 D RIL     : set_Ip_Addr 548 setting ip addr 10.0.2.15/24 on interface eth0",
+    "11-14 01:59:06.591   217   245 I sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: ipv4 address found: 10.0.2.15, interface eth0 is running"
+  ],
+  "ready": [
+    "11-14 01:59:11.632   540   600 I VehicleApiDdsEmu: event seq=107 source=dds action=runtime-started domain=30 topic=(none) type=(none) detail=hal_domain=30 convenience_domain=11 scenario_domain=17 lights_domain=11 button_domain=30 hvac_domain=23 safety_domain=14 notification_domain=19 web_active=true input_active=false",
+    "11-14 01:59:11.633   540   600 I VehicleApiDdsEmu: event seq=108 source=dds-availability action=available domain=30 topic=(none) type=(none) detail=source=web-activation direct_vhal_write=false",
+    "11-14 01:59:11.633   540   600 I VehicleApiDdsEmu: event seq=109 source=system action=emulation-source-active domain=30 topic=(none) type=(none) detail=source=web"
+  ]
+}

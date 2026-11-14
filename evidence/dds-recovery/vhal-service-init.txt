@@ -1,0 +1,11 @@
+service vendor.vehicle-hal-default /vendor/bin/hw/ai.pleos.hardware.vehicle@V2-sdv-service
+    class early_hal
+    user vehicle_network
+    group system inet input
+    setenv DAL_DISABLE_SECURITY 1
+    setenv VAPI_DISABLE_SOURCE_TIMESTAMP 1
+    setenv CYCLONEDDS_URI /vendor/etc/automotive/vhalconfig/dds/vhal-cyclonedds.xml
+    setenv NDDS_QOS_PROFILES /vendor/etc/automotive/vhalconfig/dds/vhal-rtidds.xml
+
+on post-fs-data
+    mkdir /data/vendor/vhal 0771 vehicle_network vehicle_network

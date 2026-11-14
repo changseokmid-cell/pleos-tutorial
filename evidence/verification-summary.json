@@ -1,0 +1,65 @@
+{
+  "runs": {
+    "release-smoke-verified": {
+      "events": 20,
+      "pass": {
+        "time": 1794651346.1864123,
+        "kind": "PASS",
+        "checks": [
+          "signed release launch",
+          "consent UI",
+          "SDK dual off and passenger 24",
+          "driver 21 retained",
+          "mode off stops reading",
+          "restart off by default",
+          "exact displayed history persisted",
+          "all five feature preferences persisted"
+        ]
+      }
+    },
+    "restart-persistence": {
+      "events": 23,
+      "pass": {
+        "time": 1794651148.6926315,
+        "kind": "PASS",
+        "checks": [
+          "cold boot DDS ready",
+          "cold boot default Off",
+          "cold boot history and five preferences equal",
+          "force-stop while On defaults Off",
+          "force-stop while On preserves history and preferences"
+        ],
+        "launcher": "Home then MAIN/LAUNCHER and app dock selection; right-pane focus"
+      },
+      "metadataCorrection": "The final successful retry used MAIN/LAUNCHER, a 5-second task transition wait, and right-pane focus before each UI query. Home and dock taps had been removed from ensure_app before this successful run. The retry reason/cycle label/PASS launcher string retained earlier wording; observed UI and SDK comparisons are unchanged."
+    }
+  },
+  "appEvents": 106,
+  "appEventCounts": {
+    "MODE_ON": 2,
+    "VEHICLE_INIT": 2,
+    "STT_INIT_OK": 2,
+    "TTS_INIT_OK": 2,
+    "CAPABILITY_OR_ERROR": 21,
+    "SNAPSHOT": 49,
+    "OFFER": 1,
+    "GUIDANCE": 5,
+    "TTS_REQUESTED": 3,
+    "TTS_STARTED": 3,
+    "TTS_DONE": 1,
+    "STT_REQUESTED": 1,
+    "INPUT": 2,
+    "CONSENT": 1,
+    "COMMAND_REQUESTED": 2,
+    "COMMAND_ACK": 2,
+    "INDEPENDENT_READ": 2,
+    "ACTION_RESULT": 1,
+    "EXPERIENCE_REPORT": 1,
+    "SESSION_END": 2,
+    "MODE_OFF": 1
+  },
+  "localMarkdownLinksChecked": 75,
+  "brokenLocalLinks": 0,
+  "androidSourceDiff": "empty",
+  "unitTests": "Existing 9 passing tests for unchanged Android source; signature/source audit rerun"
+}

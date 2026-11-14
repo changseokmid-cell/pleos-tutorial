@@ -1,0 +1,15 @@
+{
+  "selinux": "Enforcing",
+  "ip": "15: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000\n    inet 10.0.2.15/8 brd 10.255.255.255 scope global eth0\n       valid_lft forever preferred_lft forever\n",
+  "bootCompleted": "1",
+  "apkSha256": "ae804c869566195c2dfe8e79ad49bd8c94a921c148508915cce7298a3db35cbc",
+  "vendorConfigChanged": false,
+  "appPrivilegesChanged": false,
+  "appDataCleared": false,
+  "staleLocksArchived": [
+    "snapshot.lock.lock",
+    "hardware-qemu.ini.lock"
+  ],
+  "staleLockPid": 30704,
+  "coldBootRelaunchWrapperPid": 52576
+}

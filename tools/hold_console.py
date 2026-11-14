@@ -12,8 +12,12 @@ with requests.Session() as s:
     try:
         while not stop.exists():
             try:
-                requests.post(base+'/browser/session',params={'client':'pleos_tutorial_sdk_trial'},timeout=20).raise_for_status()
-                if not ready: print('Virtual Console test heartbeat active',flush=True); ready=True
+                response=requests.post(base+'/browser/session',params={'client':'pleos_tutorial_sdk_trial'},timeout=20)
+                response.raise_for_status()
+                active=response.json().get('active') is True
+                if active != ready:
+                    print('Virtual Console active' if active else 'Virtual Console waiting for DDS',flush=True)
+                ready=active
             except requests.RequestException as e:
                 print('Heartbeat reconnecting: '+type(e).__name__,flush=True)
             time.sleep(1)

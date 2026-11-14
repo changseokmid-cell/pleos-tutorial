@@ -1,0 +1,32 @@
+[
+  {
+    "time": 1794651210.5617325,
+    "elapsedSeconds": 0.1,
+    "ddsAddressPresent": true,
+    "active": true,
+    "bridgeReady": true,
+    "hvacPublishReady": true,
+    "hvacSubscribeReady": true,
+    "ready": true
+  },
+  {
+    "time": 1794651212.7729394,
+    "elapsedSeconds": 2.3,
+    "ddsAddressPresent": true,
+    "active": true,
+    "bridgeReady": true,
+    "hvacPublishReady": true,
+    "hvacSubscribeReady": true,
+    "ready": true
+  },
+  {
+    "time": 1794651214.9656837,
+    "elapsedSeconds": 4.5,
+    "ddsAddressPresent": true,
+    "active": true,
+    "bridgeReady": true,
+    "hvacPublishReady": true,
+    "hvacSubscribeReady": true,
+    "ready": true
+  }
+]

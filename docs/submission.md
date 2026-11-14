@@ -1,6 +1,10 @@
 # 제출 후보와 남은 절차
 
-이 폴더는 실제 구현·실행 근거를 담은 1차 제출 후보다. 사용자 요청으로 [비공개 저장소](https://github.com/changseokmid-cell/pleos-tutorial)와 [후보 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-candidate-20261114)에 보관했다. 공식 신청서·개인정보 동의·서명·참가자 정보·메일 발송은 별도다. 로그인 없는 공개 다운로드는 아직 제공하지 않는다.
+이 폴더는 실제 구현·실행 근거를 담은 1차 제출 후보다. 사용자 요청으로 [비공개 저장소](https://github.com/changseokmid-cell/pleos-tutorial)와 [검증 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114)에 보관했다. 공식 신청서·개인정보 동의·서명·참가자 정보·메일 발송은 별도다. 로그인 없는 공개 다운로드는 아직 제공하지 않는다.
+
+## 새 검증본
+
+[검증 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114)는 DDS 복구, 재시작·이력·설정 유지 PASS, 심사 안내·구조도를 반영한다. 이전 후보의 태그와 14개 첨부물은 보존한다. 새 제출 manifest와 ZIP은 `dist/verified-20261114`에 생성하며 Android 소스·APK 자체는 기존 검증 버전과 같다.
 
 ## 버전 연결
 

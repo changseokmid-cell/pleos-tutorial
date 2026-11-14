@@ -1,0 +1,17 @@
+{
+  "failure": [
+    "11-14 01:41:13.220 11308 11308 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error",
+    "11-14 01:41:13.319 11319 11319 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error",
+    "11-14 01:41:13.381   214   244 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet",
+    "11-14 01:41:13.592   214   244 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet",
+    "11-14 01:41:13.810   214   244 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet",
+    "11-14 01:41:14.012   214   244 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet",
+    "11-14 01:41:14.214   214   244 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet",
+    "11-14 01:41:14.418   214   244 E sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: network eth0 is not ready yet"
+  ],
+  "address": [
+    "11-14 01:41:14.561   700   700 D RIL     : set_Ip_Addr 548 setting ip addr 10.0.2.15/24 on interface eth0",
+    "11-14 01:41:14.619   214   244 I sdv_vhal_rust: sdv_vhal_rust_ffi::rust_vehicle_hardware: ipv4 address found: 10.0.2.15, interface eth0 is running"
+  ],
+  "ready": []
+}

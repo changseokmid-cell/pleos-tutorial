@@ -1,0 +1,6 @@
+{
+  "file": "coldboot-start.txt",
+  "beforeSha256": "ecaa624d7e00bc7eef67a10d83a667431b6ba14904b2d27303247277d87f23e7",
+  "afterSha256": "ddc9c58fb5ce50ec6f128ecaeedac2ca229e12d86cb4024ea15456f9eea2dad8",
+  "changes": "Normalize line endings and strip trailing whitespace only; original emulator stdout remains in LOCALAPPDATA/PleosSyncLab/dds-coldboot-retry.txt"
+}

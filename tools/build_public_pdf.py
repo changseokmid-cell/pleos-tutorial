@@ -58,7 +58,7 @@ add('값·영역·단위·시각·출처·지원성·오류를 함께 기록합�
 add('LIVE_SDK / MOCK_EVENT / UNVERIFIED_INTENT / TEST_PCM / USER_REPORT를 구분합니다. 자동 UI의 체감 버튼도 사용자 연구 결과로 해석하지 않습니다. 에르고·음장·SPREAD를 다른 제어로 흉내 내지 않습니다.','small')
 story.append(PageBreak())
 add('검증 결과와 다음 단계','title')
-table([['시험','결과'],['빌드·기본 안전 조건','서명 release 빌드 및 lintVital 통과. 단위 시험 9개 통과.'],['실제 차량 SDK','SYNC 연동 해제와 동승석 24°C 설정 후 운전석 유지·동승석 온도 재조회 확인.'],['예외·백그라운드','빈 동승석 차단, 중복 억제, 거절·D 전환 취소, Home 뒤 90초 만료와 SDK 변화 수신 확인.'],['Gleo 수신부','앱이 열린 상태에서 action 성공·질문·실패 callback 확인. 백그라운드 ADB 모드 시작은 OS가 거부.'],['공식 음성','ko-KR TTS 완료 관측과 반복 시간 초과를 모두 보존. 실제 사람 STT와 합성 PCM 최종 인식 성공 없음.']], [105,406])
+table([['시험','결과'],['빌드·기본 안전 조건','서명 release 빌드 및 lintVital 통과. 단위 시험 9개 통과.'],['실제 차량 SDK','SYNC 연동 해제와 동승석 24°C 설정 후 운전석 유지·동승석 온도 재조회 확인.'],['재시작·이력','서명 APK에서 앱 재실행·AVD 콜드 부팅·모드 On 강제 종료 후 기본 Off, 표시 이력과 다섯 설정 유지 확인.'],['예외·백그라운드','빈 동승석 차단, 중복 억제, 거절·D 전환 취소, Home 뒤 90초 만료와 SDK 변화 수신 확인.'],['Gleo 수신부','앱이 열린 상태에서 action 성공·질문·실패 callback 확인. 백그라운드 ADB 모드 시작은 OS가 거부.'],['공식 음성','ko-KR TTS 완료 관측과 반복 시간 초과를 모두 보존. 실제 사람 STT와 합성 PCM 최종 인식 성공 없음.']], [105,406])
 add('1차: 재현 가능한 구현과 정직한 증거','sub')
 add('단일 앱 소스, 서명 APK, 실행 로그·스크린샷, 실구동 녹화, 고객 경험 영상 목록과 파일 해시를 연결합니다. APK 녹화의 UI 입력은 자동화되었으며 사용자 만족이나 학습 개선을 입증하지 않습니다.')
 add('2차: 실제 발화, 실차, 재사용 검증','sub')
@@ -67,7 +67,7 @@ add('기술 기준과 참고','sub')
 add('kr.pleosguide 1.0.0 · Pleos Connect 2.1.0 / Android 14 API 34 · Vehicle 2.3.2 · SpeechToText/TextToSpeech 3.3.1 ON_DEVICE · targetSdk 33','small')
 for title,url in [('Pleos SDK','https://document.pleos.ai/'),('그랜저 시트','https://ownersmanual.hyundai.com/full_webhelp/gn7/2027/ko_kr/safety-adj_front_seats-power_adjust.html'),('그랜저 공조','https://ownersmanual.hyundai.com/full_webhelp/gn7/2027/ko_kr/convenience-auto_climate_ctrl-ctrl_in_manual_mode.html'),('사운드','https://ownersmanual.hyundai.com/ivi/Connect-S/AVNT/KOR/Korean/009_Vehiclesettings_12.html')]:
     story.append(Paragraph(f'<link href="{url}" color="#067B75">{escape(title)}: {escape(url)}</link>',styles['small']))
-add('상세 재현 절차와 제한: docs/testing.md · 구현표: docs/implementation.md · 제출 버전 해시: submission-manifest.json','small')
+add('심사 읽기: docs/reviewer-guide.md · 코드 구조: docs/architecture.md · 재현·제한: docs/testing.md · 구현표: docs/implementation.md · 제출 버전 해시: submission-manifest.json','small')
 out=ROOT/'docs/proposal-public.pdf'
 SimpleDocTemplate(str(out),pagesize=A4,leftMargin=42,rightMargin=42,topMargin=42,bottomMargin=64,title='내 차 사용 안내 - 구현 근거와 개발 계획',author='Pleos Tutorial').build(story,onFirstPage=footer,onLaterPages=footer)
 import fitz

@@ -1,0 +1,173 @@
+[
+  {
+    "time": 1794651210.451217,
+    "kind": "PROVENANCE",
+    "input": "Automated UI taps; no actual user comfort or learning measured",
+    "vehicle": "LIVE_SDK over console-seeded emulator"
+  },
+  {
+    "time": 1794651215.4902825,
+    "kind": "CONSOLE_SEED",
+    "path": "gear",
+    "values": {
+      "gear": "Park"
+    }
+  },
+  {
+    "time": 1794651215.547696,
+    "kind": "CONSOLE_SEED",
+    "path": "seat",
+    "values": {
+      "kind": "occupied",
+      "area": "passenger",
+      "value": "true"
+    }
+  },
+  {
+    "time": 1794651215.58435,
+    "kind": "CONSOLE_SEED",
+    "path": "hvac",
+    "values": {
+      "power": "true",
+      "dual": "true",
+      "driver_temp": 21,
+      "passenger_temp": 21
+    }
+  },
+  {
+    "time": 1794651230.296081,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 켜기"
+  },
+  {
+    "time": 1794651234.115054,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794651230754,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794651230505, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794651230471, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794651230650, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794651230657, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794651230536, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=21.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794651230699, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794651230625, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794651230560, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794651230560, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794651230458, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794651230536, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=true, unit=, area=[ROW_1_LEFT], observedAt=1794651230458, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=21.0, unit=C, area=[ROW_1_LEFT], observedAt=1794651230752, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794651230505, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794651230587, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794651230472, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794651238.1897604,
+    "kind": "AUTOMATED_UI",
+    "text": "좌석별 독립 온도"
+  },
+  {
+    "time": 1794651241.4708505,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794651237220,
+      "kind": "OFFER",
+      "sourceType": "USER_REPORT",
+      "sessionId": "ab4222a2-6a88-4b48-80fb-0ec3ba5ddad5",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794651278.627439,
+    "kind": "AUTOMATED_UI",
+    "text": "네, 체험할게요"
+  },
+  {
+    "time": 1794651284.105066,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794651282429,
+      "kind": "ACTION_RESULT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": "ab4222a2-6a88-4b48-80fb-0ec3ba5ddad5",
+      "detail": "CONFIRMED:운전석 21.0도는 유지되고, 동승석은 24.0도로 독립 설정된 것을 확인했습니다."
+    }
+  },
+  {
+    "time": 1794651290.26124,
+    "kind": "AUTOMATED_UI",
+    "text": "차이를 느꼈어요"
+  },
+  {
+    "time": 1794651300.93633,
+    "kind": "PERSISTENT_UI_BEFORE",
+    "history": "체험 이력\n좌석별 독립 온도 · 체험 수락 / 차량 상태 확인 / 체감 응답 기록\n시트 스트레칭 · 체험 기록 없음\n사운드 위치·음장 · 체험 기록 없음\n직풍 피하기 · 체험 기록 없음\n한 문장으로 두 가지 요청 · 체험 기록 없음",
+    "settings": {
+      "SYNC 안내": "true",
+      "ERGO 안내": "true",
+      "SOUND 안내": "false",
+      "SPREAD 안내": "true",
+      "GLEO 안내": "true"
+    }
+  },
+  {
+    "time": 1794651305.3116636,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 끄기"
+  },
+  {
+    "time": 1794651308.0658834,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794651304639,
+      "kind": "MODE_OFF",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "subscriptions, microphone, focus and foreground service released"
+    }
+  },
+  {
+    "time": 1794651309.6960855,
+    "kind": "CONSOLE_SEED",
+    "path": "hvac",
+    "values": {
+      "passenger_temp": 23
+    }
+  },
+  {
+    "time": 1794651331.7329762,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 켜기"
+  },
+  {
+    "time": 1794651338.17019,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794651335826,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794651335716, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794651334600, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794651335637, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794651334670, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=23.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794651335656, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794651335823, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794651335575, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794651335815, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794651335815, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794651335689, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794651335824, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=21.0, unit=C, area=[ROW_1_LEFT], observedAt=1794651335661, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=true, unit=, area=[ROW_1_LEFT], observedAt=1794651335689, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794651335716, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794651335637, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794651334600, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794651341.4307103,
+    "kind": "PERSISTENT_UI_AFTER",
+    "history": "체험 이력\n좌석별 독립 온도 · 체험 수락 / 차량 상태 확인 / 체감 응답 기록\n시트 스트레칭 · 체험 기록 없음\n사운드 위치·음장 · 체험 기록 없음\n직풍 피하기 · 체험 기록 없음\n한 문장으로 두 가지 요청 · 체험 기록 없음",
+    "settings": {
+      "SYNC 안내": "true",
+      "ERGO 안내": "true",
+      "SOUND 안내": "false",
+      "SPREAD 안내": "true",
+      "GLEO 안내": "true"
+    }
+  },
+  {
+    "time": 1794651346.1846948,
+    "kind": "AUTOMATED_UI",
+    "text": "튜토리얼 끄기"
+  },
+  {
+    "time": 1794651346.1864123,
+    "kind": "PASS",
+    "checks": [
+      "signed release launch",
+      "consent UI",
+      "SDK dual off and passenger 24",
+      "driver 21 retained",
+      "mode off stops reading",
+      "restart off by default",
+      "exact displayed history persisted",
+      "all five feature preferences persisted"
+    ]
+  }
+]

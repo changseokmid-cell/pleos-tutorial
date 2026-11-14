@@ -2,6 +2,12 @@
 
 시험일: 2026-11-14 KST. AVD의 logcat 표시 날짜/시간대는 호스트와 다르므로 JSON의 Unix 밀리초 `time`을 기준으로 대조한다.
 
+## 최신 판정
+
+서명 APK에서 SYNC 21/21→21/24 재조회, Off 이후 변경 수신 중단, 앱 재실행 기본 Off, 표시 이력과 다섯 기능별 설정 유지가 통과했다. AVD 콜드 부팅 및 모드 On 강제 종료 후에도 이력·설정 일치를 확인했다. Android 소스와 APK는 변경하지 않았다.
+
+[DDS 복구 설명](dds-recovery.md), [release 실행](../evidence/release-smoke-verified/run.json), [재시작 전후 비교](../evidence/restart-persistence/run.json)를 먼저 읽는다. 과거 실패와 중간 재시도는 지우지 않고 아래에서 구별한다.
+
 ## 환경
 
 | 항목 | 값 |
@@ -14,7 +20,9 @@
 | 의존성 | Vehicle 2.3.2, SpeechToText/TextToSpeech 3.3.1 ON_DEVICE, coroutines 1.6.3 |
 | 빌드 | Gradle 8.9, AGP 8.7.3, Kotlin 1.9.25 |
 | 서비스 | CAAS 4.2.10-coral-aosp (4002010), 순정 Gleo `ai.umos.ambientai` |
-| 자원 제약 | 2 cores, 시작 명령에 -memory 2048을 지정했으나 실제 emulator 로그는 4096MB로 자동 상향. 첫 구성에서 host commit memory 부족으로 시작 실패. 음성 준비 지연/시간 초과의 전체 원인은 미확정 |
+| 초기 자원 제약 | 2 cores, 시작 명령에 -memory 2048을 지정했으나 실제 emulator 로그는 4096MB로 자동 상향. 첫 구성에서 host commit memory 부족으로 시작 실패. 음성 준비 지연/시간 초과의 전체 원인은 미확정 |
+
+복구·최종 재검사는 4 cores / 4096MB / host GPU / no-window / no-snapshot으로 실행했다. 실제 게스트 메모리는 약 4GB다.
 
 ## 실제 capability
 
@@ -32,15 +40,15 @@
 
 ## 재현 절차
 
-1. 공식 Pleos AVD를 부팅하고 Virtual Console 브리지가 준비될 때까지 기다린다. ADB serial은 이 환경에서 `emulator-5572`다. 다른 serial이면 시험 스크립트의 값을 바꾼다.
+1. 공식 Pleos AVD를 콜드 부팅한다. Android boot_completed=1 이후에도 차량 DDS 주소와 브리지 준비를 별도로 확인한다. ADB serial은 이 환경에서 `emulator-5572`다. 다른 serial이면 시험 스크립트의 값을 바꾼다.
 2. `adb -s emulator-5572 forward tcp:18088 tcp:8088`로 콘솔을 연결한다. `python tools/hold_console.py`가 실제 콘솔의 `/browser/session` heartbeat를 유지한다. `/vehicle/catalog`가 준비되지 않았거나 503/emulator_inactive면 차량 명령을 진행하지 않는다. `.local/stop-console` 파일로 heartbeat를 종료할 수 있다.
-3. 콘솔에서 Park, 동승석 occupied=true, 공조 power=true, dual=true, 운전석/동승석 목표온도 21°C로 설정한다. 이는 시험 상황 생성이며 실차 센서 입력이 아니다.
+3. `python tools/wait_vehicle_ready.py --out evidence/my-dds-check`로 eth0 주소·활성 세션·브리지·공조 송수신을 세 번 연속 확인한 뒤, 콘솔에서 Park, 동승석 occupied=true, 공조 power=true, dual=true, 운전석/동승석 목표온도 21°C로 설정한다. 이는 시험 상황 생성이며 실차 센서 입력이 아니다.
 4. release APK를 새로 설치한다. 이 프로젝트의 debug 설치본과 서명이 다르면 `kr.pleosguide`만 삭제한 뒤 설치한다. 앱 데이터 삭제로 이력도 지워지므로 필요한 로그를 먼저 보존한다. 이전 기준 앱 `kr.syncguide`는 삭제하지 않는다.
 5. 앱을 열어 튜토리얼 켜기 → 좌석별 독립 온도 → 제안 확인 → 네, 체험할게요를 선택한다. 기대 결과는 운전석 21°C 유지, 동승석 24°C, SYNC 꺼짐이다.
 6. `PleosGuide` logcat에서 `COMMAND_REQUESTED`/명령 관련 기록과 최종 `ACTION_RESULT:CONFIRMED`를 확인한다. ACK만 확인하고 통과로 판정하지 않는다.
 7. 체감 버튼은 시험 입력임을 기록한다. Off → 앱 강제 종료 → 다시 열기에서 모드는 Off이고 학습 이력만 유지되는지 확인한다.
 
-`tools/release_smoke.py`는 위 UI 절차를 자동 탭하고 녹화한다. 시험은 마이크·알림 권한을 ADB로 미리 부여하므로 권한 대화상자 사용자 선택 흐름의 검증을 포함하지 않는다. `tools/emulator_test.py`와 `tools/exception_trial.py`는 debug 전용 TestReceiver 및 ADB action을 사용한다. TestReceiver와 TEST_PCM 파일은 release에 포함하지 않는다.
+`tools/release_smoke.py`는 위 UI 절차를 자동 탭하고 녹화한다. `PLEOS_TRIAL`을 새 이름으로 지정해 기존 증거를 보존한다. `tools/restart_persistence.py`는 같은 설치본을 콜드 부팅한 뒤 기본 Off·이력·설정을 비교한다. 이번 런처 포커스 재시도는 `tools/resume_restart_check.py`와 run.json에 남겼다. 시험은 마이크·알림 권한을 ADB로 미리 부여하므로 권한 대화상자 사용자 선택 흐름의 검증을 포함하지 않는다. `tools/emulator_test.py`와 `tools/exception_trial.py`는 debug 전용 TestReceiver 및 ADB action을 사용한다. TestReceiver와 TEST_PCM 파일은 release에 포함하지 않는다.
 
 ## 결과와 증거
 
@@ -56,11 +64,13 @@
 | 공식 음성 | Locale.KOREAN의 ko- 오류 수정 후 Locale.KOREA/ko-KR TTS_DONE 관측. 반복 timeout도 관측 | `evidence/exception-trial/all-debug-history.jsonl` |
 | 마이크 / TEST_PCM | 실제 사람 최종 인식 없음. 합성 PCM 별도 경로도 timeout; 제어로 전달 안 함 | `evidence/speech-trial/evidence.jsonl` |
 | 기준 SYNC 앱 재현 | 이번 환경에서는 상태 읽기 후 초기화 ANR로 전체 절차 실패 | `evidence/baseline-reproduction/`; 과거 성공과 구분 |
-| signed release 새 설치 | 21/21→21/24 실제 제어·재조회와 Off까지 부분 통과. 재시작 UI 검사는 중단, 이후 에뮬레이터 DDS 복구 실패로 전체 PASS 아님 | `evidence/release-smoke-first/run.json`, 스크린샷, `demos/Release_Emulator.mp4` |
+| 최초 signed release 새 설치 | 21/21→21/24 실제 제어·재조회와 Off까지 부분 통과. 재시작 UI 검사는 중단, 이후 에뮬레이터 DDS 복구 실패로 전체 PASS 아님 | `evidence/release-smoke-first/run.json`, 스크린샷, `demos/Release_Emulator.mp4` |
 
-첫 release 녹화는 102.508초이며 새 설치 실행부터 실제 SDK 제어 결과와 Off 화면까지 포함한다. 재시작·이력 유지의 release 최종 검증은 완료하지 못했다. 코드에는 모드 기본 Off와 로컬 이력 보존이 구현되어 있지만 이를 실행 통과로 올리지 않는다. 첫 시험의 logcat 최종 인덱스 슬라이스는 버퍼 순환으로 비었으며, run.json에 즉시 보존한 관측 이벤트와 스크린샷을 사용한다. 재현 도구는 스트리밍 로그와 시각 기준 필터로 수정했다.
+최종 서명 release 검사는 `evidence/release-smoke-verified`에 PASS와 SDK 로그·화면·녹화를 보존했다. Off 후 콘솔 온도를 바꿔 새 SNAPSHOT이 없는지 확인하고, 강제 종료 전후의 전체 표시 이력과 다섯 체크박스 값을 비교했다. SOUND 안내를 false로 두어 기본값과 구별했다.
 
-복구 시험에서는 기본 GPU와 software GPU cold boot를 각각 확인했으나 DDS participant/node 생성 실패와 console 503/emulator_inactive가 지속됐다. `evidence/release-smoke/console-recovery.json`과 `dds-recovery-failure.txt`에 실패를 보존했다. SELinux는 Enforcing으로 유지했고 앱에 추가 차량/오디오 특권을 부여하지 않았다. 공식 [설치 안내](https://document.pleos.ai/docs/connect/guide/getting-started/application-development/setup-connect-sdk-emulator)는 RAM 4GB를, [환경 설정](https://document.pleos.ai/docs/connect/guide/getting-started/application-development/configure-pleos-connect-emulator)은 cold boot와 GPU 조건을 안내한다. 이번 오류의 단일 원인을 확정하지 않았다.
+`evidence/restart-persistence`는 데이터 삭제 없이 AVD 콜드 부팅과 모드 On 강제 종료를 검사했다. 콜드 부팅 뒤 모드 Off, 다시 켠 뒤 이력·다섯 설정의 동일성을 확인했다. 직접 component 실행/런처 포커스 때문에 중단된 자동 탭과 수정 후 통과를 같은 run.json에 구별했다. 내부 SharedPreferences의 모든 timestamp 바이트를 추출한 시험은 아니며 화면에서 제공하는 기록을 정확히 비교했다.
+
+첫 102.508초 부분 시험은 `evidence/release-smoke-first`, 과거 DDS 실패는 `evidence/release-smoke`, 종료 후 잠금 때문에 시작하지 못한 시험은 `evidence/restart-launch-lock`에 남아 있다. DDS 복구 직후 중간 시험은 `evidence/release-smoke-dds-first`에 보존했다. 최종 판정은 verified 폴더를 따른다. [DDS 복구 문서](dds-recovery.md)는 고정 IPv4의 준비 지연, 연속 준비 확인, 오래된 잠금의 비파괴 보관, 런처 포커스 대응을 설명한다. SELinux는 Enforcing이며 앱에 추가 특권을 부여하지 않았다.
 
 콘솔의 차량 초기 상태 변경은 `CONSOLE_SEED`/`MANUAL_CONSOLE_SEED`, 실제 SDK 재조회는 `LIVE_SDK`, debug 입력은 `MOCK_EVENT`, action 주입은 `UNVERIFIED_INTENT`, PCM은 `TEST_PCM`이다. release UI의 앱 내부 `USER_REPORT` 기록도 `run.json`의 `AUTOMATED_UI`와 함께 해석해야 한다. `GUIDANCE` 등 앱 안내 이벤트에 쓰인 LIVE_SDK 표기만으로 물리 실행을 입증할 수 없다. `COMMAND_*`, 결과 재조회, `ACTION_RESULT`를 함께 확인한다.
 

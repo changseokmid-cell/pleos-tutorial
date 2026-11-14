@@ -1,6 +1,6 @@
 # APK
 
-검증 묶음 ZIP의 `apk/PleosTutorial-1.0.0.apk`가 서명한 제출 후보 APK다. [GitHub Release에서 다운로드](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-candidate-20261114/PleosTutorial-1.0.0.apk). 비공개 저장소 접근 권한이 필요하다. 소스 ZIP과 Git 일반 이력에는 대형 APK를 포함하지 않는다.
+검증 묶음 ZIP의 `apk/PleosTutorial-1.0.0.apk`가 서명한 제출 후보 APK다. [GitHub Release에서 다운로드](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/PleosTutorial-1.0.0.apk). 비공개 저장소 접근 권한이 필요하다. 소스 ZIP과 Git 일반 이력에는 대형 APK를 포함하지 않는다.
 
 앱 ID `kr.pleosguide`, versionName 1.0.0, versionCode 1. 제출 앱 소스 기준 commit은 `4fe8a913b52770218757791bf1749c2fb8b35ef9`다. 해시와 최종 제출 commit은 묶음의 `submission-manifest.json`을 확인한다.
 

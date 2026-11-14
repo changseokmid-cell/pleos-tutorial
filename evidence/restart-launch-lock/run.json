@@ -1,0 +1,15 @@
+[
+  {
+    "time": 1794649812.0848417,
+    "kind": "PROVENANCE",
+    "input": "Automated UI; exact displayed history and all five preferences compared",
+    "apkUnchanged": true,
+    "dataCleared": false
+  },
+  {
+    "time": 1794649817.3260021,
+    "kind": "COLD_BOOT_STARTED",
+    "pid": 40864,
+    "flags": "no-snapshot; memory4096; cores4; gpu host; no-window"
+  }
+]

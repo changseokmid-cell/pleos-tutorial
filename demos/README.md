@@ -14,7 +14,9 @@
 
 ## 실제 앱 녹화
 
-[Release_Emulator.mp4](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-candidate-20261114/Release_Emulator.mp4)는 검증 묶음 ZIP에 포함하는 102.508초의 실제 에뮬레이터 화면 녹화다. Android screenrecord는 오디오를 녹음하지 않는다. UI 수락과 체감 버튼은 자동화 입력이며 실제 사람 음성·만족·학습을 입증하지 않는다. 새 설치, P 상태, SYNC 실제 제어와 Off까지 확인했다. 재시작 검사는 중단되어 전체 통과가 아니다. [부분 성공·중단 기록](../evidence/release-smoke-first/run.json) 및 [재현 문서](../docs/testing.md)와 함께 확인한다.
+[Release_Emulator.mp4](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4)는 최종 서명 APK의 실제 화면 녹화(126.812초)다. UI 수락·체감 응답은 자동화 입력이며 녹음된 음성은 없다. SDK 21/21→21/24 제어, Off, 재실행·이력 확인을 [실행 기록](../evidence/release-smoke-verified/run.json)과 함께 본다. 전체 AVD 콜드 부팅 및 On 강제 종료 검사는 [별도 로그·화면](../evidence/restart-persistence/run.json)에 있다.
+
+이전 102.508초 부분 녹화는 첫 후보 Release에 그대로 보존했다. 그때의 미완료와 새 검증본의 PASS를 혼동하지 않는다.
 
 ## 제작과 구현 경계
 
