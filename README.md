@@ -1,5 +1,9 @@
 # 내 차 사용 안내
 
+비공개 GitHub 보관본입니다. [고정 제출 후보 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-candidate-20261114)에서 [제출 ZIP](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-candidate-20261114/PleosTutorial-submission-35c4f74a2c5a.zip), [서명 APK](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-candidate-20261114/PleosTutorial-1.0.0.apk), [공개 소개 PDF](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-candidate-20261114/proposal-public.pdf), [실구동 녹화](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-candidate-20261114/Release_Emulator.mp4)를 받을 수 있습니다. 저장소 접근 권한이 있는 GitHub 로그인이 필요합니다.
+
+고정 후보 commit은 `35c4f74a2c5a0cbcfe8755c226d2f7b371ef4706`입니다. 이후 기본 브랜치의 변경은 보관 위치·검증 기록을 연결하는 문서 변경입니다. [업로드·해시 검증 기록](docs/github-storage.json)
+
 Pleos Connect 차량에서 몰랐던 기능을 필요한 순간에 체험하며 익히는 Android 앱입니다. 사용자가 튜토리얼 모드를 켜고 명시적으로 요청하면 차량 상태와 연결해 안내합니다. 패키지 `kr.pleosguide`, 버전 `1.0.0`.
 
 현재 제출 후보에는 SYNC, 에르고 스트레칭, 사운드 위치·음장, SPREAD, Gleo 복합 요청 학습을 하나의 세션·음성·차량 입력·이력으로 통합했습니다. 상세 체험과 공조 명령은 P 및 차량 UX 허용 상태에서 제공합니다. 주행 중 선제 안내는 후속 검증 대상입니다.
@@ -50,4 +54,4 @@ adb -s emulator-5572 shell am start --user current -n kr.pleosguide/.MainActivit
 
 `evidence/`는 실제 차량 SDK 값, 콘솔로 만든 차량 상황, ADB/자동 UI 입력을 구별합니다. 고객 경험 영화는 제품 의도를 설명하며 APK 녹화와 별도입니다. 미확인 기능의 자동 실행을 구현 완료로 취급하지 않습니다.
 
-소스는 이 디렉터리의 독립 Git 저장소입니다. 기존 연구·영상·이전 SYNC 앱은 별도 보존합니다. 공개 원격 URL은 아직 지정되지 않았습니다. 로컬 제출 ZIP에 APK와 실구동 녹화를 포함하며, GitHub 배포 시 대형 파일은 Release 첨부파일로 연결합니다.
+소스는 이 디렉터리의 독립 Git 저장소입니다. 기존 연구·영상·이전 SYNC 앱은 별도 보존합니다. 사용자 요청으로 `changseokmid-cell/pleos-tutorial` 비공개 저장소와 Release에 보관했습니다. 승인 SYNC와 후속 네 편의 검토본도 상태를 구분해 Release에 첨부했습니다. 공식 접수나 로그인 없는 공개 배포를 완료한 것은 아닙니다.

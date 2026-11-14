@@ -26,8 +26,8 @@ Pleos Connect 2.1.0 / API34 / 2560×1440. HVAC READ_WRITE, 동승석 15~30°C/0.
 
 Git 단계: `bda0675` 격리 저장소/계약 → `b2991b5` 통합 모듈 → `4fe8a913b52770218757791bf1749c2fb8b35ef9` IO·locale 수정과 HVAC 검증. 현재 APK의 Android 소스 기준은 마지막 hash다. 후속 문서·증거 commit과 ZIP은 `dist/submission-manifest.json`에서 연결한다. 패키징 시 Android diff가 비어 있는지 대조한다.
 
-[영상 목록](demos/README.md)은 승인 SYNC와 후속 네 편의 최신 확인 검토본을 구분한다. 작업창의 제작 완료를 사용자 최종 승인으로 간주하지 않는다. GitHub URL·공식 참가자 정보는 미지정이며 이메일은 발송하지 않는다.
+[영상 목록](demos/README.md)은 승인 SYNC와 후속 네 편의 최신 확인 검토본을 구분한다. 작업창의 제작 완료를 사용자 최종 승인으로 간주하지 않는다. 사용자 요청으로 [비공개 GitHub](https://github.com/changseokmid-cell/pleos-tutorial)에 연결했고 후보 태그/Release에 소스·APK·문서·영상 14개 첨부파일을 보관했다. 후보 commit은 `35c4f74a2c5a0cbcfe8755c226d2f7b371ef4706`, 검증 기록은 [github-storage.json](docs/github-storage.json)이다. 공식 참가자 정보는 미지정이며 이메일은 발송하지 않았다.
 
 ## 남은 외부 검증과 2차 계획
 
-실제 사람 STT와 순정 Gleo 음성 시험은 사용자가 2026-11-14에 나중으로 남기도록 결정했다. 정상 자원 조건의 음성 반복·focus 충돌, 2시간 주행 후 자동 제안, 실차 사양별 지원과 사용자 학습·재사용 검증도 남는다. GitHub 대상·영상 최종 선택·참가자 정보와 동의는 사용자 확정이 필요하다. 로컬 준비를 공식 접수 완료로 표시하지 않는다.
+실제 사람 STT와 순정 Gleo 음성 시험은 사용자가 2026-11-14에 나중으로 남기도록 결정했다. 정상 자원 조건의 음성 반복·focus 충돌, 2시간 주행 후 자동 제안, 실차 사양별 지원과 사용자 학습·재사용 검증도 남는다. 영상 최종 선택·참가자 정보와 동의·접수용 공개 전환은 별도다. 비공개 보관을 공식 접수 완료로 표시하지 않는다.
