@@ -1,0 +1,98 @@
+{
+  "verifiedAt": "2026-11-14T16:01:54.381764+00:00",
+  "repository": "changseokmid-cell/pleos-tutorial",
+  "visibility": "private",
+  "releaseTag": "contest-five-feature-videos-20261115",
+  "sourceCommit": "5ad7c3066d433eabfa531d40da1487caa5e6c962",
+  "releaseUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261115",
+  "draft": false,
+  "prerelease": true,
+  "displayOrder": [
+    "SYNC",
+    "SPREAD",
+    "SOUND",
+    "ERGO",
+    "GLEO"
+  ],
+  "verification": {
+    "uploadedAssets": 7,
+    "allServerSizesAndSha256Match": true,
+    "redownloadedAndHashChecked": [
+      "01_SYNC_17e9fe22.mp4"
+    ],
+    "remoteReadmeMatchesLocalNormalizedLineEndings": true,
+    "releaseVideoUrlsMatchReadme": 5,
+    "tagCommitMatches": true,
+    "syncPlaybackRecord": "sync-playback-20261115.json",
+    "otherFourVideoHashesUnchanged": true,
+    "androidAndApkChanged": false,
+    "actualVoiceTestPerformed": false,
+    "playbackLimitation": "Current Edge played both source and compatible version to completion. The reported picture-missing symptom was not reproduced in this environment."
+  },
+  "assets": [
+    {
+      "name": "01_SYNC_17e9fe22.mp4",
+      "id": 747982271,
+      "bytes": 16482191,
+      "sha256": "17e9fe22c7b2435eb742ec657ca14163e0e3daba39af1e9be8978b8417ff1bbc",
+      "serverDigest": "sha256:17e9fe22c7b2435eb742ec657ca14163e0e3daba39af1e9be8978b8417ff1bbc",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/01_SYNC_17e9fe22.mp4",
+      "serverHashMatches": true,
+      "downloadHashMatches": true
+    },
+    {
+      "name": "02_SPREAD_abd18197.mp4",
+      "id": 747982272,
+      "bytes": 29097571,
+      "sha256": "abd18197f77286f2f930d1e9d809a5c229bc4094a78a54ce3aec0feb161f2f78",
+      "serverDigest": "sha256:abd18197f77286f2f930d1e9d809a5c229bc4094a78a54ce3aec0feb161f2f78",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/02_SPREAD_abd18197.mp4",
+      "serverHashMatches": true
+    },
+    {
+      "name": "03_SOUND_9fc8ab12.mp4",
+      "id": 747982293,
+      "bytes": 51185883,
+      "sha256": "9fc8ab123c18d4afa4f493c6935dd1fd0fb034b5efa989b11f025d499630ca23",
+      "serverDigest": "sha256:9fc8ab123c18d4afa4f493c6935dd1fd0fb034b5efa989b11f025d499630ca23",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/03_SOUND_9fc8ab12.mp4",
+      "serverHashMatches": true
+    },
+    {
+      "name": "04_ERGO_c248edc4.mp4",
+      "id": 747982269,
+      "bytes": 51908991,
+      "sha256": "c248edc464d7949ed8f9368a0eefeb8030f4cc787a4d3a14fc94d3806ce911b6",
+      "serverDigest": "sha256:c248edc464d7949ed8f9368a0eefeb8030f4cc787a4d3a14fc94d3806ce911b6",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/04_ERGO_c248edc4.mp4",
+      "serverHashMatches": true
+    },
+    {
+      "name": "05_GLEO_9aca15d5.mp4",
+      "id": 747982291,
+      "bytes": 32864527,
+      "sha256": "9aca15d5b9165e3cfdd934b534b6725cdc67f714ee08008388f639e27d82743e",
+      "serverDigest": "sha256:9aca15d5b9165e3cfdd934b534b6725cdc67f714ee08008388f639e27d82743e",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/05_GLEO_9aca15d5.mp4",
+      "serverHashMatches": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "id": 747982532,
+      "bytes": 530,
+      "sha256": "b103161e82b5bfac30deea68a209e6c95cd8eb08f3b92d91955da5e720d90a30",
+      "serverDigest": "sha256:b103161e82b5bfac30deea68a209e6c95cd8eb08f3b92d91955da5e720d90a30",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/SHA256SUMS.txt",
+      "serverHashMatches": true
+    },
+    {
+      "name": "media-manifest.json",
+      "id": 747982489,
+      "bytes": 11610,
+      "sha256": "1107639e5b8beaf037b99cef715d2a5a4b89ef6df2dd29468bc48109d957b347",
+      "serverDigest": "sha256:1107639e5b8beaf037b99cef715d2a5a4b89ef6df2dd29468bc48109d957b347",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/media-manifest.json",
+      "serverHashMatches": true
+    }
+  ]
+}

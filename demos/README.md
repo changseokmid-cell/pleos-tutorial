@@ -100,7 +100,7 @@ ADB action 수신과 callback 전송을 시험했습니다. 실제 Gleo 수신·
 
 코드 링크는 실제 APK Android 소스 commit `4fe8a913b52770218757791bf1749c2fb8b35ef9`를 가리킵니다. 썸네일은 선택한 MP4에서 직접 추출한 장면이며 새로운 합성 이미지가 아닙니다. 파일별 원본 경로·SHA-256·길이·썸네일 시각은 [media-manifest.json](media-manifest.json)에 기록했습니다.
 
-2026-11-15 영상 묶음은 SYNC 호환본과 새 시청 순서를 반영합니다. 이전 업로드 검증은 [2026-11-14 기록](github-video-storage.json)에 보존하며, 이번 재생 확인은 [SYNC 대조 기록](sync-playback-20261115.json)을 따릅니다.
+2026-11-15 영상 묶음은 SYNC 호환본과 새 시청 순서를 반영합니다. 영상 5개·명세·체크섬의 서버 크기와 SHA-256이 모두 일치하고, SYNC 재다운로드 대조도 통과했습니다. [이번 업로드 검증](github-video-storage-20261115.json)과 [SYNC 재생 대조 기록](sync-playback-20261115.json)을 따릅니다. 이전 업로드 검증은 [2026-11-14 기록](github-video-storage.json)에 보존합니다.
 
 | 영상 | 현재 선택본 | 길이 | MP4 SHA-256 앞 12자리 |
 |---|---|---|---|

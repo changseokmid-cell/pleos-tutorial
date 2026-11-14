@@ -62,3 +62,5 @@ README와 [기능별 상세 안내](demos/README.md), [심사 안내](docs/revie
 ## SYNC 재생 호환본과 영상 순서 변경
 
 2026-11-15 사용자 요청에 따라 README·기능별 상세 안내·심사 안내의 시청 순서를 SYNC → SPREAD → 사운드 위치 → 에르고 시트 → Gleo 복합 요청으로 맞췄다. 원본 SYNC의 High 4:4:4 Predictive 프로파일을 확인하고 H.264 High / yuv420p / faststart 호환본을 별도로 만들었다. 전체 1,150프레임과 길이가 같고 AAC 음성 패킷 해시가 일치한다. 현재 Edge에서는 원본과 호환본 모두 전체 재생에 성공해 사용자 환경의 화면 미표시 증상을 직접 재현한 것으로 기록하지 않는다. 원본·과거 Release는 보존하며 새 영상 태그는 `contest-five-feature-videos-20261115`이다. [재생 확인 기록](demos/sync-playback-20261115.json)과 현재 영상 명세를 따른다. 나머지 네 영상과 Android 소스·APK는 변경하지 않았다.
+
+영상 안내 commit `5ad7c30`과 새 태그의 Release를 GitHub에 반영했다. 첨부파일 7개의 서버 크기·SHA-256과 SYNC 재다운로드 해시가 모두 일치하며, 원격 README의 다섯 영상 링크와 태그 commit을 대조했다. [업로드 검증 기록](demos/github-video-storage-20261115.json)을 따른다.
