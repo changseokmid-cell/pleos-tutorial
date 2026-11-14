@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "cataloguedAt": "2026-11-14T11:58:45.400360+00:00",
   "items": [
     {
       "feature": "SYNC",
       "kind": "customer_experience_concept",
-      "workspaceSource": "outputs/20261113-sync-verbatim/SYNC_ChatLog.mp4",
+      "workspaceSource": "outputs/20261115-sync-browser-compatible/SYNC_ChatLog_Web.mp4",
       "approvalStatus": "user_approved_2026-11-13",
       "productionRecord": "docs/production/SYNC_확정본과_후속영상_제작법.md",
-      "bytes": 144905097,
-      "sha256": "339b0091c892d2ee413b408a1ba2657da476f1a05eab1dfb861d6de6f2fe7991",
+      "bytes": 16482191,
+      "sha256": "17e9fe22c7b2435eb742ec657ca14163e0e3daba39af1e9be8978b8417ff1bbc",
       "durationSeconds": 47.936,
       "width": 1920,
       "height": 1080,
@@ -18,60 +18,87 @@
       "redistributionReview": "Production sources include manufacturer imagery and generated media; public release rights not independently audited here.",
       "hasAudio": true,
       "readmeSelection": "User requested current latest five videos for the judge guide; no claim of separate creative final approval.",
-      "releaseAssetName": "01_SYNC_339b0091.mp4",
-      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/01_SYNC_339b0091.mp4",
+      "releaseAssetName": "01_SYNC_17e9fe22.mp4",
+      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/01_SYNC_17e9fe22.mp4",
       "thumbnail": {
-        "path": "demos/thumbnails/sync-339b0091.jpg",
+        "path": "demos/thumbnails/sync-web-17e9fe22.jpg",
         "timeSeconds": 36.5,
-        "sha256": "923298af2cfd50069ad1124287569357190ac111974b6110eb6507c812828558",
+        "sha256": "39e3f03d8f61c188776648529340a8e61b91e0f6513947db3fc0c4dd39e58a79",
         "width": 960,
         "height": 540,
         "method": "FFmpeg frame extraction; no generated artwork or added overlay"
       },
-      "reviewerTitle": "운전자는 더운데, 동승자는 춥다면?",
+      "reviewerTitle": "좌석마다 온도를 다르게 맞출 수 있다는 걸 모릅니다.",
       "relatedCode": {
         "path": "android/app/src/main/java/kr/pleosguide/VehicleContextRepository.kt",
         "line": 147,
         "symbol": "independentTemperature",
         "commit": "4fe8a913b52770218757791bf1749c2fb8b35ef9",
         "url": "https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/VehicleContextRepository.kt#L147"
-      }
+      },
+      "originalSource": {
+        "workspaceSource": "outputs/20261113-sync-verbatim/SYNC_ChatLog.mp4",
+        "bytes": 144905097,
+        "sha256": "339b0091c892d2ee413b408a1ba2657da476f1a05eab1dfb861d6de6f2fe7991",
+        "durationSeconds": 47.936,
+        "releaseAssetName": "01_SYNC_339b0091.mp4",
+        "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/01_SYNC_339b0091.mp4",
+        "thumbnail": {
+          "path": "demos/thumbnails/sync-339b0091.jpg",
+          "timeSeconds": 36.5,
+          "sha256": "923298af2cfd50069ad1124287569357190ac111974b6110eb6507c812828558",
+          "width": 960,
+          "height": 540,
+          "method": "FFmpeg frame extraction; no generated artwork or added overlay"
+        }
+      },
+      "revision": "browser-compatible-20261115",
+      "browserEncoding": {
+        "codec": "h264",
+        "profile": "High",
+        "level": "4.0",
+        "pixelFormat": "yuv420p",
+        "faststart": true,
+        "audio": "original AAC packets copied unchanged"
+      },
+      "playbackVerification": "demos/sync-playback-20261115.json",
+      "displayOrder": 1
     },
     {
-      "feature": "ERGO",
+      "feature": "SPREAD",
       "kind": "customer_experience_concept",
-      "workspaceSource": "outputs/20261114-ergo-film/full-rebuild-20261114/revision-3/final.mp4",
+      "workspaceSource": "outputs/20261114-spread-film/sync-verified-20261114/final.mp4",
       "approvalStatus": "review_copy_user_approval_unconfirmed",
-      "productionRecord": "outputs/20261114-ergo-film/full-rebuild-20261114/revision-3/DELIVERY.json",
-      "bytes": 51908991,
-      "sha256": "c248edc464d7949ed8f9368a0eefeb8030f4cc787a4d3a14fc94d3806ce911b6",
-      "durationSeconds": 121.258,
+      "productionRecord": "outputs/20261114-spread-film/sync-verified-20261114/검수결과.md",
+      "bytes": 29097571,
+      "sha256": "abd18197f77286f2f930d1e9d809a5c229bc4094a78a54ce3aec0feb161f2f78",
+      "durationSeconds": 61.269,
       "width": 1920,
       "height": 1080,
       "publicUrl": null,
       "apkExecutionEvidence": false,
       "redistributionReview": "Production sources include manufacturer imagery and generated media; public release rights not independently audited here.",
-      "revision": "revision-3",
       "hasAudio": true,
       "readmeSelection": "User requested current latest five videos for the judge guide; no claim of separate creative final approval.",
-      "releaseAssetName": "02_ERGO_c248edc4.mp4",
-      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/02_ERGO_c248edc4.mp4",
+      "releaseAssetName": "02_SPREAD_abd18197.mp4",
+      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/02_SPREAD_abd18197.mp4",
       "thumbnail": {
-        "path": "demos/thumbnails/ergo-c248edc4.jpg",
-        "timeSeconds": 39.5,
-        "sha256": "8ef43929f663d71d58c2f83e3046c3f17fcc2debf5de0b554521c1a87df1ad36",
+        "path": "demos/thumbnails/spread-abd18197.jpg",
+        "timeSeconds": 36.5,
+        "sha256": "5ba9e1bfc1981cf3e60c54e4573f5ce0e59060553d34f6746ba66e25b87b02e4",
         "width": 960,
         "height": 540,
         "method": "FFmpeg frame extraction; no generated artwork or added overlay"
       },
-      "reviewerTitle": "오래 앉아 뻐근할 때, 몰랐던 시트 버튼을 발견합니다.",
+      "reviewerTitle": "시원함을 유지하면서 몸에 직접 닿는 바람을 피할 수 있다는 걸 모릅니다.",
       "relatedCode": {
         "path": "android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt",
-        "line": 151,
-        "symbol": "Feature.ERGO",
+        "line": 153,
+        "symbol": "Feature.SPREAD",
         "commit": "4fe8a913b52770218757791bf1749c2fb8b35ef9",
-        "url": "https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L151"
-      }
+        "url": "https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L153"
+      },
+      "displayOrder": 2
     },
     {
       "feature": "SOUND",
@@ -91,7 +118,7 @@
       "hasAudio": true,
       "readmeSelection": "User requested current latest five videos for the judge guide; no claim of separate creative final approval.",
       "releaseAssetName": "03_SOUND_9fc8ab12.mp4",
-      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/03_SOUND_9fc8ab12.mp4",
+      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/03_SOUND_9fc8ab12.mp4",
       "thumbnail": {
         "path": "demos/thumbnails/sound-9fc8ab12.jpg",
         "timeSeconds": 40.0,
@@ -100,49 +127,52 @@
         "height": 540,
         "method": "FFmpeg frame extraction; no generated artwork or added overlay"
       },
-      "reviewerTitle": "뒷자리에서는 음악이 너무 크게 들린다면?",
+      "reviewerTitle": "음량뿐 아니라 소리의 중심도 바꿀 수 있다는 걸 모릅니다.",
       "relatedCode": {
         "path": "android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt",
         "line": 152,
         "symbol": "Feature.SOUND",
         "commit": "4fe8a913b52770218757791bf1749c2fb8b35ef9",
         "url": "https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L152"
-      }
+      },
+      "displayOrder": 3
     },
     {
-      "feature": "SPREAD",
+      "feature": "ERGO",
       "kind": "customer_experience_concept",
-      "workspaceSource": "outputs/20261114-spread-film/sync-verified-20261114/final.mp4",
+      "workspaceSource": "outputs/20261114-ergo-film/full-rebuild-20261114/revision-3/final.mp4",
       "approvalStatus": "review_copy_user_approval_unconfirmed",
-      "productionRecord": "outputs/20261114-spread-film/sync-verified-20261114/검수결과.md",
-      "bytes": 29097571,
-      "sha256": "abd18197f77286f2f930d1e9d809a5c229bc4094a78a54ce3aec0feb161f2f78",
-      "durationSeconds": 61.269,
+      "productionRecord": "outputs/20261114-ergo-film/full-rebuild-20261114/revision-3/DELIVERY.json",
+      "bytes": 51908991,
+      "sha256": "c248edc464d7949ed8f9368a0eefeb8030f4cc787a4d3a14fc94d3806ce911b6",
+      "durationSeconds": 121.258,
       "width": 1920,
       "height": 1080,
       "publicUrl": null,
       "apkExecutionEvidence": false,
       "redistributionReview": "Production sources include manufacturer imagery and generated media; public release rights not independently audited here.",
+      "revision": "revision-3",
       "hasAudio": true,
       "readmeSelection": "User requested current latest five videos for the judge guide; no claim of separate creative final approval.",
-      "releaseAssetName": "04_SPREAD_abd18197.mp4",
-      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/04_SPREAD_abd18197.mp4",
+      "releaseAssetName": "04_ERGO_c248edc4.mp4",
+      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/04_ERGO_c248edc4.mp4",
       "thumbnail": {
-        "path": "demos/thumbnails/spread-abd18197.jpg",
-        "timeSeconds": 36.5,
-        "sha256": "5ba9e1bfc1981cf3e60c54e4573f5ce0e59060553d34f6746ba66e25b87b02e4",
+        "path": "demos/thumbnails/ergo-c248edc4.jpg",
+        "timeSeconds": 39.5,
+        "sha256": "8ef43929f663d71d58c2f83e3046c3f17fcc2debf5de0b554521c1a87df1ad36",
         "width": 960,
         "height": 540,
         "method": "FFmpeg frame extraction; no generated artwork or added overlay"
       },
-      "reviewerTitle": "시원한 온도는 좋은데, 얼굴에 바람이 직접 닿는다면?",
+      "reviewerTitle": "시트에 스트레칭 기능이 있다는 걸 모릅니다.",
       "relatedCode": {
         "path": "android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt",
-        "line": 153,
-        "symbol": "Feature.SPREAD",
+        "line": 151,
+        "symbol": "Feature.ERGO",
         "commit": "4fe8a913b52770218757791bf1749c2fb8b35ef9",
-        "url": "https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L153"
-      }
+        "url": "https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L151"
+      },
+      "displayOrder": 4
     },
     {
       "feature": "GLEO",
@@ -161,7 +191,7 @@
       "hasAudio": true,
       "readmeSelection": "User requested current latest five videos for the judge guide; no claim of separate creative final approval.",
       "releaseAssetName": "05_GLEO_9aca15d5.mp4",
-      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/05_GLEO_9aca15d5.mp4",
+      "downloadUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/05_GLEO_9aca15d5.mp4",
       "thumbnail": {
         "path": "demos/thumbnails/gleo-9aca15d5.jpg",
         "timeSeconds": 51.0,
@@ -170,17 +200,18 @@
         "height": 540,
         "method": "FFmpeg frame extraction; no generated artwork or added overlay"
       },
-      "reviewerTitle": "에어컨과 라디오를 각각 조작하고 있었다면?",
+      "reviewerTitle": "여러 기능을 한 문장으로 부탁할 수 있다는 걸 모릅니다.",
       "relatedCode": {
         "path": "android/app/src/main/java/kr/pleosguide/GleoReceiver.kt",
         "line": 10,
         "symbol": "onReceive",
         "commit": "4fe8a913b52770218757791bf1749c2fb8b35ef9",
         "url": "https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/GleoReceiver.kt#L10"
-      }
+      },
+      "displayOrder": 5
     }
   ],
-  "releaseTag": "contest-five-feature-videos-20261114",
+  "releaseTag": "contest-five-feature-videos-20261115",
   "visibility": "private",
-  "selectionReason": "Current latest five source videos requested by user for judge-facing README."
+  "selectionReason": "User requested SYNC playback compatibility and viewing order SYNC, SPREAD, SOUND, ERGO, GLEO on 2026-11-15."
 }

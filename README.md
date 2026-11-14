@@ -60,7 +60,7 @@
 <h3>01. 좌석마다 온도를 다르게 맞출 수 있다는 걸 모릅니다.</h3>
 <p><em>좌석별 독립 온도 · SYNC｜48초</em></p>
 <p>이 영상의 고객은 운전석과 동승석의 온도를 따로 설정할 수 있다는 사실을 모릅니다. 누군가 덥거나 춥다고 하면, 익숙한 온도 조절로 두 사람에게 맞는 하나의 온도를 찾으려 합니다.</p>
-<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/01_SYNC_339b0091.mp4"><img src="demos/thumbnails/sync-339b0091.jpg" alt="좌석별 독립 온도 · SYNC 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/01_SYNC_339b0091.mp4">▶ 영상 열기 · 0:48</a></p>
+<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/01_SYNC_17e9fe22.mp4"><img src="demos/thumbnails/sync-web-17e9fe22.jpg" alt="좌석별 독립 온도 · SYNC 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/01_SYNC_17e9fe22.mp4">▶ 영상 열기 · 0:48</a></p>
 <ul>
 <li><strong>체험의 계기</strong> — 더운 운전자가 온도를 낮추자 동승자는 추위를 느낍니다. 튜토리얼은 두 사람의 서로 다른 요구가 드러난 순간, 동승석만 따뜻하게 조절하는 방법을 소개합니다.</li>
 <li><strong>경험하며 알게 되는 점</strong> — 운전석은 21°C를 유지하고 동승석만 24°C로 바뀝니다. 두 사람이 각자 편안해지는 경험을 통해 <strong>“내 차는 좌석마다 온도를 다르게 맞출 수 있구나”</strong>라고 이해합니다.</li>
@@ -76,48 +76,10 @@
 
 <table>
 <tr><td>
-<h3>02. 시트에 스트레칭 기능이 있다는 걸 모릅니다.</h3>
-<p><em>에르고 시트 스트레칭｜2분 1초</em></p>
-<p>시트의 앞뒤 위치와 등받이 기울기는 조절해 왔지만, 시트가 허리와 골반의 스트레칭을 도와주는 기능까지 갖췄다는 사실은 모릅니다. 전용 버튼이 있어도 무엇을 하는 버튼인지 몰라 사용하지 않았습니다.</p>
-<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/02_ERGO_c248edc4.mp4"><img src="demos/thumbnails/ergo-c248edc4.jpg" alt="에르고 시트 스트레칭 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/02_ERGO_c248edc4.mp4">▶ 영상 열기 · 2:01</a></p>
-<ul>
-<li><strong>체험의 계기</strong> — 장거리 운전 후 휴게소에 정차합니다. 튜토리얼은 <strong>긴 주행 뒤 주차했다는 차량 상태</strong>를 계기로, 쉬는 동안 사용할 수 있는 시트 스트레칭을 소개합니다.</li>
-<li><strong>경험하며 알게 되는 점</strong> — 안내에 따라 시트 옆 버튼을 누르고, 허리와 골반을 받치는 움직임을 경험합니다. 기능의 존재와 함께 <strong>버튼의 위치, 모드를 바꾸는 방법, 종료하는 방법</strong>까지 익힙니다.</li>
-<li><strong>다음에 이어지는 행동</strong> — 다음 휴게소에서는 안내를 기다리지 않고 같은 버튼을 직접 누릅니다. 영상은 <strong>“이런 기능이 있었네”라는 발견이 “이럴 때 내가 쓰면 되겠네”라는 행동으로 바뀌는 모습</strong>까지 보여줍니다.</li>
-</ul>
-<details>
-<summary>현재 구현과 검증 보기</summary>
-<p><strong>현재 APK:</strong> 시트 버튼·모드 안내와 응답 기록을 확인했습니다. 스트레칭 모터를 직접 제어하지 않으며, 실제 스트레칭 동작·체감·재사용은 영상의 재현입니다. 2시간 실시간 주행 후 자동 제안은 후속 검증 대상입니다.</p>
-<p><a href="demos/README.md#ergo">장면 설명</a> · <a href="https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L151">관련 코드</a> · <a href="demos/README.md#ergo-evidence">검증 근거</a></p>
-</details>
-</td></tr>
-</table>
-
-<table>
-<tr><td>
-<h3>03. 음량뿐 아니라 소리의 중심도 바꿀 수 있다는 걸 모릅니다.</h3>
-<p><em>사운드 위치｜1분 21초</em></p>
-<p>음악이 크게 들리면 전체 음량을 줄이는 방법만 떠올립니다. 소리의 중심을 앞이나 뒤로 옮겨, 탑승한 사람들의 상황에 맞게 조절할 수 있다는 사실은 모릅니다.</p>
-<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/03_SOUND_9fc8ab12.mp4"><img src="demos/thumbnails/sound-9fc8ab12.jpg" alt="사운드 위치 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/03_SOUND_9fc8ab12.mp4">▶ 영상 열기 · 1:21</a></p>
-<ul>
-<li><strong>체험의 계기</strong> — 뒷자리 자녀가 음악이 크게 들린다며 쉬고 싶다고 말합니다. 아버지가 전체 음량을 줄이려는 순간, 튜토리얼이 소리의 중심을 앞쪽으로 옮기는 방법을 소개합니다.</li>
-<li><strong>경험하며 알게 되는 점</strong> — 음량 설정은 유지하면서 소리의 중심을 옮깁니다. 앞자리에서는 음악을 듣고, 뒷자리에서는 이전보다 작게 들리는 차이를 경험하며 <strong>“음악 소리를 조절하는 방법이 음량만 있는 것은 아니구나”</strong>라고 이해합니다.</li>
-<li><strong>다음에 이어지는 행동</strong> — 휴식 후 가족이 다시 함께 음악을 들을 때, 아버지가 직접 소리의 중심을 가운데로 되돌립니다. 필요한 상황에 맞게 설정하고 다시 바꾸는 방법까지 익힙니다.</li>
-</ul>
-<details>
-<summary>현재 구현과 검증 보기</summary>
-<p><strong>현재 APK:</strong> 순정 위치 설정 안내와 가운데 복원 응답을 기록합니다. 스피커를 직접 제어하지 않으며, 응답 기록은 사용자가 보고한 단계입니다. 최신 영상은 사운드 위치 체험에 집중하며 음장 비교를 포함하지 않습니다.</p>
-<p><a href="demos/README.md#sound">장면 설명</a> · <a href="https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L152">관련 코드</a> · <a href="demos/README.md#sound-evidence">검증 근거</a></p>
-</details>
-</td></tr>
-</table>
-
-<table>
-<tr><td>
-<h3>04. 시원함을 유지하면서 몸에 직접 닿는 바람을 피할 수 있다는 걸 모릅니다.</h3>
+<h3>02. 시원함을 유지하면서 몸에 직접 닿는 바람을 피할 수 있다는 걸 모릅니다.</h3>
 <p><em>직풍 피하기 · SPREAD｜1분 1초</em></p>
 <p>차 안의 온도는 적당하지만 얼굴에 직접 닿는 바람이 불편합니다. 바람을 탑승자 주변으로 분산하는 기능을 모르기 때문에, 평소 익숙한 온도 조절로 해결하려 합니다.</p>
-<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/04_SPREAD_abd18197.mp4"><img src="demos/thumbnails/spread-abd18197.jpg" alt="직풍 피하기 · SPREAD 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/04_SPREAD_abd18197.mp4">▶ 영상 열기 · 1:01</a></p>
+<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/02_SPREAD_abd18197.mp4"><img src="demos/thumbnails/spread-abd18197.jpg" alt="직풍 피하기 · SPREAD 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/02_SPREAD_abd18197.mp4">▶ 영상 열기 · 1:01</a></p>
 <ul>
 <li><strong>체험의 계기</strong> — 운전자가 “바람이 얼굴로 오니 온도를 올릴까?”라고 말하고, 동승자는 지금의 시원함을 유지하고 싶어 합니다. 튜토리얼은 이 대화에서 드러난 직풍의 불편에 맞춰 SPREAD 기능을 소개합니다.</li>
 <li><strong>경험하며 알게 되는 점</strong> — 설정 온도는 그대로인 상태에서 바람이 몸 주변으로 퍼지는 변화를 경험합니다. <strong>온도와 바람의 방향을 각각 조절할 수 있으며, 시원함을 유지하면서도 직풍을 피할 수 있다</strong>는 것을 알게 됩니다.</li>
@@ -133,10 +95,48 @@
 
 <table>
 <tr><td>
+<h3>03. 음량뿐 아니라 소리의 중심도 바꿀 수 있다는 걸 모릅니다.</h3>
+<p><em>사운드 위치｜1분 21초</em></p>
+<p>음악이 크게 들리면 전체 음량을 줄이는 방법만 떠올립니다. 소리의 중심을 앞이나 뒤로 옮겨, 탑승한 사람들의 상황에 맞게 조절할 수 있다는 사실은 모릅니다.</p>
+<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/03_SOUND_9fc8ab12.mp4"><img src="demos/thumbnails/sound-9fc8ab12.jpg" alt="사운드 위치 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/03_SOUND_9fc8ab12.mp4">▶ 영상 열기 · 1:21</a></p>
+<ul>
+<li><strong>체험의 계기</strong> — 뒷자리 자녀가 음악이 크게 들린다며 쉬고 싶다고 말합니다. 아버지가 전체 음량을 줄이려는 순간, 튜토리얼이 소리의 중심을 앞쪽으로 옮기는 방법을 소개합니다.</li>
+<li><strong>경험하며 알게 되는 점</strong> — 음량 설정은 유지하면서 소리의 중심을 옮깁니다. 앞자리에서는 음악을 듣고, 뒷자리에서는 이전보다 작게 들리는 차이를 경험하며 <strong>“음악 소리를 조절하는 방법이 음량만 있는 것은 아니구나”</strong>라고 이해합니다.</li>
+<li><strong>다음에 이어지는 행동</strong> — 휴식 후 가족이 다시 함께 음악을 들을 때, 아버지가 직접 소리의 중심을 가운데로 되돌립니다. 필요한 상황에 맞게 설정하고 다시 바꾸는 방법까지 익힙니다.</li>
+</ul>
+<details>
+<summary>현재 구현과 검증 보기</summary>
+<p><strong>현재 APK:</strong> 순정 위치 설정 안내와 가운데 복원 응답을 기록합니다. 스피커를 직접 제어하지 않으며, 응답 기록은 사용자가 보고한 단계입니다. 최신 영상은 사운드 위치 체험에 집중하며 음장 비교를 포함하지 않습니다.</p>
+<p><a href="demos/README.md#sound">장면 설명</a> · <a href="https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L152">관련 코드</a> · <a href="demos/README.md#sound-evidence">검증 근거</a></p>
+</details>
+</td></tr>
+</table>
+
+<table>
+<tr><td>
+<h3>04. 시트에 스트레칭 기능이 있다는 걸 모릅니다.</h3>
+<p><em>에르고 시트 스트레칭｜2분 1초</em></p>
+<p>시트의 앞뒤 위치와 등받이 기울기는 조절해 왔지만, 시트가 허리와 골반의 스트레칭을 도와주는 기능까지 갖췄다는 사실은 모릅니다. 전용 버튼이 있어도 무엇을 하는 버튼인지 몰라 사용하지 않았습니다.</p>
+<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/04_ERGO_c248edc4.mp4"><img src="demos/thumbnails/ergo-c248edc4.jpg" alt="에르고 시트 스트레칭 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/04_ERGO_c248edc4.mp4">▶ 영상 열기 · 2:01</a></p>
+<ul>
+<li><strong>체험의 계기</strong> — 장거리 운전 후 휴게소에 정차합니다. 튜토리얼은 <strong>긴 주행 뒤 주차했다는 차량 상태</strong>를 계기로, 쉬는 동안 사용할 수 있는 시트 스트레칭을 소개합니다.</li>
+<li><strong>경험하며 알게 되는 점</strong> — 안내에 따라 시트 옆 버튼을 누르고, 허리와 골반을 받치는 움직임을 경험합니다. 기능의 존재와 함께 <strong>버튼의 위치, 모드를 바꾸는 방법, 종료하는 방법</strong>까지 익힙니다.</li>
+<li><strong>다음에 이어지는 행동</strong> — 다음 휴게소에서는 안내를 기다리지 않고 같은 버튼을 직접 누릅니다. 영상은 <strong>“이런 기능이 있었네”라는 발견이 “이럴 때 내가 쓰면 되겠네”라는 행동으로 바뀌는 모습</strong>까지 보여줍니다.</li>
+</ul>
+<details>
+<summary>현재 구현과 검증 보기</summary>
+<p><strong>현재 APK:</strong> 시트 버튼·모드 안내와 응답 기록을 확인했습니다. 스트레칭 모터를 직접 제어하지 않으며, 실제 스트레칭 동작·체감·재사용은 영상의 재현입니다. 2시간 실시간 주행 후 자동 제안은 후속 검증 대상입니다.</p>
+<p><a href="demos/README.md#ergo">장면 설명</a> · <a href="https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L151">관련 코드</a> · <a href="demos/README.md#ergo-evidence">검증 근거</a></p>
+</details>
+</td></tr>
+</table>
+
+<table>
+<tr><td>
 <h3>05. 여러 기능을 한 문장으로 부탁할 수 있다는 걸 모릅니다.</h3>
 <p><em>Gleo 복합 요청｜1분 10초</em></p>
 <p>에어컨을 끄려면 공조 화면을, 라디오를 켜려면 미디어 화면을 찾아갑니다. 서로 다른 기능을 Gleo에게 한 문장으로 함께 부탁할 수 있다는 방법은 아직 모릅니다.</p>
-<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/05_GLEO_9aca15d5.mp4"><img src="demos/thumbnails/gleo-9aca15d5.jpg" alt="Gleo 복합 요청 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/05_GLEO_9aca15d5.mp4">▶ 영상 열기 · 1:10</a></p>
+<p align="center"><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/05_GLEO_9aca15d5.mp4"><img src="demos/thumbnails/gleo-9aca15d5.jpg" alt="Gleo 복합 요청 영상의 실제 장면" width="800"></a><br><a href="https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/05_GLEO_9aca15d5.mp4">▶ 영상 열기 · 1:10</a></p>
 <ul>
 <li><strong>체험의 계기</strong> — 바닷가에 정차한 부부가 창문을 열고 라디오를 들으며 쉬려 합니다. 운전자가 공조와 미디어를 각각 조작하려는 장면에서, 튜토리얼이 두 가지 부탁을 한 문장으로 전달하는 방법을 소개합니다.</li>
 <li><strong>경험하며 알게 되는 점</strong> — 운전자가 직접 <strong>“헤이 글레오. 에어컨 끄고 라디오 켜줘”</strong>라고 말합니다. A/C가 꺼지고 라디오가 재생되는 두 결과를 확인하며, 자신의 말로 여러 기능을 함께 요청하는 방법을 익힙니다.</li>
@@ -150,7 +150,7 @@
 </td></tr>
 </table>
 
-[최신 영상 5개 한곳에서 받기](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261114) · [버전·해시·썸네일 출처](demos/media-manifest.json)
+[최신 영상 5개 한곳에서 받기](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261115) · [버전·해시·썸네일 출처](demos/media-manifest.json)
 
 에르고는 **revision-3**, 사운드는 **위치 중심 v5**입니다. 최신 사운드 영상은 음장 비교를 포함하지 않습니다. 이전 영상과 기존 APK 검증 Release는 보존합니다.
 

@@ -1,0 +1,147 @@
+{
+  "sourceSha256": "339b0091c892d2ee413b408a1ba2657da476f1a05eab1dfb861d6de6f2fe7991",
+  "compatibleSha256": "17e9fe22c7b2435eb742ec657ca14163e0e3daba39af1e9be8978b8417ff1bbc",
+  "source": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "profile": "High 4:4:4 Predictive",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "r_frame_rate": "24/1",
+        "duration": "47.916667",
+        "nb_read_frames": "1150"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "r_frame_rate": "0/0",
+        "duration": "47.936000",
+        "nb_read_frames": "2247"
+      }
+    ],
+    "format": {
+      "duration": "47.936000",
+      "size": "144905097"
+    }
+  },
+  "compatible": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "r_frame_rate": "24/1",
+        "duration": "47.916667",
+        "nb_read_frames": "1150"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "r_frame_rate": "0/0",
+        "duration": "47.936000",
+        "nb_read_frames": "2247"
+      }
+    ],
+    "format": {
+      "duration": "47.936000",
+      "size": "16482191"
+    }
+  },
+  "sameAudioPacketHash": "SHA256=2c93a8f0489dbe223f2a191f8f2b640a93e17d08eab33dda603262812607e964",
+  "sameVideoFrameCount": true,
+  "sameDuration": true,
+  "completeDecode": "PASS",
+  "faststart": true,
+  "atoms": [
+    {
+      "type": "ftyp",
+      "offset": 0,
+      "size": 32
+    },
+    {
+      "type": "moov",
+      "offset": 32,
+      "size": 34681
+    },
+    {
+      "type": "free",
+      "offset": 34713,
+      "size": 8
+    },
+    {
+      "type": "mdat",
+      "offset": 34721,
+      "size": 16447470
+    }
+  ],
+  "date": "2026-11-15",
+  "issue": "User reported audio plays while the SYNC picture is missing.",
+  "downloadedOriginalMatchesSource": true,
+  "likelyCompatibilityFactor": "Original AVC stream declares High 4:4:4 Predictive; the other four videos use High. This is a compatibility hypothesis, not a reproduced decoder failure in the tested Edge environment.",
+  "browserPlayback": {
+    "browser": "Microsoft Edge on the shared Windows PC",
+    "method": "Actual HTML video playback over a loopback HTTP server with byte-range support; muted playback",
+    "original": {
+      "duration": 47.936,
+      "currentTime": 47.936,
+      "videoWidth": 1920,
+      "videoHeight": 1080,
+      "decodedFrames": 1150,
+      "droppedFrames": 0,
+      "ended": true,
+      "error": null
+    },
+    "compatible": {
+      "duration": 47.936,
+      "currentTime": 47.936,
+      "videoWidth": 1920,
+      "videoHeight": 1080,
+      "decodedFrames": 1150,
+      "droppedFrames": 0,
+      "ended": true,
+      "error": null
+    },
+    "limit": "The user-specific audio-only issue was not reproduced in this Edge environment. Compatibility on every browser/player is not claimed."
+  },
+  "visualInspection": {
+    "extractedFramesSeconds": [
+      1,
+      22,
+      36.5
+    ],
+    "reviewedFramesSeconds": [
+      1,
+      36.5
+    ],
+    "result": "Opening road scene and independent 21/24-degree scene visibly present."
+  },
+  "transcodeCommand": "ffmpeg -i SYNC_ChatLog.mp4 -map 0:v:0 -map 0:a:0 -c:v libx264 -preset medium -crf 18 -profile:v high -level:v 4.0 -pix_fmt yuv420p -threads 4 -c:a copy -movflags +faststart SYNC_ChatLog_Web.mp4",
+  "references": [
+    "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs",
+    "https://www.ffmpeg.org/ffmpeg-codecs.html",
+    "https://github.com/FFmpeg/FFmpeg/blob/master/libavformat/movenc.c"
+  ],
+  "releaseTag": "contest-five-feature-videos-20261115"
+}
