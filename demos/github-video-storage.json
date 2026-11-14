@@ -1,0 +1,90 @@
+{
+  "verifiedAt": "2026-11-14T12:15:34.458016+00:00",
+  "repository": "changseokmid-cell/pleos-tutorial",
+  "visibility": "private",
+  "releaseTag": "contest-five-feature-videos-20261114",
+  "sourceCommit": "f687bd904336550b2e7f97b24c717bae1763f06a",
+  "releaseUrl": "https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261114",
+  "prerelease": true,
+  "verification": {
+    "uploadedAssets": 7,
+    "allServerSizesAndSha256Match": true,
+    "redownloadedAndHashChecked": [
+      "02_ERGO_c248edc4.mp4",
+      "03_SOUND_9fc8ab12.mp4"
+    ],
+    "remoteThumbnailHashesMatch": 5,
+    "githubRenderedReadmeThumbnails": 5,
+    "githubRenderedVideoDestinations": 5,
+    "localDocumentationChecks": 91,
+    "androidUnchangedFromApkSourceCommit": "4fe8a913b52770218757791bf1749c2fb8b35ef9",
+    "actualVoiceTestPerformed": false
+  },
+  "assets": [
+    {
+      "name": "01_SYNC_339b0091.mp4",
+      "id": 747383636,
+      "bytes": 144905097,
+      "sha256": "339b0091c892d2ee413b408a1ba2657da476f1a05eab1dfb861d6de6f2fe7991",
+      "serverDigest": "sha256:339b0091c892d2ee413b408a1ba2657da476f1a05eab1dfb861d6de6f2fe7991",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/01_SYNC_339b0091.mp4",
+      "serverHashMatches": true
+    },
+    {
+      "name": "02_ERGO_c248edc4.mp4",
+      "id": 747383635,
+      "bytes": 51908991,
+      "sha256": "c248edc464d7949ed8f9368a0eefeb8030f4cc787a4d3a14fc94d3806ce911b6",
+      "serverDigest": "sha256:c248edc464d7949ed8f9368a0eefeb8030f4cc787a4d3a14fc94d3806ce911b6",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/02_ERGO_c248edc4.mp4",
+      "serverHashMatches": true,
+      "downloadHashMatches": true
+    },
+    {
+      "name": "03_SOUND_9fc8ab12.mp4",
+      "id": 747383633,
+      "bytes": 51185883,
+      "sha256": "9fc8ab123c18d4afa4f493c6935dd1fd0fb034b5efa989b11f025d499630ca23",
+      "serverDigest": "sha256:9fc8ab123c18d4afa4f493c6935dd1fd0fb034b5efa989b11f025d499630ca23",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/03_SOUND_9fc8ab12.mp4",
+      "serverHashMatches": true,
+      "downloadHashMatches": true
+    },
+    {
+      "name": "04_SPREAD_abd18197.mp4",
+      "id": 747383630,
+      "bytes": 29097571,
+      "sha256": "abd18197f77286f2f930d1e9d809a5c229bc4094a78a54ce3aec0feb161f2f78",
+      "serverDigest": "sha256:abd18197f77286f2f930d1e9d809a5c229bc4094a78a54ce3aec0feb161f2f78",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/04_SPREAD_abd18197.mp4",
+      "serverHashMatches": true
+    },
+    {
+      "name": "05_GLEO_9aca15d5.mp4",
+      "id": 747383648,
+      "bytes": 32864527,
+      "sha256": "9aca15d5b9165e3cfdd934b534b6725cdc67f714ee08008388f639e27d82743e",
+      "serverDigest": "sha256:9aca15d5b9165e3cfdd934b534b6725cdc67f714ee08008388f639e27d82743e",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/05_GLEO_9aca15d5.mp4",
+      "serverHashMatches": true
+    },
+    {
+      "name": "media-manifest.json",
+      "id": 747383923,
+      "bytes": 9987,
+      "sha256": "5fd8b9c04c8216431632790464ee373c0bbb251775fdec645ea7c036f6899f74",
+      "serverDigest": "sha256:5fd8b9c04c8216431632790464ee373c0bbb251775fdec645ea7c036f6899f74",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/media-manifest.json",
+      "serverHashMatches": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "id": 747383931,
+      "bytes": 524,
+      "sha256": "c82dca31c1bb35fa3104e8f212498763d8c4f324489b5fe709fe0df86d83d2f4",
+      "serverDigest": "sha256:c82dca31c1bb35fa3104e8f212498763d8c4f324489b5fe709fe0df86d83d2f4",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/SHA256SUMS.txt",
+      "serverHashMatches": true
+    }
+  ]
+}

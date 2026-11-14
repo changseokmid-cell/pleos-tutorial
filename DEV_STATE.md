@@ -46,3 +46,5 @@ README를 제품 장면 → 확인 범위 → 코드 → 재현 순서로 구성
 [현재 영상 명세](demos/media-manifest.json)에 파일 해시·재생 시간·썸네일 추출 시점·APK 소스 기준 코드 링크를 기록했다. 이전 명세는 [archive](demos/archive/media-manifest-first-candidate.json)에 보존했다. 새 영상 보관 태그는 `contest-five-feature-videos-20261114`이며 기존 두 Release를 덮어쓰지 않는다. 영상 원본은 Git 일반 이력에 넣지 않고 Release 첨부파일로 보관한다.
 
 README와 [기능별 상세 안내](demos/README.md), [심사 안내](docs/reviewer-guide.md)를 연결했다. 각 기능의 제품 경험과 확인한 실행 증거·미검증 범위를 함께 읽을 수 있다. Android 소스·APK·기존 증거는 수정하지 않았다. 이번 작업으로 실제 사람의 STT/Gleo 음성 시험을 수행했다고 주장하지 않는다.
+
+영상 안내 commit `f687bd9`와 새 태그를 비공개 GitHub에 반영했다. 영상 5개·명세·체크섬 7개 첨부파일의 서버 크기와 SHA-256이 모두 일치한다. 새 에르고·사운드 2개는 재다운로드 해시도 일치했다. 썸네일 원격 파일 해시와 GitHub가 변환한 README의 영상 5개 링크를 확인했다. [업로드 검증 기록](demos/github-video-storage.json)을 따른다. 기존 APK 소스와의 Android diff는 없으며 이번 문서·미디어 작업으로 앱 빌드나 음성 실사용 시험을 다시 수행하지 않았다.
