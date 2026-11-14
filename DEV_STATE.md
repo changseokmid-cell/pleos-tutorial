@@ -31,10 +31,18 @@ Git 단계: `bda0675` 격리 저장소/계약 → `b2991b5` 통합 모듈 → `4
 
 ## 남은 외부 검증과 2차 계획
 
-실제 사람 STT와 순정 Gleo 음성 시험은 사용자가 2026-11-14에 나중으로 남기도록 결정했다. 정상 자원 조건의 음성 반복·focus 충돌, 2시간 주행 후 자동 제안, 실차 사양별 지원과 사용자 학습·재사용 검증도 남는다. 영상 최종 선택·참가자 정보와 동의·접수용 공개 전환은 별도다. 비공개 보관을 공식 접수 완료로 표시하지 않는다.
+실제 사람 STT와 순정 Gleo 음성 시험은 사용자가 2026-11-14에 나중으로 남기도록 결정했다. 정상 자원 조건의 음성 반복·focus 충돌, 2시간 주행 후 자동 제안, 실차 사양별 지원과 사용자 학습·재사용 검증도 남는다. 최신 영상 5개를 심사 안내에 연결하도록 사용자가 요청했으며, 참가자 정보와 동의·접수용 공개 전환은 별도다. 비공개 보관을 공식 접수 완료로 표시하지 않는다.
 
 ## 심사 문서 재구성 및 새 검증본
 
 README를 제품 장면 → 확인 범위 → 코드 → 재현 순서로 구성했다. [심사 안내](docs/reviewer-guide.md), [구조·함수 안내](docs/architecture.md), [DDS 복구](docs/dds-recovery.md)를 추가했다. 새 보관 태그는 `contest-round1-verified-20261114`이며 이전 후보 태그와 파일은 덮어쓰지 않는다. 새 묶음은 `dist/verified-20261114`에 생성한다.
 
 새 검증본 commit `aacb5a1f78ae43a34a8beaa64c65964f996801f0`과 태그를 GitHub에 반영했다. 비공개 Release의 첨부파일 8개 모두 서버 해시가 일치하며 APK·제출 ZIP을 내려받아 다시 확인했다. [검증 영수증](docs/github-storage-verified.json)을 따른다. 마지막 전체 UI 시험은 106개 앱 이벤트와 PASS를 남겼고 문서 링크 75개를 대조했다. PDF 3쪽을 생성·검토했다. 검증 후 이번 heartbeat와 에뮬레이터를 종료했다.
+
+## 최신 다섯 영상과 심사 탐색 경로
+
+2026-11-14 사용자 요청으로 최신 영화 5개를 README의 실제 장면 썸네일에 연결했다. 에르고는 `full-rebuild-20261114/revision-3/final.mp4`, 사운드는 `native1080-position-v5/final.mp4`로 갱신했고 SYNC·SPREAD·GLEO는 원본 해시를 대조해 유지했다. 최신 사운드의 범위는 위치 이동·가운데 복원이며 음장 비교는 제외한다. APK의 기존 사운드 안내 흐름과 차이는 [상세 안내](demos/README.md#sound)에 명시했다.
+
+[현재 영상 명세](demos/media-manifest.json)에 파일 해시·재생 시간·썸네일 추출 시점·APK 소스 기준 코드 링크를 기록했다. 이전 명세는 [archive](demos/archive/media-manifest-first-candidate.json)에 보존했다. 새 영상 보관 태그는 `contest-five-feature-videos-20261114`이며 기존 두 Release를 덮어쓰지 않는다. 영상 원본은 Git 일반 이력에 넣지 않고 Release 첨부파일로 보관한다.
+
+README와 [기능별 상세 안내](demos/README.md), [심사 안내](docs/reviewer-guide.md)를 연결했다. 각 기능의 제품 경험과 확인한 실행 증거·미검증 범위를 함께 읽을 수 있다. Android 소스·APK·기존 증거는 수정하지 않았다. 이번 작업으로 실제 사람의 STT/Gleo 음성 시험을 수행했다고 주장하지 않는다.

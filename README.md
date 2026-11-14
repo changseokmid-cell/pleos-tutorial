@@ -1,35 +1,47 @@
 # 내 차 사용 안내
 
-**차량 기능을 몰라 겪는 불편을 짧은 체험으로 바꾸는 Pleos Connect 차량용 Android 앱입니다.** 사용자가 튜토리얼을 켜고 요청하면 차량 상태를 확인하고 기능을 제안합니다. 동의를 받아 체험을 돕고, 차량 결과와 체감 응답을 따로 남겨 다음 사용으로 이어갑니다.
+**몰랐던 차량 기능을, 필요한 순간의 짧은 체험으로 익히는 Pleos Connect 차량용 앱입니다.** 기능의 이름을 설명하는 데서 시작하기보다 사용자의 불편을 기능 발견·체험·다음 사용으로 연결합니다.
 
-예를 들어 동승자가 춥다고 할 때 운전석 설정을 유지하며 동승석 온도만 높이는 방법을 안내합니다. 실제 Vehicle SDK로 SYNC를 끄고 **21/21°C → 21/24°C** 변화를 재조회했습니다. 조작과 함께 좌석별 독립 조절을 익히도록 안내와 체감 기록을 연결합니다.
+[① 다섯 가지 고객 경험](#다섯-가지-고객-경험) → [② 실제 APK 실행과 검증](#실제-apk-실행과-검증) → [③ 코드 구조](docs/architecture.md)
 
-![서명 APK에서 좌우 독립 온도를 확인한 화면](evidence/release-smoke-verified/03-confirmed-21-24.png)
+## 다섯 가지 고객 경험
 
-## 심사위원께 권하는 읽는 순서
+먼저 아래 영상으로 사용 장면을 살펴보세요. 총 약 **6분 21초**입니다. 썸네일이나 **영상 열기**를 누르면 MP4가 열리거나 다운로드됩니다. 저장소와 영상은 **비공개**이므로 접근 권한이 있는 GitHub 로그인이 필요합니다.
 
-| 순서 | 자료 | 확인할 내용 |
-|---|---|---|
-| 1 · 제품 이해 | [3쪽 작품 소개 PDF](docs/proposal-public.pdf) / [심사 안내](docs/reviewer-guide.md) | 누구의 어떤 불편을 해결하는가 |
-| 2 · 실제 실행 | [검증 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114) | 서명 APK, 제출 ZIP, 실제 화면 녹화 |
-| 3 · 코드 이해 | [구조와 코드 읽기](docs/architecture.md) | 입력 → 세션 → 차량 명령 → 재조회 → 이력 |
-| 4 · 재현·한계 | [시험 결과](docs/testing.md) / [구현표](docs/implementation.md) | 성공 근거, 자동화 입력, 미검증 범위 |
+다섯 편은 **제품 경험 시나리오**를 표현한 영상입니다. 각 항목의 **현재 APK**와 아래 실구동 검증에서 실제 구현 범위를 확인할 수 있습니다.
 
-저장소는 **비공개**이며 자료를 받으려면 접근 권한이 있는 GitHub 로그인이 필요합니다. 고객 경험 영화는 제품 의도를 보여 주는 연출입니다. APK 실구동 녹화와 구별해 [영상 목록](demos/README.md)에 표시했습니다. GitHub 보관은 공식 접수 완료를 뜻하지 않습니다.
+| 영상 | 사용 장면 → 체험 → 구현 근거 |
+|---|---|
+| [<img src="demos/thumbnails/sync-339b0091.jpg" alt="좌석별 독립 온도 · SYNC 영상의 실제 장면" width="320">](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/01_SYNC_339b0091.mp4)<br>**01 · 좌석별 독립 온도 · SYNC · 0:48** | **운전자는 더운데, 동승자는 춥다면?**<br>운전석 온도는 유지하고 동승석만 따뜻하게 바꾸며 좌석별 독립 조절을 발견합니다.<br>**현재 APK:** 실제 SDK 제어·재조회 확인: 운전석 21°C 유지 / 동승석 24°C.<br>[▶ 영상 열기](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/01_SYNC_339b0091.mp4) · [장면 설명](demos/README.md#sync) · [관련 코드](https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/VehicleContextRepository.kt#L147) · [검증 근거](demos/README.md#sync-evidence) |
+| [<img src="demos/thumbnails/ergo-c248edc4.jpg" alt="에르고 시트 스트레칭 영상의 실제 장면" width="320">](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/02_ERGO_c248edc4.mp4)<br>**02 · 에르고 시트 스트레칭 · 2:01** | **오래 앉아 뻐근할 때, 몰랐던 시트 버튼을 발견합니다.**<br>휴게소에서 버튼 위치와 모드 순서를 익히고, 다음 정차 때 스스로 다시 사용합니다.<br>**현재 APK:** 시트 버튼·모드 안내와 응답 기록. 스트레칭 모터 직접 제어 없음.<br>[▶ 영상 열기](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/02_ERGO_c248edc4.mp4) · [장면 설명](demos/README.md#ergo) · [관련 코드](https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L151) · [검증 근거](demos/README.md#ergo-evidence) |
+| [<img src="demos/thumbnails/sound-9fc8ab12.jpg" alt="사운드 위치 영상의 실제 장면" width="320">](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/03_SOUND_9fc8ab12.mp4)<br>**03 · 사운드 위치 · 1:21** | **뒷자리에서는 음악이 너무 크게 들린다면?**<br>같은 음량에서 소리의 중심을 앞쪽으로 옮겨 체험하고, 휴식 뒤 직접 가운데로 되돌립니다.<br>**현재 APK:** 순정 위치 설정 안내와 복원 응답 기록. 스피커 직접 제어 없음.<br>[▶ 영상 열기](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/03_SOUND_9fc8ab12.mp4) · [장면 설명](demos/README.md#sound) · [관련 코드](https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L152) · [검증 근거](demos/README.md#sound-evidence) |
+| [<img src="demos/thumbnails/spread-abd18197.jpg" alt="직풍 피하기 · SPREAD 영상의 실제 장면" width="320">](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/04_SPREAD_abd18197.mp4)<br>**04 · 직풍 피하기 · SPREAD · 1:01** | **시원한 온도는 좋은데, 얼굴에 바람이 직접 닿는다면?**<br>온도를 높이는 대신 바람을 분산하는 기능을 체험하고 다음에 선택할 방법을 익힙니다.<br>**현재 APK:** 순정 메뉴 안내와 목표온도 유지 관측. 전동 벤트 제어·모드 확인 없음.<br>[▶ 영상 열기](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/04_SPREAD_abd18197.mp4) · [장면 설명](demos/README.md#spread) · [관련 코드](https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/TutorialCoordinator.kt#L153) · [검증 근거](demos/README.md#spread-evidence) |
+| [<img src="demos/thumbnails/gleo-9aca15d5.jpg" alt="Gleo 복합 요청 영상의 실제 장면" width="320">](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/05_GLEO_9aca15d5.mp4)<br>**05 · Gleo 복합 요청 · 1:10** | **에어컨과 라디오를 각각 조작하고 있었다면?**<br>두 가지 부탁을 한 문장으로 전달하는 방법을 배우고, 운전자가 직접 Gleo를 호출합니다.<br>**현재 APK:** App Schema 3개 action·callback 전송 확인. 실제 Gleo 음성 왕복은 추후 시험.<br>[▶ 영상 열기](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261114/05_GLEO_9aca15d5.mp4) · [장면 설명](demos/README.md#gleo) · [관련 코드](https://github.com/changseokmid-cell/pleos-tutorial/blob/4fe8a913b52770218757791bf1749c2fb8b35ef9/android/app/src/main/java/kr/pleosguide/GleoReceiver.kt#L10) · [검증 근거](demos/README.md#gleo-evidence) |
 
-## 현재 구현한 다섯 체험
+[최신 영상 5개 한곳에서 받기](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261114) · [버전·해시·썸네일 출처](demos/media-manifest.json)
 
-공통 흐름은 **발견 → 제안·수락 → 체험 → 결과 확인 → 체감 기록**입니다. 상세 체험과 자동 공조 명령은 P 및 차량 UX 허용 상태에서 제공합니다.
+에르고는 **revision-3**, 사운드는 **위치 중심 v5**입니다. 최신 사운드 영상은 음장 비교를 포함하지 않습니다. 이전 영상과 기존 APK 검증 Release는 보존합니다.
 
-| 체험 | APK가 하는 일 | 확인 범위 |
-|---|---|---|
-| 좌석별 독립 온도 · SYNC | 연동 해제, 동승석 온도 설정, 좌우 독립 재조회 | 실제 SDK 제어 성공. 운전석 21°C 유지 / 동승석 24°C |
-| 에르고 스트레칭 | 장착 차량의 시트 버튼·모드 순서 안내 | 안내 흐름 시험. 스트레칭 모터 직접 제어 없음 |
-| 사운드 위치·음장 | 위치 체험 → 가운데 복원 응답 → 음장 비교 | 단계 분리 시험. 순정 스피커·음장 직접 제어 없음 |
-| 직풍 피하기 · SPREAD | 순정 메뉴 안내, 목표온도 유지 관측 | 안내와 온도 관측 시험. 전동 벤트 제어·모드 확인 없음 |
-| Gleo 복합 요청 학습 | 복합 요청 문장, 마이크 양보, Schema 3개 action | ADB 수신부·callback 시험. 실제 자연어 왕복 미검증 |
+## 실제 APK 실행과 검증
 
-공식 ON_DEVICE STT/TTS 3.3.1을 연결했고 한국어 TTS 완료를 관측했습니다. 시간 초과도 남아 있습니다. **사람의 마이크 발화와 순정 Gleo 실사용 시험은 사용자 요청으로 추후 진행합니다.** 자동화 수락·체감 버튼은 사용자 연구나 학습 효과의 증거가 아닙니다.
+[<img src="evidence/release-smoke-verified/03-confirmed-21-24.png" alt="실제 서명 APK에서 운전석 21도와 동승석 24도를 재조회한 화면" width="640">](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4)
+
+**[▶ 실제 서명 APK 녹화 · 2분 7초](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4)** · [서명 APK·소스 ZIP 받기](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114)
+
+실제 Pleos 에뮬레이터 화면입니다. 녹화는 무음이며 수락·체감 버튼은 자동 UI 입력입니다. 다섯 시나리오의 영화와 별도로, 아래 결과를 확인했습니다.
+
+| 확인할 내용 | 실행 근거 |
+|---|---|
+| SYNC 해제, 운전석 21°C 유지 / 동승석 24°C 설정 | [명령·독립 재조회 로그](evidence/release-smoke-verified/evidence.jsonl), [전체 UI 시험 PASS](evidence/release-smoke-verified/run.json) |
+| Off 후 조회 중단, 앱 재실행·콜드 부팅·강제 종료 후 기본 Off | [재시작 검사](evidence/restart-persistence/run.json) |
+| 표시 이력과 다섯 기능 설정 유지 | [재시작 후 화면](evidence/restart-persistence/04-killed-while-on-history.png), [전후 값 비교](evidence/restart-persistence/run.json) |
+| 에르고·사운드·SPREAD 안내, Gleo action 수신부 | [기능별 코드·증거 안내](demos/README.md), [전체 시험 범위](docs/testing.md) |
+
+실제 사람의 STT 발화와 순정 Gleo 자연어 왕복은 추후 시험입니다. 영화의 체감·재사용 장면이나 자동화 응답을 사용자 학습 효과의 검증으로 해석하지 않습니다.
+
+## 이어서 읽기
+
+[심사 안내](docs/reviewer-guide.md) · [3쪽 작품 소개 PDF](docs/proposal-public.pdf) · [코드 구조와 함수별 읽기](docs/architecture.md) · [현재 APK 구현표](docs/implementation.md) · [재현 절차](docs/testing.md)
 
 ## 코드의 핵심
 
