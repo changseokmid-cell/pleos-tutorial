@@ -1,0 +1,11 @@
+{
+  "fullDecode": "PASS",
+  "sha256": "9897af21b137edc993d067d04c18cdd5c9a883b1ca86d0f4531d0d78e403ec4b",
+  "durationSeconds": 102.508,
+  "audio": false,
+  "sampleFramesSeconds": [
+    1,
+    78,
+    98
+  ]
+}

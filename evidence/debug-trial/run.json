@@ -1,0 +1,129 @@
+[
+  {
+    "time": 1794642673.1306894,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "gear",
+    "params": {
+      "gear": "Park"
+    }
+  },
+  {
+    "time": 1794642673.1825323,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "seat",
+    "params": {
+      "kind": "occupied",
+      "area": "passenger",
+      "value": "true"
+    }
+  },
+  {
+    "time": 1794642673.2279935,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "hvac",
+    "params": {
+      "power": "true",
+      "dual": "true",
+      "driver_temp": 21,
+      "passenger_temp": 21
+    }
+  },
+  {
+    "time": 1794642704.3569763,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794642701724,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794642701578, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794642701583, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794642701678, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794642701677, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=21.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794642701646, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794642701696, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794642701621, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794642701605, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794642701605, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794642701567, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794642701696, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=false, unit=, area=[ROW_1_LEFT], observedAt=1794642701567, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=21.0, unit=C, area=[ROW_1_LEFT], observedAt=1794642701660, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794642701579, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794642701720, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794642701583, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794642725.44633,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794642723108,
+      "kind": "OFFER",
+      "sourceType": "MOCK_EVENT",
+      "sessionId": "55d473af-79d1-48ae-9994-f13d0a85f9ce",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794642734.11536,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794642731205,
+      "kind": "ACTION_RESULT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": "55d473af-79d1-48ae-9994-f13d0a85f9ce",
+      "detail": "CONFIRMED:운전석 21.0도는 유지되고, 동승석은 24.0도로 독립 설정된 것을 확인했습니다."
+    }
+  },
+  {
+    "time": 1794642740.7745116,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794642737874,
+      "kind": "OFFER",
+      "sourceType": "MOCK_EVENT",
+      "sessionId": "c6a8f94b-97d2-49af-b5cd-5865fb53225b",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794642759.6426742,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794642756825,
+      "kind": "OFFER",
+      "sourceType": "MOCK_EVENT",
+      "sessionId": "2762c0e8-955a-4df3-a881-c80f6d025c89",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794642771.828245,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794642769329,
+      "kind": "OFFER",
+      "sourceType": "MOCK_EVENT",
+      "sessionId": "ef85d553-3fd9-4528-b1d4-b44d5e4b76ec",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794642784.137664,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794642781193,
+      "kind": "OFFER",
+      "sourceType": "MOCK_EVENT",
+      "sessionId": "e46e00fc-e941-4547-8724-3ed0092b2ee1",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794642800.1982095,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "gear",
+    "params": {
+      "gear": "Drive"
+    }
+  },
+  {
+    "time": 1794642805.2270427,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "gear",
+    "params": {
+      "gear": "Park"
+    }
+  },
+  {
+    "time": 1794642812.7773724,
+    "kind": "HARNESS_FINISHED",
+    "claim": "Receiver and mock-input integration trial; inspect individual outcomes, not a blanket success."
+  }
+]

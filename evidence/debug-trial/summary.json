@@ -1,0 +1,38 @@
+{
+  "input": "MOCK_EVENT via debug-only receiver; no human experience study",
+  "sync": "Two LIVE_SDK commands and independent confirmation 21/21 to 21/24",
+  "featuresOffered": 6,
+  "actionResults": [
+    {
+      "time": 1794642731205,
+      "kind": "ACTION_RESULT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": "55d473af-79d1-48ae-9994-f13d0a85f9ce",
+      "detail": "CONFIRMED:운전석 21.0도는 유지되고, 동승석은 24.0도로 독립 설정된 것을 확인했습니다."
+    }
+  ],
+  "exceptions": [
+    {
+      "time": 1794642791870,
+      "kind": "GLEO_CALLBACK_SENT",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": null,
+      "detail": "{\"functionName\":\"START_FEATURE_GUIDE\",\"status\":\"asking\",\"message\":\"Please specify a feature.\",\"mode\":\"silent\",\"data\":\"[{}]\"}"
+    },
+    {
+      "time": 1794642792461,
+      "kind": "GLEO_CALLBACK_SENT",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": null,
+      "detail": "{\"functionName\":\"START_FEATURE_GUIDE\",\"status\":\"fail\",\"message\":\"The feature value is unsupported.\",\"mode\":\"silent\",\"data\":\"[{}]\"}"
+    },
+    {
+      "time": 1794642792914,
+      "kind": "GLEO_CALLBACK_SENT",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": null,
+      "detail": "{\"functionName\":\"RESPOND_TO_GUIDE\",\"status\":\"fail\",\"message\":\"The session has expired or does not match.\",\"mode\":\"silent\",\"data\":\"[{}]\"}"
+    }
+  ],
+  "voice": "First run used Locale.KOREAN (ko-) despite incorrect hardcoded ko-KR init label; failed. Locale.KOREA fix separately verified later."
+}

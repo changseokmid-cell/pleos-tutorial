@@ -1,0 +1,362 @@
+[
+  {
+    "time": 1794646256.6125371,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646260.6882794,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646265.0311618,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646269.1590502,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646273.2825496,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646277.5643184,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646281.6652281,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646285.7225652,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646289.785215,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646293.854203,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646297.8948634,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646301.9736423,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646306.058913,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646310.120448,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646314.1653733,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646318.231418,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646322.279696,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646326.3322597,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646330.4245303,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646334.5025403,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646338.5617967,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646342.6158223,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646346.6917512,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646350.767652,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646354.884146,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646358.97311,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646363.0455723,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646367.1045244,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646371.1661506,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  },
+  {
+    "time": 1794646375.253891,
+    "heartbeat": {
+      "active": false,
+      "clients": 1,
+      "timeout_ms": 3000
+    },
+    "gearStatus": 503,
+    "result": {
+      "error": "emulator_inactive"
+    }
+  }
+]

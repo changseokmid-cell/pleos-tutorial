@@ -1,0 +1,42 @@
+[
+  {
+    "time": 1794644056.3472,
+    "kind": "PROVENANCE",
+    "input": "MOCK_EVENT and ADB UNVERIFIED_INTENT; no actual human recognition"
+  },
+  {
+    "time": 1794644059.2560382,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "gear",
+    "params": {
+      "gear": "Park"
+    }
+  },
+  {
+    "time": 1794644059.2992778,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "seat",
+    "params": {
+      "kind": "occupied",
+      "area": "passenger",
+      "value": "true"
+    }
+  },
+  {
+    "time": 1794644059.329803,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "hvac",
+    "params": {
+      "power": "true",
+      "dual": "true",
+      "driver_temp": 21,
+      "passenger_temp": 21
+    }
+  },
+  {
+    "time": 1794644111.7519636,
+    "kind": "PRESERVED_DEBUG_HISTORY",
+    "events": 499,
+    "tts_done": 1
+  }
+]

@@ -1,29 +1,33 @@
 # Pleos 통합 튜토리얼 개발 상태
 
-2026-11-14 시작. 이 디렉터리는 별도 Git 저장소이며 기존 sync-tutorial 및 영상/연구 원본을 변경하지 않는다.
+2026-11-14. 단일 개발창과 별도 Git 저장소 `pleos-tutorial`에서 진행했다. 기존 sync-tutorial, 연구·영상 원본, ev6-cockpit-lab, artifacts는 보존했다.
 
-- 구현: 공통 차량 샘플, 세션, 공식 ON_DEVICE 음성 입출력, 로컬 이력, Gleo 3개 action, 다섯 기능 모듈. 실제 통합 실행 검증 중.
-- 실행 환경: 로컬 JDK 17.0.21, Android SDK 35/Build Tools 35, PleosSync210 AVD 확인.
-- 첫 AVD 기동: 호스트 commit memory 부족. RAM 2048MB/2 cores로 부팅, API34/기존 2.1.0 이미지와 ADB 연결.
-- debug 빌드 및 안전 조건 단위 테스트 9개 통과. Windows 한글 경로의 JUnit ClassNotFound를 ASCII 빌드 출력 경로로 해결했다. 출력: `%LOCALAPPDATA%/PleosSyncLab/tutorial-build`.
-- 첫 실행에서 SDK 초기화/호출이 메인 스레드를 붙잡아 FGS ANR 발생. SDK 초기화와 차량 probe/poll을 IO로 옮겨 다시 빌드/테스트 통과. 수정 APK의 실제 재시험 진행 중.
-- Virtual Console 초기 `emulator_inactive`/503은 브리지 준비 지연과 연결 유지 문제로 관측. 콘솔 원문의 `/browser/session` heartbeat를 유지한 뒤 gear Park 요청 200/bridge_ready=true 확인.
-- 기존 SYNC 재현 시험 진행 중. 신규 차량 제어/음성 성공은 아직 기록하지 않음.
-- 11/14 통합 debug 시험: 실제 SDK 두 명령(setHvacDual=false, 동승석 setHvacTemperature=24) 후 21/21 → 21/24, 운전석 유지/연동 Off 독립 재조회 CONFIRMED. 수락은 MOCK_EVENT이며 실제 음성 수락 아님.
-- 다섯 기능 안내/응답/이력 흐름, Gleo 수신부 asking/fail, CarUxRestrictions P=0/D=80 관측. 세션 테스트 응답은 실제 사용자 체감/학습 증거 아님.
-- 음성 첫 오류는 Locale.KOREAN의 ko-가 지원되지 않아 발생. Locale.KOREA(ko-KR)로 고친 후 공식 ON_DEVICE TTS_DONE 확인. 마이크 입력은 첫 준비 지연/무응답을 관측했고 실제 사람 인식은 미검증. TEST_PCM 별도 시험 진행 중.
-- 실제 capability: 공조 READ_WRITE, 동승석 15~30°C/0.5°C 간격. getTripCurrentDrivingTime은 ERROR_NOT_SUPPORTED_PROPERTY. CarAudioManager 접근 가능, CAR_CONTROL_AUDIO_SETTINGS 권한 -1. 스트레칭/SPREAD/음장 전용 제어 미구현.
-- 기존 기준선 재현은 빈 좌석/공조/22·22 읽기까지 확인했으나 현재 저메모리 환경에서 기존 앱 초기화 ANR로 전체 절차 실패. 이전 성공 기록은 보존하고 이번 실패를 새 성공으로 덮지 않음.
-- targetSdk33, 서명한 release 빌드 및 lintVital 통과. 서명키/암호는 저장소 밖 로컬 도구 폴더에 있으며 비공개 유지. 다음: release 새 설치·실구동 녹화·제출 묶음.
+## 구현과 실행
 
-## 로컬 Git 단계
+`kr.pleosguide` 1.0.0에 공통 차량 샘플·capability·한 세션·공식 ON_DEVICE STT/TTS·로컬 이력·Gleo 3개 action·다섯 기능 안내를 통합했다. 상세 체험과 자동 공조 명령은 P/CarUxRestrictions 허용 상태로 제한한다. 주행 중 선제 안내는 후속 검증 대상이다.
 
-- `bda0675`: 제출 전용 저장소/공통 데이터 계약.
-- `b2991b5`: 다섯 모듈, 음성, Gleo, 시험 도구.
-- 후속 IO/빌드 경로 수정은 실행 검증 후 커밋 예정.
+- debug 실제 SDK에서 SYNC 해제와 동승석 온도 설정 후 21/21 → 21/24°C, 운전석 21°C 유지, dual=false를 재조회했다. 수락은 MOCK_EVENT다.
+- signed release 새 설치에서도 같은 결과와 Off를 확인했다. 첫 재시작 검사는 차량의 왼쪽 pane 선택 및 이후 에뮬레이터 캡처 정지로 중단됐다. 기본/software GPU cold boot 복구에서도 DDS participant 생성 실패와 console 503이 지속되어 전체 release PASS로 표시하지 않았다. 102.508초 녹화, 부분 성공과 중단은 `evidence/release-smoke-first`, 복구 실패는 `evidence/release-smoke`에 보존했다.
+- 빈 동승석 차단, 중복 억제, 거절·D 전환 취소, Home 뒤 90초 무응답 종료와 SDK 변화 수신을 확인했다.
+- 에르고·사운드·SPREAD는 공식 매뉴얼에 근거한 순정 조작 안내와 응답 기록이다. 전용 스트레칭·음장·전동 벤트 자동 제어는 없다.
+- Gleo action은 앱이 열린 상태에서 ADB SET/START/RESPOND와 success/asking/fail callback 송신을 확인했다. background ADB SET은 OS가 FGS 시작을 거부했다. 실제 Gleo 자연어 왕복은 미검증이다.
+- Locale.KOREA(ko-KR) 수정 후 공식 TTS_DONE을 관측했으나 반복 timeout도 있다. 실제 사람 STT와 TEST_PCM 최종 인식 성공 없음.
+- 단위 시험 9개, release 빌드/lintVital, 서명 검증 통과. release의 debug flag/TestReceiver/시험 PCM 제외와 schema 포함을 확인했다.
 
-## 원본/영상 상태
+## 지원성과 환경
 
-SYNC 확정 영상은 이전 사용자 승인본 그대로 유지한다. Gleo 및 에르고 제작창은 11월 14일 새 음성/영상 최종 출력 작업 중인 것을 읽기 확인했다. 후속 네 편을 최종 승인으로 표시하지 않는다. 사운드 원문 스냅샷 파일이 빈 파일임을 발견해 공식 매뉴얼 URL을 다시 열어 본문과 음원 제약을 확인했다.
+Pleos Connect 2.1.0 / API34 / 2560×1440. HVAC READ_WRITE, 동승석 15~30°C/0.5°C. 착좌 반전은 정확한 이미지 fingerprint의 동승석에만 적용한다. 운전석/후석 raw 의미 매핑은 UNKNOWN이다. 현재 trip 시간은 ERROR_NOT_SUPPORTED_PROPERTY. CarAudioManager 획득 가능, 오디오 제어 권한 -1.
 
-배포 전 필요한 외부 항목: GitHub 대상, 후속 영상 최종 승인, 공식 참가 정보/동의. 이메일 발송은 작업 범위 밖이다.
+호스트 메모리 압박·서비스 준비 지연을 관측했다. SDK 초기화/호출을 IO로 옮겨 첫 FGS ANR을 해결했다. 이번 기존 기준 앱 재현은 ANR로 전체 실패했으며 과거 성공 기록과 구분했다. 재기동 후 DDS 노드 생성 실패/503도 발생했다. 최종 결과와 재현 조건은 [testing.md](docs/testing.md), 실행별 run.json을 따른다.
+
+## 제출 산출물과 Git
+
+[README](README.md), [공개 소개 PDF](docs/proposal-public.pdf), [공식 양식 반영용 개발 계획](docs/proposal-public.md), [구현표](docs/implementation.md), [시험 문서](docs/testing.md)를 작성했다. APK는 `apk/PleosTutorial-1.0.0.apk`, 검증/hash는 `evidence/build/release-audit.json`에 있다. Git 일반 이력에 APK·MP4·키·캐시를 넣지 않는다.
+
+Git 단계: `bda0675` 격리 저장소/계약 → `b2991b5` 통합 모듈 → `4fe8a913b52770218757791bf1749c2fb8b35ef9` IO·locale 수정과 HVAC 검증. 현재 APK의 Android 소스 기준은 마지막 hash다. 후속 문서·증거 commit과 ZIP은 `dist/submission-manifest.json`에서 연결한다. 패키징 시 Android diff가 비어 있는지 대조한다.
+
+[영상 목록](demos/README.md)은 승인 SYNC와 후속 네 편의 최신 확인 검토본을 구분한다. 작업창의 제작 완료를 사용자 최종 승인으로 간주하지 않는다. GitHub URL·공식 참가자 정보는 미지정이며 이메일은 발송하지 않는다.
+
+## 남은 외부 검증과 2차 계획
+
+실제 사람 STT와 순정 Gleo 음성 시험은 사용자가 2026-11-14에 나중으로 남기도록 결정했다. 정상 자원 조건의 음성 반복·focus 충돌, 2시간 주행 후 자동 제안, 실차 사양별 지원과 사용자 학습·재사용 검증도 남는다. GitHub 대상·영상 최종 선택·참가자 정보와 동의는 사용자 확정이 필요하다. 로컬 준비를 공식 접수 완료로 표시하지 않는다.

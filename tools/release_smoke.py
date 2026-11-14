@@ -14,6 +14,17 @@ def console(path,**kw):
 def nodes():
     adb('shell','uiautomator','dump','/sdcard/pleos-release-ui.xml')
     return E.fromstring(adb('shell','cat','/sdcard/pleos-release-ui.xml')).iter('node')
+
+def ensure_app():
+    # Pleos has two simultaneous foreground panes. Focus the app's observed
+    # right-hand content before asking UIAutomator for its active hierarchy.
+    adb('shell','am','start','-W','--user','current','-n','kr.pleosguide/.MainActivity')
+    for _ in range(10):
+        adb('shell','input','tap','1700','150')
+        found=list(nodes())
+        if any(n.get('package')=='kr.pleosguide' for n in found):return found
+        time.sleep(2)
+    raise AssertionError('App pane not available after launch')
 def click(text):
     for _ in range(8):
         for n in nodes():
@@ -35,7 +46,8 @@ def logs():
 def wait(kind,contains='',timeout=75,start=0):
     until=time.monotonic()+timeout
     while time.monotonic()<until:
-        for e in logs()[start:]:
+        for e in logs():
+            if e['time']<start:continue
             if e['kind']==kind and contains in e['detail']:event('OBSERVED',event=e);return e
         time.sleep(1)
     raise AssertionError(kind+' not observed')
@@ -48,25 +60,26 @@ if __name__=='__main__':
     console('hvac',power='true',dual='true',driver_temp=21,passenger_temp=21)
     adb('shell','pm','grant','--user','current','kr.pleosguide','android.permission.RECORD_AUDIO')
     adb('shell','pm','grant','--user','current','kr.pleosguide','android.permission.POST_NOTIFICATIONS')
-    base=len(logs())
+    base=int(time.time()*1000)
+    capture_file=(OUT/'app-log.txt').open('wb')
+    capture=subprocess.Popen(A+['logcat','-s','PleosGuide:I'],stdout=capture_file,stderr=subprocess.DEVNULL)
     rec=subprocess.Popen(A+['shell','screenrecord','--size','1280x720','--bit-rate','3000000','--time-limit','180','/sdcard/pleos-release-smoke.mp4'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
     try:
-        adb('shell','am','start','--user','current','-n','kr.pleosguide/.MainActivity');time.sleep(2);screenshot('01-fresh-install')
+        ensure_app();screenshot('01-fresh-install')
         click('튜토리얼 켜기');wait('SNAPSHOT','driverTemp, value=21.0',start=base)
         click('좌석별 독립 온도');wait('OFFER',start=base);screenshot('02-consent')
         # Wait for official TTS to finish, or its explicit error/timeout, before UI response.
         until=time.monotonic()+30
         while time.monotonic()<until:
-            if any(e['kind'] in ['TTS_DONE','TTS_ERROR','TTS_TIMEOUT'] for e in logs()[base:]):break
+            if any(e['time']>=base and e['kind'] in ['TTS_DONE','TTS_ERROR','TTS_TIMEOUT'] for e in logs()):break
             time.sleep(1)
         click('네, 체험할게요');wait('ACTION_RESULT','CONFIRMED',start=base);screenshot('03-confirmed-21-24')
         click('차이를 느꼈어요')
         click('튜토리얼 끄기');wait('MODE_OFF',start=base);screenshot('04-mode-off')
-        before=len(logs());console('hvac',passenger_temp=23);time.sleep(4)
-        assert not any(e['kind']=='SNAPSHOT' for e in logs()[before:]),'Off mode continued reading'
+        before=int(time.time()*1000);console('hvac',passenger_temp=23);time.sleep(4)
+        assert not any(e['time']>=before and e['kind']=='SNAPSHOT' for e in logs()),'Off mode continued reading'
         adb('shell','am','force-stop','--user','current','kr.pleosguide')
-        adb('shell','am','start','--user','current','-n','kr.pleosguide/.MainActivity');time.sleep(2)
-        text=' '.join(n.get('text','') for n in nodes())
+        text=' '.join(n.get('text','') for n in ensure_app())
         assert '튜토리얼 켜기' in text,'Mode restarted unexpectedly'
         # Private persistent history is checked by reopening mode in the same installed release.
         click('튜토리얼 켜기');wait('SNAPSHOT',start=before)
@@ -75,7 +88,17 @@ if __name__=='__main__':
         screenshot('05-history-after-restart');click('튜토리얼 끄기')
         event('PASS',checks=['fresh release launch','consent UI','SDK dual off and passenger 24','driver 21 retained','mode off stops reading','restart off by default','history persisted'])
     finally:
-        entries=logs()[base:]
+        capture.terminate()
+        try:capture.wait(timeout=10)
+        except subprocess.TimeoutExpired:capture.kill()
+        capture_file.close()
+        entries=[]
+        for line in (OUT/'app-log.txt').read_text(encoding='utf8',errors='replace').splitlines():
+            if 'PleosGuide: {' not in line:continue
+            try:
+                entry=json.loads(line.split('PleosGuide: ',1)[1])
+                if entry['time']>=base:entries.append(entry)
+            except json.JSONDecodeError:pass
         (OUT/'evidence.jsonl').write_text('\n'.join(json.dumps(e,ensure_ascii=False) for e in entries)+'\n',encoding='utf8')
         if rec.poll() is None:
             pid=adb('shell','pidof','screenrecord').strip()

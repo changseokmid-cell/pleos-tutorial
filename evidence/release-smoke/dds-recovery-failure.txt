@@ -1,0 +1,22 @@
+SELinux: Enforcing
+
+11-14 00:52:41.659   507   570 I VehicleApiDdsEmu: event seq=426 source=dds action=node-create-failed domain=30 topic=(none) type=(none) detail=(none)
+11-14 00:52:42.375  7368  7368 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:42.699   507   572 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:42.699   507   572 I VehicleApiDdsEmu: event seq=428 source=dds action=node-create-failed domain=30 topic=(none) type=(none) detail=(none)
+11-14 00:52:43.144  7385  7385 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:43.750   507   571 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:43.751   507   571 I VehicleApiDdsEmu: event seq=430 source=dds action=node-create-failed domain=30 topic=(none) type=(none) detail=(none)
+11-14 00:52:43.838  7401  7401 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:44.734  7418  7418 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:44.783   507   573 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:44.784   507   573 I VehicleApiDdsEmu: event seq=432 source=dds action=node-create-failed domain=30 topic=(none) type=(none) detail=(none)
+11-14 00:52:45.550   507   570 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:45.551   507   570 I VehicleApiDdsEmu: event seq=434 source=dds action=node-create-failed domain=30 topic=(none) type=(none) detail=(none)
+11-14 00:52:45.821   507   571 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:45.821   507   571 I VehicleApiDdsEmu: event seq=436 source=dds action=node-create-failed domain=30 topic=(none) type=(none) detail=(none)
+11-14 00:52:46.336  7453  7453 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:46.651  7456  7456 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:46.843   507   573 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error
+11-14 00:52:46.843   507   573 I VehicleApiDdsEmu: event seq=438 source=dds action=node-create-failed domain=30 topic=(none) type=(none) detail=(none)
+11-14 00:52:47.366  7495  7495 E SDVOS_LIBDAL: [dal_create_node_impl] [dal_create_node_impl] Participant was not created: Error

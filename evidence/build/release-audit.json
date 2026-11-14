@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "4fe8a913b52770218757791bf1749c2fb8b35ef9",
+  "apkSha256": "ae804c869566195c2dfe8e79ad49bd8c94a921c148508915cce7298a3db35cbc",
+  "apkBytes": 26133318,
+  "signed": true,
+  "debuggable": false,
+  "debugReceiverIncluded": false,
+  "testPcmIncluded": false,
+  "gleoSchemaIncluded": true,
+  "unitTests": {
+    "name": "kr.pleosguide.GuideSafetyTest",
+    "tests": "9",
+    "skipped": "0",
+    "failures": "0",
+    "errors": "0",
+    "timestamp": "2026-11-14T08:02:47",
+    "hostname": "BOOK-HBQ5LNBQU2",
+    "time": "0.068"
+  },
+  "androidDiffFromSourceCommit": "empty"
+}

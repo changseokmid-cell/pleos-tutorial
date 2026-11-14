@@ -1,0 +1,6 @@
+--------- beginning of main
+11-13 23:47:15.864 13572 13598 D SyncVehicle: power areas READ_WRITE [ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT]
+11-13 23:47:15.864 13572 13781 D SyncVehicle: sync areas READ_WRITE [ROW_1_LEFT, ROW_1_RIGHT]
+11-13 23:47:15.970 13572 13572 I SyncTutorial: SDK Cabin(parked=true, occupied=null, power=null, synced=true, driver=22.0, passenger=22.0)
+11-13 23:47:16.882 13572 13598 D SyncVehicle: power areas READ_WRITE [ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT]
+11-13 23:47:17.048 13572 13572 I SyncTutorial: SDK Cabin(parked=true, occupied=false, power=true, synced=true, driver=22.0, passenger=22.0)

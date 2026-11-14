@@ -1,0 +1,22 @@
+[
+  {
+    "time": "2026-11-14T07:46:27.106673+00:00",
+    "label": "console gear",
+    "gear": "Park"
+  },
+  {
+    "time": "2026-11-14T07:46:27.170961+00:00",
+    "label": "console seat",
+    "kind": "occupied",
+    "area": "passenger",
+    "value": "false"
+  },
+  {
+    "time": "2026-11-14T07:46:27.237596+00:00",
+    "label": "console hvac",
+    "power": "true",
+    "dual": "true",
+    "driver_temp": 22,
+    "passenger_temp": 22
+  }
+]

@@ -1,0 +1,276 @@
+[
+  {
+    "time": 1794644158.914694,
+    "kind": "PROVENANCE",
+    "input": "MOCK_EVENT and ADB UNVERIFIED_INTENT; no actual human recognition"
+  },
+  {
+    "time": 1794644163.8769124,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "gear",
+    "params": {
+      "gear": "Park"
+    }
+  },
+  {
+    "time": 1794644163.892177,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "seat",
+    "params": {
+      "kind": "occupied",
+      "area": "passenger",
+      "value": "true"
+    }
+  },
+  {
+    "time": 1794644163.9101803,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "hvac",
+    "params": {
+      "power": "true",
+      "dual": "true",
+      "driver_temp": 21,
+      "passenger_temp": 21
+    }
+  },
+  {
+    "time": 1794644173.961956,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644171511,
+      "kind": "MODE_ON",
+      "sourceType": "USER_REPORT",
+      "sessionId": null,
+      "detail": "user-started foreground service"
+    }
+  },
+  {
+    "time": 1794644189.8529086,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644186739,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794644186585, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794644186538, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794644186685, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794644186718, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794644186599, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=21.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794644186717, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794644186677, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794644186622, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794644186622, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794644186495, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794644186599, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=false, unit=, area=[ROW_1_LEFT], observedAt=1794644186495, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=21.0, unit=C, area=[ROW_1_LEFT], observedAt=1794644186734, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794644186586, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794644186627, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794644186538, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794644190.1519136,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "seat",
+    "params": {
+      "kind": "occupied",
+      "area": "passenger",
+      "value": "false"
+    }
+  },
+  {
+    "time": 1794644192.9639761,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644189880,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794644189566, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794644189583, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794644189806, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794644189874, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794644189641, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=21.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794644189875, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794644189719, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794644189623, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794644189624, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794644189570, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794644189642, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=false, unit=, area=[ROW_1_LEFT], observedAt=1794644189570, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=21.0, unit=C, area=[ROW_1_LEFT], observedAt=1794644189746, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794644189567, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794644189834, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794644189583, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794644197.099959,
+    "kind": "PASS",
+    "check": "Empty passenger seat blocks SYNC"
+  },
+  {
+    "time": 1794644197.1195247,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "seat",
+    "params": {
+      "kind": "occupied",
+      "area": "passenger",
+      "value": "true"
+    }
+  },
+  {
+    "time": 1794644201.2736259,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644198950,
+      "kind": "OFFER",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": "c7f2eee9-7556-4e70-a02e-49891b8bdda9",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794644201.5311553,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644199083,
+      "kind": "GLEO_CALLBACK_SENT",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": null,
+      "detail": "{\"functionName\":\"START_FEATURE_GUIDE\",\"status\":\"success\",\"message\":\"The guide session was started. No vehicle operation has been confirmed.\",\"mode\":\"silent\",\"data\":\"[{\\\"sessionId\\\":\\\"c7f2eee9-7556-4e70-a02e-49891b8bdda9\\\",\\\"phase\\\":\\\"PROPOSED\\\",\\\"feature\\\":\\\"ERGO\\\"}]\"}"
+    }
+  },
+  {
+    "time": 1794644202.3601456,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644200228,
+      "kind": "DUPLICATE_SUPPRESSED",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": "c7f2eee9-7556-4e70-a02e-49891b8bdda9",
+      "detail": "SOUND"
+    }
+  },
+  {
+    "time": 1794644202.828246,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644200246,
+      "kind": "GLEO_CALLBACK_SENT",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": null,
+      "detail": "{\"functionName\":\"START_FEATURE_GUIDE\",\"status\":\"fail\",\"message\":\"A session is already active or the parked vehicle conditions are not met.\",\"mode\":\"silent\",\"data\":\"[{\\\"sessionId\\\":\\\"c7f2eee9-7556-4e70-a02e-49891b8bdda9\\\",\\\"phase\\\":\\\"PROPOSED\\\",\\\"feature\\\":\\\"ERGO\\\"}]\"}"
+    }
+  },
+  {
+    "time": 1794644203.8692336,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644201659,
+      "kind": "CONSENT",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": "c7f2eee9-7556-4e70-a02e-49891b8bdda9",
+      "detail": "target=null"
+    }
+  },
+  {
+    "time": 1794644204.1426291,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644201809,
+      "kind": "GLEO_CALLBACK_SENT",
+      "sourceType": "UNVERIFIED_INTENT",
+      "sessionId": null,
+      "detail": "{\"functionName\":\"RESPOND_TO_GUIDE\",\"status\":\"success\",\"message\":\"The response was accepted by the guide. This does not confirm vehicle execution.\",\"mode\":\"silent\",\"data\":\"[{\\\"sessionId\\\":\\\"c7f2eee9-7556-4e70-a02e-49891b8bdda9\\\",\\\"phase\\\":\\\"GUIDING\\\",\\\"feature\\\":\\\"ERGO\\\"}]\"}"
+    }
+  },
+  {
+    "time": 1794644204.527689,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "gear",
+    "params": {
+      "gear": "Drive"
+    }
+  },
+  {
+    "time": 1794644206.167476,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644203588,
+      "kind": "SESSION_END",
+      "sourceType": "LIVE_SDK",
+      "sessionId": "c7f2eee9-7556-4e70-a02e-49891b8bdda9",
+      "detail": "주행 중에는 자세한 체험 안내를 멈춥니다. 정차 후 이어 주세요."
+    }
+  },
+  {
+    "time": 1794644206.1705828,
+    "kind": "PASS",
+    "check": "Active guide ends on live Drive/UX restriction; no vehicle writes"
+  },
+  {
+    "time": 1794644206.1940484,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "gear",
+    "params": {
+      "gear": "Park"
+    }
+  },
+  {
+    "time": 1794644210.6365252,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644208065,
+      "kind": "OFFER",
+      "sourceType": "MOCK_EVENT",
+      "sessionId": "b3b006d1-74b1-48e7-b24c-297a70c21887",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794644211.506734,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644209165,
+      "kind": "SESSION_END",
+      "sourceType": "LIVE_SDK",
+      "sessionId": "b3b006d1-74b1-48e7-b24c-297a70c21887",
+      "detail": "안내를 취소했습니다. 설정을 추가로 바꾸지 않습니다."
+    }
+  },
+  {
+    "time": 1794644211.5094554,
+    "kind": "PASS",
+    "check": "Explicit rejection ends session"
+  },
+  {
+    "time": 1794644212.8914602,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644210298,
+      "kind": "OFFER",
+      "sourceType": "MOCK_EVENT",
+      "sessionId": "8820c190-aa42-45c8-aa34-d43c6cd2e2a6",
+      "detail": "explicit request"
+    }
+  },
+  {
+    "time": 1794644303.9541616,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644301507,
+      "kind": "SESSION_END",
+      "sourceType": "LIVE_SDK",
+      "sessionId": "8820c190-aa42-45c8-aa34-d43c6cd2e2a6",
+      "detail": "무응답으로 안내를 마쳤습니다. 필요할 때 다시 불러 주세요."
+    }
+  },
+  {
+    "time": 1794644303.957678,
+    "kind": "PASS",
+    "check": "90-second no-response expiry while main Activity is backgrounded"
+  },
+  {
+    "time": 1794644304.3049834,
+    "kind": "MANUAL_CONSOLE_SEED",
+    "path": "hvac",
+    "params": {
+      "passenger_temp": 22
+    }
+  },
+  {
+    "time": 1794644305.887245,
+    "kind": "OBSERVED",
+    "event": {
+      "time": 1794644303026,
+      "kind": "SNAPSHOT",
+      "sourceType": "LIVE_SDK",
+      "sessionId": null,
+      "detail": "{passengerOccupiedRaw=VehicleSample(name=passengerOccupiedRaw, value=false, unit=, area=[ROW_1_RIGHT], observedAt=1794644302677, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), parked=VehicleSample(name=parked, value=true, unit=, area=global, observedAt=1794644302694, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), ac=VehicleSample(name=ac, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794644302850, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), tripMinutes=VehicleSample(name=tripMinutes, value=null, unit=min, area=global, observedAt=1794644303011, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupiedRaw=VehicleSample(name=rearLeftOccupiedRaw, value=true, unit=, area=[ROW_2_LEFT], observedAt=1794644302708, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), passengerTemp=VehicleSample(name=passengerTemp, value=22.0, unit=C, area=[ROW_1_RIGHT], observedAt=1794644302888, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), sync=VehicleSample(name=sync, value=false, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT], observedAt=1794644302995, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), rearRightOccupiedRaw=VehicleSample(name=rearRightOccupiedRaw, value=true, unit=, area=[ROW_2_RIGHT], observedAt=1794644302724, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), rearRightOccupied=VehicleSample(name=rearRightOccupied, value=null, unit=, area=[ROW_2_RIGHT], observedAt=1794644302724, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupied=VehicleSample(name=driverOccupied, value=null, unit=, area=[ROW_1_LEFT], observedAt=1794644302647, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), rearLeftOccupied=VehicleSample(name=rearLeftOccupied, value=null, unit=, area=[ROW_2_LEFT], observedAt=1794644302708, capability=READ_ATTEMPT, error=unavailable, sourceType=LIVE_SDK), driverOccupiedRaw=VehicleSample(name=driverOccupiedRaw, value=false, unit=, area=[ROW_1_LEFT], observedAt=1794644302647, capability=UNKNOWN, error=null, sourceType=LIVE_SDK), driverTemp=VehicleSample(name=driverTemp, value=21.0, unit=C, area=[ROW_1_LEFT], observedAt=1794644302775, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), passengerOccupied=VehicleSample(name=passengerOccupied, value=true, unit=, area=[ROW_1_RIGHT], observedAt=1794644302677, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK), power=VehicleSample(name=power, value=true, unit=, area=[ROW_1_LEFT, ROW_1_RIGHT, ROW_2_LEFT, ROW_2_CENTER, ROW_2_RIGHT], observedAt=1794644302724, capability=READ_WRITE, error=null, sourceType=LIVE_SDK), uxRestricted=VehicleSample(name=uxRestricted, value=false, unit=, area=global, observedAt=1794644302694, capability=READ_ATTEMPT, error=null, sourceType=LIVE_SDK)}"
+    }
+  },
+  {
+    "time": 1794644305.8908906,
+    "kind": "PASS",
+    "check": "Foreground service still receives SDK changes after Home"
+  },
+  {
+    "time": 1794644310.1051116,
+    "kind": "PRESERVED_DEBUG_HISTORY",
+    "events": 612,
+    "tts_done": 2
+  }
+]

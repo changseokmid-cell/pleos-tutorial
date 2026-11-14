@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-14",
+  "cataloguedAt": "2026-11-14T08:52:00.716211+00:00",
+  "items": [
+    {
+      "feature": "SYNC",
+      "kind": "customer_experience_concept",
+      "workspaceSource": "outputs/20261113-sync-verbatim/SYNC_ChatLog.mp4",
+      "approvalStatus": "user_approved_2026-11-13",
+      "productionRecord": "docs/production/SYNC_확정본과_후속영상_제작법.md",
+      "bytes": 144905097,
+      "sha256": "339b0091c892d2ee413b408a1ba2657da476f1a05eab1dfb861d6de6f2fe7991",
+      "durationSeconds": 47.936,
+      "width": 1920,
+      "height": 1080,
+      "publicUrl": null,
+      "apkExecutionEvidence": false,
+      "redistributionReview": "Production sources include manufacturer imagery and generated media; public release rights not independently audited here."
+    },
+    {
+      "feature": "ERGO",
+      "kind": "customer_experience_concept",
+      "workspaceSource": "outputs/20261114-ergo-film/full-rebuild-20261114/final.mp4",
+      "approvalStatus": "review_copy_user_approval_unconfirmed",
+      "productionRecord": "outputs/20261114-ergo-film/full-rebuild-20261114/DELIVERY.json",
+      "bytes": 48875372,
+      "sha256": "f73a39dfe9b0bcd1dcbd17f7ad6d1b3b6e1d1af6a2aded1d5f1f64d4d1572921",
+      "durationSeconds": 123.754,
+      "width": 1920,
+      "height": 1080,
+      "publicUrl": null,
+      "apkExecutionEvidence": false,
+      "redistributionReview": "Production sources include manufacturer imagery and generated media; public release rights not independently audited here."
+    },
+    {
+      "feature": "SOUND",
+      "kind": "customer_experience_concept",
+      "workspaceSource": "outputs/20261114-sound-film/full-rebuild-20261114/final.mp4",
+      "approvalStatus": "review_copy_user_approval_unconfirmed",
+      "productionRecord": "outputs/20261114-sound-film/full-rebuild-20261114/validation.json",
+      "bytes": 48105346,
+      "sha256": "2befdabe7faa5945aa054d8219ad872aa975cb907fefdaf64ae5e3edac27f47c",
+      "durationSeconds": 101.013,
+      "width": 1920,
+      "height": 1080,
+      "publicUrl": null,
+      "apkExecutionEvidence": false,
+      "redistributionReview": "Production sources include manufacturer imagery and generated media; public release rights not independently audited here."
+    },
+    {
+      "feature": "SPREAD",
+      "kind": "customer_experience_concept",
+      "workspaceSource": "outputs/20261114-spread-film/sync-verified-20261114/final.mp4",
+      "approvalStatus": "review_copy_user_approval_unconfirmed",
+      "productionRecord": "outputs/20261114-spread-film/sync-verified-20261114/검수결과.md",
+      "bytes": 29097571,
+      "sha256": "abd18197f77286f2f930d1e9d809a5c229bc4094a78a54ce3aec0feb161f2f78",
+      "durationSeconds": 61.269,
+      "width": 1920,
+      "height": 1080,
+      "publicUrl": null,
+      "apkExecutionEvidence": false,
+      "redistributionReview": "Production sources include manufacturer imagery and generated media; public release rights not independently audited here."
+    },
+    {
+      "feature": "GLEO",
+      "kind": "customer_experience_concept",
+      "workspaceSource": "outputs/20261114-gleo-film/full-rebuild-20261114/final.mp4",
+      "approvalStatus": "review_copy_user_approval_unconfirmed",
+      "productionRecord": "outputs/20261114-gleo-film/full-rebuild-20261114/production-state.json",
+      "bytes": 32864527,
+      "sha256": "9aca15d5b9165e3cfdd934b534b6725cdc67f714ee08008388f639e27d82743e",
+      "durationSeconds": 69.504,
+      "width": 1920,
+      "height": 1080,
+      "publicUrl": null,
+      "apkExecutionEvidence": false,
+      "redistributionReview": "Production sources include manufacturer imagery and generated media; public release rights not independently audited here."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "baseline-reproduction/app-log.txt",
+    "originalSha256": "123e1bf79542410cc6d0713ac39eb26a4a3f308e40649efbf7df2e54bde63566",
+    "normalizedSha256": "cfa5b8c3c85e7c12a8deb056fd10303b3bc38c32936229c651340a46876ba72b",
+    "operation": "line endings only: CRCRLF/CRLF to LF"
+  },
+  {
+    "path": "build/release-manifest.txt",
+    "originalSha256": "af92c3557b5a16efa0371728d8be23887d324607a04c979289073b05e40f5344",
+    "normalizedSha256": "8bb02091746e1c7f396f8012b936f9c2d4193118153a3f1a23ca54df57823393",
+    "operation": "line endings only: CRCRLF/CRLF to LF"
+  },
+  {
+    "path": "build/signature-verification.txt",
+    "originalSha256": "9807f1a676860b24529eae39c03a9935b61c1ce2c4b3e598c065eec2f217aba2",
+    "normalizedSha256": "03c6044cce6fccace8e1ae40c9cd8e0d773a52e7c20e1fd5bf51c844172fa358",
+    "operation": "line endings only: CRCRLF/CRLF to LF"
+  },
+  {
+    "path": "release-smoke/dds-recovery-failure.txt",
+    "originalSha256": "720beefdffcf454e5af2496dc2d5d8716e2d1bf039ccfef1d9b5643186100837",
+    "normalizedSha256": "c386f9cf2e26be44853a4579f467301cc098c3c94c933304a48bdecdc02cce48",
+    "operation": "line endings only: CRCRLF/CRLF to LF"
+  }
+]

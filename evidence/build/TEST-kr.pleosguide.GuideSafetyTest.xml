@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kr.pleosguide.GuideSafetyTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-14T08:02:47" hostname="BOOK-HBQ5LNBQU2" time="0.068">
+  <properties/>
+  <testcase name="unsupportedSignalCannotBecomeFalse" classname="kr.pleosguide.GuideSafetyTest" time="0.02"/>
+  <testcase name="missingSeatIsNotEmptyOrOccupied" classname="kr.pleosguide.GuideSafetyTest" time="0.0"/>
+  <testcase name="cancellationPrecedesAcceptance" classname="kr.pleosguide.GuideSafetyTest" time="0.004"/>
+  <testcase name="temperatureIsAnExplicitNumericRequest" classname="kr.pleosguide.GuideSafetyTest" time="0.032"/>
+  <testcase name="rearMusicRequestIsNotThoughtDetection" classname="kr.pleosguide.GuideSafetyTest" time="0.004"/>
+  <testcase name="staleSnapshotCannotAuthorizeCommands" classname="kr.pleosguide.GuideSafetyTest" time="0.0"/>
+  <testcase name="multipleNativeActionsRouteToGleoLesson" classname="kr.pleosguide.GuideSafetyTest" time="0.001"/>
+  <testcase name="directAirAndHeatAreDifferentIntents" classname="kr.pleosguide.GuideSafetyTest" time="0.002"/>
+  <testcase name="unknownUxAndDrivingPreventControl" classname="kr.pleosguide.GuideSafetyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

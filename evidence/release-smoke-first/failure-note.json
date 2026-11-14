@@ -1,0 +1,10 @@
+{
+  "result": "partial",
+  "confirmed": [
+    "fresh signed APK installation",
+    "SYNC 21/21 to 21/24 independent read",
+    "Off event"
+  ],
+  "interruption": "UIAutomator selected the left driving pane after restart; screen capture later stalled, AVD restarted",
+  "log_capture_issue": "Index-based final slice became empty after log buffer rollover. run.json preserves observed events; screenshots and raw MP4 preserved. Harness now streams logcat and filters by epoch time."
+}

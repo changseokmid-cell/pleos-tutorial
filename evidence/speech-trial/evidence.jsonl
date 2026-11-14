@@ -1,0 +1,15 @@
+{"time": 1794643529426, "kind": "TEST_INJECTION", "sourceType": "MOCK_EVENT", "sessionId": null, "detail": "text=null;feature=null"}
+{"time": 1794643543135, "kind": "MODE_ON", "sourceType": "USER_REPORT", "sessionId": null, "detail": "user-started foreground service"}
+{"time": 1794643543612, "kind": "VEHICLE_INIT", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "Pleos/crp_avd/crp_avd_x86_64:14/RELEASE.release_connect_v2.1.0/release_connect_v2.1.0:user/test-keys;seatMapping=true"}
+{"time": 1794643544256, "kind": "STT_INIT_OK", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "ON_DEVICE ko-KR"}
+{"time": 1794643546332, "kind": "TTS_INIT_OK", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "ON_DEVICE ko-KR"}
+{"time": 1794643553531, "kind": "TEST_INJECTION", "sourceType": "MOCK_EVENT", "sessionId": null, "detail": "text=null;feature=null"}
+{"time": 1794643553782, "kind": "TTS_REQUESTED", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "내 차 사용 안내입니다. 한국어 음성 출력을 확인합니다."}
+{"time": 1794643554667, "kind": "TTS_STARTED", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "official ON_DEVICE"}
+{"time": 1794643599236, "kind": "TTS_TIMEOUT", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "resources released"}
+{"time": 1794643601547, "kind": "TEST_INJECTION", "sourceType": "MOCK_EVENT", "sessionId": null, "detail": "text=null;feature=null"}
+{"time": 1794643601747, "kind": "STT_PCM_REQUESTED", "sourceType": "TEST_PCM", "sessionId": null, "detail": "214340 bytes; synthetic fixture; no microphone; no vehicle action dispatch"}
+{"time": 1794643641822, "kind": "STT_PCM_TIMEOUT", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "resources released"}
+{"time": 1794643669973, "kind": "TEST_INJECTION", "sourceType": "MOCK_EVENT", "sessionId": null, "detail": "text=null;feature=null"}
+{"time": 1794643671862, "kind": "STT_REQUESTED", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "vehicle microphone; 12 seconds; ON_DEVICE ko-KR"}
+{"time": 1794643684082, "kind": "STT_TIMEOUT", "sourceType": "LIVE_SDK", "sessionId": null, "detail": "resources released"}
