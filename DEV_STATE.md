@@ -36,3 +36,5 @@ Git 단계: `bda0675` 격리 저장소/계약 → `b2991b5` 통합 모듈 → `4
 ## 심사 문서 재구성 및 새 검증본
 
 README를 제품 장면 → 확인 범위 → 코드 → 재현 순서로 구성했다. [심사 안내](docs/reviewer-guide.md), [구조·함수 안내](docs/architecture.md), [DDS 복구](docs/dds-recovery.md)를 추가했다. 새 보관 태그는 `contest-round1-verified-20261114`이며 이전 후보 태그와 파일은 덮어쓰지 않는다. 새 묶음은 `dist/verified-20261114`에 생성한다.
+
+새 검증본 commit `aacb5a1f78ae43a34a8beaa64c65964f996801f0`과 태그를 GitHub에 반영했다. 비공개 Release의 첨부파일 8개 모두 서버 해시가 일치하며 APK·제출 ZIP을 내려받아 다시 확인했다. [검증 영수증](docs/github-storage-verified.json)을 따른다. 마지막 전체 UI 시험은 106개 앱 이벤트와 PASS를 남겼고 문서 링크 75개를 대조했다. PDF 3쪽을 생성·검토했다. 검증 후 이번 heartbeat와 에뮬레이터를 종료했다.

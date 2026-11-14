@@ -6,6 +6,8 @@
 
 [검증 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114)는 DDS 복구, 재시작·이력·설정 유지 PASS, 심사 안내·구조도를 반영한다. 이전 후보의 태그와 14개 첨부물은 보존한다. 새 제출 manifest와 ZIP은 `dist/verified-20261114`에 생성하며 Android 소스·APK 자체는 기존 검증 버전과 같다.
 
+고정 검증본은 `aacb5a1f78ae43a34a8beaa64c65964f996801f0`이다. [업로드 검증](github-storage-verified.json)에서 첨부파일 8개 서버 해시 및 APK·제출 ZIP 재다운로드 일치를 확인했다.
+
 ## 버전 연결
 
 - 앱 소스 빌드 기준: `4fe8a913b52770218757791bf1749c2fb8b35ef9`.

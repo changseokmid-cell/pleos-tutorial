@@ -1,0 +1,65 @@
+{
+  "verifiedAt": "2026-11-14T10:22:31.317365+00:00",
+  "repository": "https://github.com/changseokmid-cell/pleos-tutorial",
+  "private": true,
+  "release": "https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114",
+  "releaseId": 445207072,
+  "tag": "contest-round1-verified-20261114",
+  "candidateCommit": "aacb5a1f78ae43a34a8beaa64c65964f996801f0",
+  "assetCount": 8,
+  "serverSha256AllMatched": true,
+  "downloadedAndRehashed": [
+    "PleosTutorial-1.0.0.apk",
+    "PleosTutorial-submission-aacb5a1f78ae.zip"
+  ],
+  "assets": [
+    {
+      "name": "PleosTutorial-1.0.0.apk",
+      "size": 26133318,
+      "digest": "sha256:ae804c869566195c2dfe8e79ad49bd8c94a921c148508915cce7298a3db35cbc",
+      "browser_download_url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/PleosTutorial-1.0.0.apk"
+    },
+    {
+      "name": "PleosTutorial-source-aacb5a1f78ae.zip",
+      "size": 9684746,
+      "digest": "sha256:f95a86737b89eda7fcd5df1ecc246e1f4214c7b6d4907133ffbfc22745376551",
+      "browser_download_url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/PleosTutorial-source-aacb5a1f78ae.zip"
+    },
+    {
+      "name": "PleosTutorial-submission-aacb5a1f78ae.zip",
+      "size": 20708863,
+      "digest": "sha256:eb29b58a78d2b1eb343555cbec575fa0b9e10a73767de671911916885c1a3988",
+      "browser_download_url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/PleosTutorial-submission-aacb5a1f78ae.zip"
+    },
+    {
+      "name": "proposal-public.pdf",
+      "size": 123170,
+      "digest": "sha256:18b659ea84bd95f69ee76659aeefab6b2c78772f4883e19ef09432cfa0423a03",
+      "browser_download_url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/proposal-public.pdf"
+    },
+    {
+      "name": "READ_ME_FIRST.md",
+      "size": 1629,
+      "digest": "sha256:8cb9b4408f1d54c24a262acf9adadd685dbcfa127e0efe6aeebcc15e4abe75a5",
+      "browser_download_url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/READ_ME_FIRST.md"
+    },
+    {
+      "name": "Release_Emulator.mp4",
+      "size": 1867098,
+      "digest": "sha256:4a5827a41f265ecd485a794194b4acdac07afc78b3b3b8b6527a8a0f13eab90a",
+      "browser_download_url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 306,
+      "digest": "sha256:6ff14c42f059bdfabda53099254a88f1a735ca9af1e1b0e1b5828312720add66",
+      "browser_download_url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/SHA256SUMS.txt"
+    },
+    {
+      "name": "submission-manifest.json",
+      "size": 2357,
+      "digest": "sha256:c0da8a57f5998ddb639b9206693aa6243223772952d40801847c5eb4cb2ddb33",
+      "browser_download_url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/submission-manifest.json"
+    }
+  ]
+}
