@@ -110,7 +110,7 @@ ADB action 수신과 callback 전송을 시험했습니다. 실제 Gleo 수신·
 | ERGO | 에르고 revision-3 | 121.258초 | `c248edc464d7` |
 | GLEO | Gleo full-rebuild | 69.504초 | `9aca15d5b916` |
 
-[2026-11-14 영상 명세](archive/media-manifest-20261114.json)와 [당시 원본 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261114), [첫 후보의 영상 목록](archive/media-manifest-first-candidate.json)과 [이전 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-candidate-20261114)는 보존합니다. 이번 사용자의 최신 5편 연결 요청은 README 등록 기준에 기록했으며, 제작 기록에 있는 과거 검토·승인 상태를 소급 변경하지 않았습니다. 현재 저장소는 비공개이며 로그인·접근 권한이 필요합니다.
+[2026-11-14 영상 명세](archive/media-manifest-20261114.json)와 [당시 원본 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261114), [첫 후보의 영상 목록](archive/media-manifest-first-candidate.json)과 [이전 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-candidate-20261114)는 보존합니다. 이번 사용자의 최신 5편 연결 요청은 README 등록 기준에 기록했으며, 제작 기록에 있는 과거 검토·승인 상태를 소급 변경하지 않았습니다. 2026-11-15 저장소를 공개로 전환했으며, 로그인 없이 영상을 내려받을 수 있습니다. 브라우저에서 바로 열리지 않으면 다운로드한 MP4를 재생해 주세요. [공개 접근 검증](../docs/public-access-20261115.json)에서 다운로드 대조와 재생 확인 범위를 볼 수 있습니다.
 
 ## 썸네일 다시 만들기
 

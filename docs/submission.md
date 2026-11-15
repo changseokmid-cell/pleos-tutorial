@@ -1,6 +1,6 @@
 # 제출 후보와 남은 절차
 
-이 폴더는 실제 구현·실행 근거를 담은 1차 제출 후보다. 사용자 요청으로 [비공개 저장소](https://github.com/changseokmid-cell/pleos-tutorial)와 [검증 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114)에 보관했다. 공식 신청서·개인정보 동의·서명·참가자 정보·메일 발송은 별도다. 로그인 없는 공개 다운로드는 아직 제공하지 않는다.
+이 폴더는 실제 구현·실행 근거를 담은 1차 제출 후보다. 사용자 요청으로 2026-11-15 [저장소](https://github.com/changseokmid-cell/pleos-tutorial)를 공개로 전환했다. [최신 고객 경험 영상 5개](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261115)와 [서명 APK·실제 실행 녹화](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114)를 로그인 없이 내려받을 수 있다. 공식 신청서·개인정보 동의·서명·참가자 정보·메일 발송은 별도다.
 
 ## 새 검증본
 
@@ -21,9 +21,11 @@
 2. 검증 묶음 ZIP: 소스 ZIP, 서명 APK, 공개 소개 PDF, 실제 release 실행 녹화, manifest, 해시. 고객 경험 영화는 별도 선택 자산으로 관리한다.
 3. 고객 경험 영상: SYNC는 사용자 승인본. 에르고·사운드·SPREAD·Gleo는 새 검토본의 hash·출처를 목록화하되 최종 승인으로 표시하지 않는다. 영화의 자동 실행 장면과 APK 실제 지원 표를 함께 제공한다.
 
-## GitHub 보관과 제출 전 공개 확인
+## GitHub 보관과 공개 확인
 
-별도 Git 저장소와 `contest-round1-candidate-20261114` 태그를 push하고 Release 14개 첨부파일을 보관했다. 고정 후보 commit은 `35c4f74a2c5a0cbcfe8755c226d2f7b371ef4706`이다. [보관 검증 기록](github-storage.json)에 GitHub 서버 해시와 APK·제출 ZIP 재다운로드 대조를 남겼다. 현재는 비공개 로그인 상태에서 확인한 결과다. 실제 접수용 공개 상태로 전환할 때 로그인 없이 소스·APK·영상을 열어 다시 검사한다.
+별도 Git 저장소와 `contest-round1-candidate-20261114` 태그를 push하고 Release 14개 첨부파일을 보관했다. 고정 후보 commit은 `35c4f74a2c5a0cbcfe8755c226d2f7b371ef4706`이다. [당시 비공개 보관 검증](github-storage.json)은 원래 기록으로 보존한다.
+
+공개 전환 후 인증 헤더와 쿠키 없이 저장소·README·영상 및 APK Release를 열고, 고객 경험 영상 5개·실행 녹화·APK의 다운로드와 SHA-256 일치를 확인했다. 내려받은 영상 6개의 화면 재생도 Edge에서 확인했다. [공개 접근 검증](public-access-20261115.json)에 결과를 기록했다. MP4는 브라우저에 따라 다운로드되며, 이 경우 내려받은 파일을 재생한다.
 
 원래 제출 묶음의 remoteUrl=null은 업로드 전 작성 시점의 기록이며 고정 ZIP을 덮어쓰지 않는다. 이 문서와 Release가 보관 위치를 연결한다. 기본 브랜치의 후속 보관 문서 commit을 고정 후보 commit과 혼동하지 않는다.
 

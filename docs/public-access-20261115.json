@@ -1,0 +1,150 @@
+{
+  "verifiedAt": "2026-11-15T06:27:08.079226+00:00",
+  "repository": "changseokmid-cell/pleos-tutorial",
+  "repositoryUrl": "https://github.com/changseokmid-cell/pleos-tutorial",
+  "visibility": "public",
+  "checkedCommit": "cd892f40ea9f1c5a742562940cf47867fc7e3196",
+  "authentication": "Fresh urllib openers without cookies or Authorization headers",
+  "repositoryMetadata": {
+    "url": "https://api.github.com/repos/changseokmid-cell/pleos-tutorial",
+    "status": 200,
+    "bytes": 5846,
+    "contentType": "application/json",
+    "finalHost": "api.github.com"
+  },
+  "pages": [
+    {
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial",
+      "status": 200,
+      "bytes": 307423,
+      "contentType": "text/html",
+      "finalHost": "github.com",
+      "signInLinkPresent": true
+    },
+    {
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261115",
+      "status": 200,
+      "bytes": 148471,
+      "contentType": "text/html",
+      "finalHost": "github.com",
+      "signInLinkPresent": true
+    },
+    {
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114",
+      "status": 200,
+      "bytes": 149371,
+      "contentType": "text/html",
+      "finalHost": "github.com",
+      "signInLinkPresent": true
+    },
+    {
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/blob/cd892f40ea9f1c5a742562940cf47867fc7e3196/README.md",
+      "status": 200,
+      "bytes": 320823,
+      "contentType": "text/html",
+      "finalHost": "github.com",
+      "signInLinkPresent": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "01_SYNC_17e9fe22.mp4",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/01_SYNC_17e9fe22.mp4",
+      "status": 200,
+      "bytes": 16482191,
+      "sha256": "17e9fe22c7b2435eb742ec657ca14163e0e3daba39af1e9be8978b8417ff1bbc",
+      "serverDigestMatches": true,
+      "contentType": "application/octet-stream",
+      "finalHost": "release-assets.githubusercontent.com",
+      "authorizationHeaderSent": false,
+      "cookiesSent": false
+    },
+    {
+      "name": "02_SPREAD_abd18197.mp4",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/02_SPREAD_abd18197.mp4",
+      "status": 200,
+      "bytes": 29097571,
+      "sha256": "abd18197f77286f2f930d1e9d809a5c229bc4094a78a54ce3aec0feb161f2f78",
+      "serverDigestMatches": true,
+      "contentType": "application/octet-stream",
+      "finalHost": "release-assets.githubusercontent.com",
+      "authorizationHeaderSent": false,
+      "cookiesSent": false
+    },
+    {
+      "name": "03_SOUND_9fc8ab12.mp4",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/03_SOUND_9fc8ab12.mp4",
+      "status": 200,
+      "bytes": 51185883,
+      "sha256": "9fc8ab123c18d4afa4f493c6935dd1fd0fb034b5efa989b11f025d499630ca23",
+      "serverDigestMatches": true,
+      "contentType": "application/octet-stream",
+      "finalHost": "release-assets.githubusercontent.com",
+      "authorizationHeaderSent": false,
+      "cookiesSent": false
+    },
+    {
+      "name": "04_ERGO_c248edc4.mp4",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/04_ERGO_c248edc4.mp4",
+      "status": 200,
+      "bytes": 51908991,
+      "sha256": "c248edc464d7949ed8f9368a0eefeb8030f4cc787a4d3a14fc94d3806ce911b6",
+      "serverDigestMatches": true,
+      "contentType": "application/octet-stream",
+      "finalHost": "release-assets.githubusercontent.com",
+      "authorizationHeaderSent": false,
+      "cookiesSent": false
+    },
+    {
+      "name": "05_GLEO_9aca15d5.mp4",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-five-feature-videos-20261115/05_GLEO_9aca15d5.mp4",
+      "status": 200,
+      "bytes": 32864527,
+      "sha256": "9aca15d5b9165e3cfdd934b534b6725cdc67f714ee08008388f639e27d82743e",
+      "serverDigestMatches": true,
+      "contentType": "application/octet-stream",
+      "finalHost": "release-assets.githubusercontent.com",
+      "authorizationHeaderSent": false,
+      "cookiesSent": false
+    },
+    {
+      "name": "PleosTutorial-1.0.0.apk",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/PleosTutorial-1.0.0.apk",
+      "status": 200,
+      "bytes": 26133318,
+      "sha256": "ae804c869566195c2dfe8e79ad49bd8c94a921c148508915cce7298a3db35cbc",
+      "serverDigestMatches": true,
+      "contentType": "application/vnd.android.package-archive",
+      "finalHost": "release-assets.githubusercontent.com",
+      "authorizationHeaderSent": false,
+      "cookiesSent": false
+    },
+    {
+      "name": "Release_Emulator.mp4",
+      "url": "https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4",
+      "status": 200,
+      "bytes": 1867098,
+      "sha256": "4a5827a41f265ecd485a794194b4acdac07afc78b3b3b8b6527a8a0f13eab90a",
+      "serverDigestMatches": true,
+      "contentType": "application/octet-stream",
+      "finalHost": "release-assets.githubusercontent.com",
+      "authorizationHeaderSent": false,
+      "cookiesSent": false
+    }
+  ],
+  "readmeVideoLinks": 5,
+  "browserVerification": {
+    "repositoryPage": "Public badge and Sign in link visible in a logged-out in-app browser",
+    "downloadedVideoPlayback": {
+      "browser": "Microsoft Edge",
+      "videoCount": 6,
+      "observedPlaybackSecondsAtLeast": 9.9,
+      "allVideosDecodedFrames": true,
+      "allVideoErrors": null,
+      "customerVideoResolution": "1920x1080",
+      "emulatorVideoResolution": "1280x720",
+      "scope": "Playback was checked using the anonymously downloaded and SHA-256-verified files."
+    },
+    "directCrossOriginEmbedding": "The temporary remote-embedding harness reported media errors. This does not affect the separately verified anonymous download URLs; use downloaded playback if a browser downloads the MP4."
+  }
+}
