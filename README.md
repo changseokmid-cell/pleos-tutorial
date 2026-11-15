@@ -177,7 +177,7 @@
 
 ## 이어서 읽기
 
-[심사 안내](docs/reviewer-guide.md) · [초기 구현 소개 PDF · 2026-11-14](docs/proposal-public.pdf) · [코드 구조와 함수별 읽기](docs/architecture.md) · [현재 APK 구현표](docs/implementation.md) · [재현 절차](docs/testing.md)
+[심사 안내](docs/reviewer-guide.md) · [Experio 작품 소개서 PDF · 3쪽](docs/proposal-public.pdf) · [코드 구조와 함수별 읽기](docs/architecture.md) · [현재 APK 구현표](docs/implementation.md) · [재현 절차](docs/testing.md)
 
 ## 코드의 핵심
 
