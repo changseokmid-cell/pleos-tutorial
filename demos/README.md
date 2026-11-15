@@ -1,4 +1,6 @@
-# 다섯 영상에서 코드·실구동 증거까지
+# Experio(Agentic Tutorial)의 다섯 고객 경험
+
+오황 팀이 제작한 영상과 관련 코드·실구동 검증 자료입니다.
 
 [README 썸네일로 돌아가기](../README.md#다섯-가지-고객-경험) · [최신 영상 Release](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261115) · [실제 APK 녹화](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4)
 

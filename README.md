@@ -1,4 +1,6 @@
-# 내 차 사용 안내
+# Experio(Agentic Tutorial)
+
+**오황 팀 · 현대자동차그룹 차량용 앱 개발 공모전 출품작**
 
 **차량에 탑재됐지만 몰랐던 기능을, 필요한 순간에 체험하고 스스로 사용하도록 돕는 Pleos Connect 차량용 튜토리얼 앱입니다.**
 
@@ -20,7 +22,7 @@
 
 이 문제는 소비자의 불편에 그치지 않습니다. 현대차가 개발하고 제공한 기능이 사용되지 않으면, 기술 투자와 업데이트의 성과가 고객이 체감하는 가치로 충분히 전달되기 어렵습니다. 차량에는 더 많은 기능이 생겼지만 고객은 이전과 같은 기능만 사용하는 상황에서는 SDV의 발전을 구매 이후의 만족과 지속적인 서비스 이용으로 연결하기 어렵습니다.
 
-**따라서 SDV 전환에는 새로운 기능을 제공하는 것과 함께, 기존 고객이 그 기능을 발견하고 익히도록 돕는 과정이 필요합니다.** ‘내 차 사용 안내’는 이 과정을 지원하기 위해 제안하는 앱입니다. 초기 대상은 **Pleos 탑재 그랜저를 새로 이용하는 50~69세 운전자 중, 새로운 디지털 조작과 기능 탐색에 어려움을 겪는 사람**입니다.
+**따라서 SDV 전환에는 새로운 기능을 제공하는 것과 함께, 기존 고객이 그 기능을 발견하고 익히도록 돕는 과정이 필요합니다.** Experio는 이 과정을 지원하기 위해 오황 팀이 제안하는 앱입니다. 초기 대상은 **Pleos 탑재 그랜저를 새로 이용하는 50~69세 운전자 중, 새로운 디지털 조작과 기능 탐색에 어려움을 겪는 사람**입니다.
 
 <details>
 <summary>고객 정의와 근거를 읽는 기준</summary>
@@ -49,7 +51,7 @@
 
 ## 다섯 가지 고객 경험
 
-차에 어떤 기능이 있는지 모르면, 그 기능이 필요한 순간에도 익숙한 방법만 사용하게 됩니다. ‘내 차 사용 안내’는 바로 그 순간을 기능을 발견하고 배우는 기회로 연결합니다.
+차에 어떤 기능이 있는지 모르면, 그 기능이 필요한 순간에도 익숙한 방법만 사용하게 됩니다. Experio는 바로 그 순간을 기능을 발견하고 배우는 기회로 연결합니다.
 
 아래 다섯 영상은 **기능의 존재를 몰랐던 고객이 자신의 상황에서 효과를 경험하고, 다음에는 스스로 사용할 방법을 알아가는 과정**을 보여줍니다.
 
@@ -156,6 +158,8 @@
 
 ## 실제 APK 실행과 검증
 
+아래 APK와 실행 녹화는 Experio의 시제품입니다. 설치 파일명은 `PleosTutorial-1.0.0.apk`이며, 기존 화면·영상·초기 소개 자료에는 개발 당시 명칭인 ‘내 차 사용 안내’가 표시될 수 있습니다.
+
 [<img src="evidence/release-smoke-verified/03-confirmed-21-24.png" alt="실제 서명 APK에서 운전석 21도와 동승석 24도를 재조회한 화면" width="640">](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4)
 
 **[▶ 실제 서명 APK 녹화 · 2분 7초](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4)** · [서명 APK·소스 ZIP 받기](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114)
@@ -173,7 +177,7 @@
 
 ## 이어서 읽기
 
-[심사 안내](docs/reviewer-guide.md) · [3쪽 작품 소개 PDF](docs/proposal-public.pdf) · [코드 구조와 함수별 읽기](docs/architecture.md) · [현재 APK 구현표](docs/implementation.md) · [재현 절차](docs/testing.md)
+[심사 안내](docs/reviewer-guide.md) · [초기 구현 소개 PDF · 2026-11-14](docs/proposal-public.pdf) · [코드 구조와 함수별 읽기](docs/architecture.md) · [현재 APK 구현표](docs/implementation.md) · [재현 절차](docs/testing.md)
 
 ## 코드의 핵심
 

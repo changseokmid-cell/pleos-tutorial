@@ -1,4 +1,6 @@
-# 제출 후보와 남은 절차
+# Experio(Agentic Tutorial) 제출 자료
+
+출품 팀명은 **오황**, 앱명은 **Experio(Agentic Tutorial)**입니다. 기존 `pleos-tutorial` 저장소와 `PleosTutorial-1.0.0.apk`는 이 앱의 시제품 소스와 설치 파일입니다. 이전 영상·실행 녹화·배포 자료에는 개발 당시 명칭이 남아 있을 수 있습니다.
 
 이 폴더는 실제 구현·실행 근거를 담은 1차 제출 후보다. 사용자 요청으로 2026-11-15 [저장소](https://github.com/changseokmid-cell/pleos-tutorial)를 공개로 전환했다. [최신 고객 경험 영상 5개](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-five-feature-videos-20261115)와 [서명 APK·실제 실행 녹화](https://github.com/changseokmid-cell/pleos-tutorial/releases/tag/contest-round1-verified-20261114)를 로그인 없이 내려받을 수 있다. 공식 신청서·개인정보 동의·서명·참가자 정보·메일 발송은 별도다.
 
