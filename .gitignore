@@ -14,3 +14,4 @@ dist/
 *.aar
 *.log
 __pycache__/
+!/apk/오황_Experio(Agentic Tutorial)_release.apk

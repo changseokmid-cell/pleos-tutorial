@@ -158,7 +158,7 @@
 
 ## 실제 APK 실행과 검증
 
-아래 APK와 실행 녹화는 Experio의 시제품입니다. 설치 파일명은 `PleosTutorial-1.0.0.apk`이며, 기존 화면·영상·초기 소개 자료에는 개발 당시 명칭인 ‘내 차 사용 안내’가 표시될 수 있습니다.
+아래 APK와 실행 녹화는 Experio의 시제품입니다. 제출 APK는 [`apk/오황_Experio(Agentic Tutorial)_release.apk`](apk/오황_Experio(Agentic%20Tutorial)_release.apk)이며, 기존 화면·영상·초기 소개 자료에는 개발 당시 명칭인 ‘내 차 사용 안내’가 표시될 수 있습니다.
 
 [<img src="evidence/release-smoke-verified/03-confirmed-21-24.png" alt="실제 서명 APK에서 운전석 21도와 동승석 24도를 재조회한 화면" width="640">](https://github.com/changseokmid-cell/pleos-tutorial/releases/download/contest-round1-verified-20261114/Release_Emulator.mp4)
 
@@ -203,11 +203,11 @@ Windows 출력은 `%LOCALAPPDATA%/PleosSyncLab/tutorial-build/outputs/apk/debug/
 서명 빌드는 외부 keystore alias `submission`과 `PLEOS_KEYSTORE`, `PLEOS_STORE_PASSWORD`, `PLEOS_KEY_PASSWORD` 환경 변수를 설정해 `./tools/build.ps1 -Release`로 실행합니다. 키·암호는 저장소에 넣지 않습니다.
 
 ```text
-adb -s emulator-5572 install apk/PleosTutorial-1.0.0.apk
+adb -s emulator-5572 install "apk/오황_Experio(Agentic Tutorial)_release.apk"
 adb -s emulator-5572 shell am start --user current -n kr.pleosguide/.MainActivity
 ```
 
-검증 환경은 Pleos Connect 2.1.0 / API 34입니다. 일반 휴대전화에는 차량 서비스가 없습니다. 앱에서 튜토리얼을 켜고 P 상태에서 체험을 선택합니다. [DDS 준비 확인과 재현 명령](docs/testing.md)을 먼저 읽어 주세요. Android 부팅 완료와 차량 서비스 준비 완료는 다른 시점일 수 있습니다.
+검증 환경은 **Pleos Connect 2.1.0 / Android API 34 / 화면 2560×1440, mdpi**입니다. 일반 휴대전화에는 차량 서비스가 없습니다. 앱에서 튜토리얼을 켜고 P 상태에서 체험을 선택합니다. [DDS 준비 확인과 재현 명령](docs/testing.md)을 먼저 읽어 주세요. Android 부팅 완료와 차량 서비스 준비 완료는 다른 시점일 수 있습니다.
 
 ## 증거·버전·후속 과제
 
